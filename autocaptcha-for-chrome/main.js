@@ -1,0 +1,1 @@
+document.getElementsByClassName("submit3")[0].value = "Sign In";
