@@ -11,7 +11,7 @@ or suggest new features.
 
 ### Chrome
 
-1. Download the extension - [AutoCaptcha for Chrome](autocaptcha-for-chrome.crx?raw=true)
+1. Download the zip file.
 
 2. Click on the three lines shown on the top-right corner in your browser, which will open a menu for you. Click on “Settings.” You will be redirected to your browser’s settings page.
 
