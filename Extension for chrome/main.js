@@ -39,6 +39,7 @@ var textbox = document.getElementsByName('passwd')[0];
         }
     }
 document.getElementsByClassName("submit3")[0].value = "Sign In";
+document.getElementsByClassName("white-text")[0].innerHTML = "&copy; 2016  VIT University, Vellore - 632001, Tamil Nadu, India.";
 document.getElementsByClassName("submit3")[1].name = "Reset";
 document.getElementsByClassName("submit3")[2].name = "forgotPassword";
 document.getElementsByClassName("submit3")[2].value = "Forgot Password";

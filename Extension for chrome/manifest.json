@@ -14,10 +14,28 @@
 		"css": ["main.css"],
 		"js": ["main.js"]
 	},
+	{
+	
+		"matches": ["*://academics.vit.ac.in/student/stud_home.asp"],
+		"all_frames": true,
+		"js": ["home.js"],
+		"css": ["spotlight.css"]
+	},
     {
-      "matches": ["*://academics.vit.ac.in/*/attn_report.asp*","*://27.251.102.132/*/attn_report.asp*"],
+      "matches": ["*://academics.vit.ac.in/*/attn_report.asp*","*://academics.vit.ac.in/student/attn_report_details.asp","*://27.251.102.132/*/attn_report.asp*"],
       "all_frames": true,
-      "js": ["attendance.js"]
+      "js": ["attendance.js"],
+	  "css": ["home.css"]
+    },
+	{
+      "matches": ["*://academics.vit.ac.in/student/stud_riviera_home.asp","*://academics.vit.ac.in/student/stud_riviera_info.asp","*://academics.vit.ac.in/student/stud_riviera_event_info.asp"],
+      "all_frames": true,
+	  "css": ["misc.css"]
+    },
+	{
+      "matches": ["*://academics.vit.ac.in/student/stud_menu.asp"],
+      "all_frames": true,
+	  "css": ["stud_menu.css"]
     }
   ],
   "manifest_version": 2
