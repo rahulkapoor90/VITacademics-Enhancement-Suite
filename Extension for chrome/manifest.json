@@ -21,6 +21,12 @@
 		"js": ["home.js"],
 		"css": ["spotlight.css"]
 	},
+	{
+	
+		"matches": ["*://academics.vit.ac.in/student/timetable_ws.asp"],
+		"all_frames": true,
+	    "js": ["timetable.js"]
+	},
     {
       "matches": ["*://academics.vit.ac.in/*/attn_report.asp*","*://academics.vit.ac.in/student/attn_report_details.asp","*://27.251.102.132/*/attn_report.asp*"],
       "all_frames": true,

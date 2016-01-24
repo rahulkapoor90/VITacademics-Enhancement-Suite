@@ -1,5 +1,5 @@
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css');
 table td tr:nth-child(5), tr:nth-child(4)
 {
     display:none;

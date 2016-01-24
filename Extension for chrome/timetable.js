@@ -1,11 +1,19 @@
-var textbox = document.getElementsByName('rgrsemcd')[0];
+var textbox = document.getElementsByName('regular')[0];
     var para = document.createElement("input");
-	var potty = document.createElement("P");
-
     var t = document.createTextNode("Show Password");
-   // potty.style.cssText=" font-size: 10px; text-align: right; margin-top: 0px; ";
-    para.setAttribute("type", "checkbox"); 
-    potty.appendChild(para);  
-	potty.appendChild(t);
-
-    textbox.parentElement.appendChild(potty);
+    para.setAttribute("type", "button"); 
+	para.setAttribute("id", "btnExport"); 
+	para.setAttribute("value","Export Table data into Excel");
+    textbox.parentElement.appendChild(para);
+	tabletoExcel('timetable','Time Table');
+var tableToExcel = (function() {
+  var uri = 'data:application/vnd.ms-excel;base64,'
+    , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+    , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+    , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+  return function(table, name) {
+    if (!table.nodeType) table = document.getElementById(table)
+    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+    window.location.href = uri + base64(format(template, ctx))
+  }
+})()
