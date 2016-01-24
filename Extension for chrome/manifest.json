@@ -2,6 +2,7 @@
   "name": "VIT Academics Enhancement Suite",
   "version": "0.1",
   "author": "Rahul Kapoor",
+  "manifest_version": 2,
   "description": "Extension to help you improve your experience on VIT Academics",
   "permissions": ["*://academics.vit.ac.in/*"],
   "content_scripts": [
@@ -18,7 +19,7 @@
 	
 		"matches": ["*://academics.vit.ac.in/student/stud_home.asp"],
 		"all_frames": true,
-		"js": ["home.js"],
+		"js": ["stud_home.js"],
 		"css": ["spotlight.css"]
 	},
 	{
@@ -41,8 +42,15 @@
 	{
       "matches": ["*://academics.vit.ac.in/student/stud_menu.asp"],
       "all_frames": true,
-	  "css": ["stud_menu.css"]
+	  "css": ["stud_menu.css"],
+	  "js": ["stud_menu.js"]
+    },
+	{
+      "matches": ["*://academics.vit.ac.in/student/fac_profile.asp","*://academics.vit.ac.in/student/fac_profile.asp?*"],
+      "all_frames": true,
+	  "css": ["fac_profile.css"],
+	  "js": ["fac_profile.js"]
     }
   ],
-  "manifest_version": 2
+   "web_accessible_resources": ["https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css","https://fonts.googleapis.com/icon?family=Material+Icons"]
 }

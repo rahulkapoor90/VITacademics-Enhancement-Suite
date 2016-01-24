@@ -1,3 +1,14 @@
-a {
-	font-size: 20px;
+
+table{
+	width: 100% !important;
+	display:table;
+	padding: 0px 0px 3px 0;
+}
+}
+.sttd{
+	 font-weight: normal;
+	  font-size: 1em;
+}
+.sta{
+	font-size:13px !important;
 }

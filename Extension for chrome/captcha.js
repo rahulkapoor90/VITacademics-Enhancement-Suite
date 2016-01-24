@@ -637,7 +637,7 @@ var getCaptcha = function(img) {
     temp = 0;
     var x, y;
     for (x = 0; x < 25; ++x) {
-        for (y = 0; y < 130; ++y) {
+        for (y = 0; y < 132; ++y) {
             temp = img[x][y];
             if (x !== 0 && x !== 24)
                 if (img[x + 1][y] === 0 && temp === 1 && img[x - 1][y] === 0) {
@@ -657,9 +657,7 @@ var getCaptcha = function(img) {
         f = 0;
         for (x = xoff; x < 25; ++x) {
             for (y = yoff; y < 130; ++y) {
-                if (skip(skipstart, skipend, y))
-                    continue;
-                else {
+                if (!(skip(skipstart, skipend, y))){
                     if (matchImg(x, y, img, mask)) {
                         skipstart.push(y);
                         skipend.push(y + mask[0].length);
@@ -692,8 +690,6 @@ changeButton.addEventListener("click", function(){
 
 function loaded() {
 
-    console.log("AutoCaptcha for VITacademics");  
-
     var canvas = document.createElement('canvas');
     var context = canvas.getContext('2d');
     var img = document.getElementById('imgCaptcha');
@@ -708,7 +704,6 @@ function loaded() {
     var endTime=new Date().getTime();
     if(captcha.length==6)
     {
-    	console.info("Parsed Captcha "+captcha+" in "+(endTime-startTime)+" milliseconds");
     	var textbox = document.getElementsByName('vrfcd')[0];
     	textbox.value=captcha;
 		
