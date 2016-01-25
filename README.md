@@ -7,6 +7,17 @@ Inspired by Reddit Enhancement Suite.
 More updates are scheduled for future and then only after that extension will come to chrome extensions store so please try to contribute
 or suggest new features.
 
+
+## New Features
+1. Better and fresh design for login screen with ability to show password and automatically filled captcha by [karthikb351](https://github.com/karthikb351/AutoCaptcha-for-VITacademics/).
+
+2. New icons for left-side menu.
+
+3. Minor changes for faculty information.
+
+4. Ability to export TimeTable to 'png', 'excel' and 'xml' through buttons provided at the end of TimeTable screen.
+
+
 ## Manual Installation
 
 ### Chrome
@@ -26,11 +37,13 @@ or suggest new features.
 7. Done.
 
 
-# Screenshot
+# Screenshots
 
 ![] (http://i.imgur.com/k7qZJhM.png)
 
 ![] (http://i.imgur.com/OQTHHnE.png)
+
+![] (http://i.imgur.com/TG04Ifn.png)
 
 # Contributions
 
