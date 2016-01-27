@@ -1,4 +1,4 @@
-# VIT Academics Enhancement Suite ![](http://i.imgur.com/Dtw7uni.png)
+# VIT Academics Enhancement Suite ![](http://i.imgur.com/BSu8VGu.png)
 
 Chrome extension that helps you to enhance your browsing experience at [https://academics.vit.ac.in/student/stud_login.asp] (https://academics.vit.ac.in/student/stud_login.asp)
 
