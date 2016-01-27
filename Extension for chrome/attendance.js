@@ -8,3 +8,7 @@ function getDateString(date) {
 }
 
 document.getElementsByName("to_date")[0].value=getDateString(new Date());
+$(document).ready(function () {
+	//$('table:first-child ul:first-child').hide();
+   //     $('table:nth-child(1) td:nth-child(7)').hide();
+});

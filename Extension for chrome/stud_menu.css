@@ -1,12 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 table{
 	padding: 0px 0px 3px 0;
-	background:#ecf0f1 !important;
-	width: 100% !important;
+	
 	font-family: "Roboto", helvetica, arial, sans-serif !important;
 }
 .sta{
-	font-size:12px !important;
+	font-size:13px !important;
 }
 .sttd {
    font-weight: normal;

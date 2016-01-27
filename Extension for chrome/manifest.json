@@ -3,8 +3,12 @@
   "version": "0.1",
   "author": "Rahul Kapoor",
   "manifest_version": 2,
-  "description": "Extension to help you improve your experience on VIT Academics",
+  "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
   "permissions": ["*://academics.vit.ac.in/*"],
+  "icons": {
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
   "content_scripts": [
     {
       "matches": ["*://academics.vit.ac.in/parent/parent_login.asp","*://academics.vit.ac.in/student/stud_login.asp","*://academics.vit.ac.in/parent/","*://academics.vit.ac.in/student/","*://27.251.102.132/parent/parent_login.asp","*://27.251.102.132/student/stud_login.asp","*://27.251.102.132/parent/","*://27.251.102.132/student/"],
@@ -32,7 +36,7 @@
     {
       "matches": ["*://academics.vit.ac.in/*/attn_report.asp*","*://academics.vit.ac.in/student/attn_report_details.asp","*://27.251.102.132/*/attn_report.asp*"],
       "all_frames": true,
-      "js": ["attendance.js"],
+      "js": ["jquery.js","attendance.js"],
 	  "css": ["home.css"]
     },
 	{
@@ -51,6 +55,11 @@
       "all_frames": true,
 	  "css": ["fac_profile.css"],
 	  "js": ["fac_profile.js"]
+    },
+	{
+      "matches": ["*://academics.vit.ac.in/student/changepswd.asp"],
+      "all_frames": true,
+	  "css": ["changepswd.css"]
     }
   ],
    "web_accessible_resources": ["https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css","https://fonts.googleapis.com/icon?family=Material+Icons"]
