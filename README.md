@@ -17,6 +17,10 @@ or suggest new features.
 
 4. Ability to export TimeTable to 'png', 'excel' and 'xml' through buttons provided at the end of TimeTable screen.
 
+Installation (for Users)
+-------------------------
+
+![Download](https://chrome.google.com/webstore/detail/vit-academics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb?hl=en-US&gl=IN) it from Chrome Web Store.
 
 ## Manual Installation
 
