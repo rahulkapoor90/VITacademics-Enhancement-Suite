@@ -20,7 +20,7 @@ or suggest new features.
 Installation (for Users)
 -------------------------
 
-![Download](https://chrome.google.com/webstore/detail/vit-academics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb?hl=en-US&gl=IN) it from Chrome Web Store.
+[Download](https://chrome.google.com/webstore/detail/vit-academics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb?hl=en-US&gl=IN) it from Chrome Web Store.
 
 ## Manual Installation
 
