@@ -1,3 +1,6 @@
+
+[![ghit.me](https://ghit.me/badge.svg?repo=rahulkapoor90/VITacademics-Enhancement-Suite)](https://ghit.me/repo/rahulkapoor90/VITacademics-Enhancement-Suite)
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite)
 # VIT Academics Enhancement Suite ![](http://i.imgur.com/BSu8VGu.png)
 
 Chrome extension that helps you to enhance your browsing experience at [https://academics.vit.ac.in/student/stud_login.asp] (https://academics.vit.ac.in/student/stud_login.asp)
