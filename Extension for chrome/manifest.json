@@ -9,6 +9,11 @@
 		"48": "icon48.png",
 		"128": "icon128.png"
 	},
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+		
+	},
   "content_scripts": [
     {
       "matches": ["*://academics.vit.ac.in/parent/parent_login.asp","*://academics.vit.ac.in/student/stud_login.asp","*://academics.vit.ac.in/parent/","*://academics.vit.ac.in/student/","*://27.251.102.132/parent/parent_login.asp","*://27.251.102.132/student/stud_login.asp","*://27.251.102.132/parent/","*://27.251.102.132/student/"],
@@ -16,7 +21,7 @@
     },
 	{
 		"matches": ["*://academics.vit.ac.in/student/stud_login.asp","*://academics.vit.ac.in/student/"],
-		"css": ["main.css"],
+		"css": ["font-awesome.css","main.css"],
 		"js": ["main.js"]
 	},
 	{
