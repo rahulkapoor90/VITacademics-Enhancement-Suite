@@ -13,14 +13,18 @@ var textbox = document.getElementsByName('passwd')[0];
 	
 	var note = document.getElementsByName('stud_login')[0];
 	var par = document.createElement("div");
-	var icon = document.createElement("i");
 	var tag = document.createElement("a");
 	var t1 = document.createTextNode(" Hello! Please try to refresh page again if the verification is not filled properly. Developed by - ");
 	var t2 = document.createTextNode("Rahul Kapoor");
+	
+	  function myfunction(e) {
+        var s = String.fromCharCode( e.which );
+    if ( s.toUpperCase() === s && s.toLowerCase() !== s && !e.shiftKey ) {
+        alert('caps is on');
+    }
+         };
 
 	par.setAttribute("class", "info-msg"); 
-	icon.setAttribute("class", "fa fa-info");
-	par.appendChild(icon);
 	par.appendChild(t1);
 	tag.setAttribute("href", "http://www.github.com/rahulkapoor90");
 	tag.setAttribute("id", "rahultag");
@@ -45,6 +49,7 @@ var textbox = document.getElementsByName('passwd')[0];
                 elem.focus();
         }
     }
+var el = document.getElementsByClassName("textbox")[0].onkeypress = myfunction(event);
 document.getElementsByClassName("submit3")[0].value = "Sign In";
 document.getElementsByClassName("white-text")[0].innerHTML = "&copy; 2016  VIT University, Vellore - 632001, Tamil Nadu, India.";
 document.getElementsByClassName("submit3")[1].name = "Reset";

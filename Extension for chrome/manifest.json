@@ -16,8 +16,8 @@
     },
 	{
 		"matches": ["*://academics.vit.ac.in/student/stud_login.asp","*://academics.vit.ac.in/student/"],
-		"css": ["font-awesome.css","main.css"],
-		"js": ["main.js"]
+		"css": ["main.css"],
+		"js": ["jquery.js","main.js"]
 	},
 	{
 	
