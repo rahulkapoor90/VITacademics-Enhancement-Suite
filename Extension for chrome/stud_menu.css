@@ -12,3 +12,6 @@ table{
    color:#686868 !important;
 text-decoration:none !important;
 }
+.sta:hover {
+	color: rgb(0,0,0) !important;
+}
