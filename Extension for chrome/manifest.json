@@ -1,6 +1,6 @@
 {
   "name": "VIT Academics Enhancement Suite",
-  "version": "0.3",
+  "version": "0.4",
   "author": "Rahul Kapoor",
   "manifest_version": 2,
   "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
@@ -25,6 +25,13 @@
 		"all_frames": true,
 		"js": ["stud_home.js"],
 		"css": ["spotlight.css"]
+	},
+	{
+	
+		"matches": ["*://academics.vit.ac.in/student/errormsg_2.asp"],
+		"all_frames": true,
+		"js": ["error_msg.js"],
+		"css": ["error_msg.css"]
 	},
 	{
 	

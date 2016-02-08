@@ -25,6 +25,11 @@ Installation (for Users)
 
 [Download](https://chrome.google.com/webstore/detail/vit-academics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb?hl=en-US&gl=IN) it from Chrome Web Store.
 
+## Firefox
+
+If you're a firefox user, sorry this extension is not yet available for you as i am very busy with other stuff but if you still want this extension you can help me with porting this extension 
+for Mozilla Firefox.
+
 ## Manual Installation
 
 ### Chrome
