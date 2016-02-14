@@ -1,0 +1,15 @@
+var table1 = document.getElementsByTagName('table')[0];
+var para = document.createElement("select");
+var option1  = document.createElement("option");
+var potty = document.createElement("P");
+var t = document.createTextNode("Show Password");
+var t1 = document.createTextNode("ITE302");
+potty.style.cssText=" font-size: 10px; text-align: right; margin-top: 0px; ";
+para.setAttribute("name", "course"); 
+para.setAttribute("class", "textbox"); 
+para.setAttribute("onchange", "call_coursepage()"); 
+option1.setAttribute("value","ITE302");
+option1.appendChild(t1);
+para.appendChild(option1);
+potty.appendChild(para);
+table1.parentElement.appendChild(potty);

@@ -20,6 +20,17 @@
 		"js": ["main.js"]
 	},
 	{
+		"matches": ["*://academics.vit.ac.in/student/coursepage_view.asp?*"],
+		"all_frames": true,
+		"css": ["course_page.css"]
+	},
+	{
+		"matches": ["*://academics.vit.ac.in/student/coursepage_view3.asp"],
+		"all_frames": true,
+		"css": ["course_view.css"],
+		"js": ["jquery.js","course_view.js"]
+	},
+	{
 	
 		"matches": ["*://academics.vit.ac.in/student/stud_home.asp"],
 		"all_frames": true,
