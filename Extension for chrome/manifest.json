@@ -1,14 +1,18 @@
 {
   "name": "VIT Academics Enhancement Suite",
-  "version": "0.6",
+  "version": "0.7",
   "author": "Rahul Kapoor",
   "manifest_version": 2,
   "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
   "permissions": ["*://academics.vit.ac.in/*"],
-  "icons": {
-		"48": "icon48.png",
-		"128": "icon128.png"
-	},
+  "icons" : {
+  	"16": "icon.png",
+    "19": "icon19.png",
+    "48": "icon48.png",
+    "128": "icon128.png",
+    "130": "icon130.png",
+    "550": "icon550.png"
+  },
   "browser_action": {
     "default_icon": "github-logo.png",
     "default_popup": "popup.html",

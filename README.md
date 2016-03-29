@@ -51,7 +51,7 @@ for Mozilla Firefox.
 
 # Screenshots
 
-![] (http://i.imgur.com/EFnpxXp.png)
+![] (http://i.imgur.com/k7qZJhM.png)
 
 ![] (http://i.imgur.com/OQTHHnE.png)
 
