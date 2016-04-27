@@ -49,7 +49,8 @@
 	{
 		"matches": ["*://academics.vit.ac.in/student/coursepage_view.asp?*"],
 		"all_frames": true,
-		"css": ["course_page.css"]
+		"css": ["course_page.css"],
+    "js": ["jquery.js","course_page.js"]
 	},
 	{
 		"matches": ["*://academics.vit.ac.in/student/coursepage_view3.asp"],
