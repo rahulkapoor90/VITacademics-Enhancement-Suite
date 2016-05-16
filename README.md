@@ -1,6 +1,6 @@
 
 [![ghit.me](https://ghit.me/badge.svg?repo=rahulkapoor90/VITacademics-Enhancement-Suite)](https://ghit.me/repo/rahulkapoor90/VITacademics-Enhancement-Suite)
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite)
+
 # VIT Academics Enhancement Suite ![](http://i.imgur.com/BSu8VGu.png)
 
 Chrome extension that helps you to enhance your browsing experience at [https://academics.vit.ac.in/student/stud_login.asp] (https://academics.vit.ac.in/student/stud_login.asp)
@@ -10,22 +10,39 @@ Inspired by Reddit Enhancement Suite.
 More updates are scheduled for future and then only after that extension will come to chrome extensions store so please try to contribute
 or suggest new features.
 
+## Contributions
 
-## New Features
+Contributions are welcome. if you see any issue then open an issue and if you think you can fix it then start working on it by forking this project.
+
+## Features
 1. Better and fresh design for login screen with ability to show password and automatically filled captcha by [karthikb351](https://github.com/karthikb351/AutoCaptcha-for-VITacademics/).
 
-2. New icons for left-side menu.
+### 2. An easy and Secure way to login.
 
-3. Minor changes for faculty information.
+With the inbuit pronto login system loging to VIT Wifi is now easier than ever. Because your pronto details are never shared or even stored on your device, ES is a safer, more private way to login.
 
-4. Ability to export TimeTable to 'png', 'excel' and 'xml' through buttons provided at the end of TimeTable screen.
+### 3. Beautiful and clean design
+
+With the ability to automatically fill the captcha on page signing in now 2x more faster than before with a new clean and easy to use interface.
+
+### 4. Download Course Material
+
+When you go to Course Page	you can select all the files you want and ES will do the rest. By clicking "Download Files" button at the bottom of the page ES will create a folder with all the faculties categorized properly.
+
+### 5. Be More Productive.
+
+As a student, I always wanted an easy way to store my timetable. ES has features to help you export your timetable easily. Now you have quick and faster way to store your timetable at the end of course registeration every semester.
+
+### 6. The only extension you’ll ever need.
+
+With so many features and a promise to provide regular updates and support ES will become an indispensible tool once you install it. There are many more features coming soon, stay tuned.
 
 Installation (for Users)
 -------------------------
 
 [Download](https://chrome.google.com/webstore/detail/vit-academics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb?hl=en-US&gl=IN) it from Chrome Web Store.
 
-## Firefox
+## Firefox (Update: Coming Soon!)
 
 If you're a firefox user, sorry this extension is not yet available for you as i am very busy with other stuff but if you still want this extension you can help me with porting this extension 
 for Mozilla Firefox.
@@ -49,14 +66,14 @@ for Mozilla Firefox.
 7. Done.
 
 
-# Screenshots
+## Screenshots
 
-![] (http://i.imgur.com/k7qZJhM.png)
+![Secure Loging] (http://i.imgur.com/CvBvrRQ.png)
 
-![] (http://i.imgur.com/OQTHHnE.png)
+![Clean design] (http://i.imgur.com/T0Wdh2K.png)
 
-![] (http://i.imgur.com/TG04Ifn.png)
+![Download Course Material] (http://i.imgur.com/yStmjHk.png)
 
-# Contributions
+![Export Timetable] (http://i.imgur.com/aP1iUrb.png)
 
-Contributions are welcome. if you see any issue then open an issue and if you think you can fix it then start working on it by forking this project.
+![Tweaks everywhere] (http://i.imgur.com/8fpdOye.png)
