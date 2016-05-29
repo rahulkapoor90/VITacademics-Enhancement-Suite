@@ -41,12 +41,14 @@ With so many features and a promise to provide regular updates and support ES wi
 Installation (for Users)
 -------------------------
 
+### Chrome
 [Download](https://chrome.google.com/webstore/detail/vit-academics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb?hl=en-US&gl=IN) it from Chrome Web Store.
 
-## Firefox (Update: Coming Soon!)
+### Firefox 
 
-If you're a firefox user, sorry this extension is not yet available for you as i am very busy with other stuff but if you still want this extension you can help me with porting this extension 
-for Mozilla Firefox.
+[Download](https://addons.mozilla.org/en-US/firefox/addon/vit-enhancement-suite/) BETA addon for Mozilla Firefox.
+
+
 
 ## Manual Installation
 
