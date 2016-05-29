@@ -1,0 +1,29 @@
+p[id^=t] {
+	font-weight:bold;
+	color: #669644 !important;
+}
+p[id^=po] {
+    font-weight: bold;
+}
+p[id^=p] {
+    font-weight: bold;
+}
+p[id^=tt]{
+	font-weight: bold;
+	color: #E74C3C !important;
+}
+button{
+	position: relative;
+	text-decoration: none;	
+	margin-right: 6px;
+	border-bottom: 5px solid #959595;
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	cursor: pointer;
+}
+button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
