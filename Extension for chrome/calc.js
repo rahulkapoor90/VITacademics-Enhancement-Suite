@@ -4,7 +4,7 @@
 function calc(o,n)
 {
     var totelem = document.getElementById('t' + n);
-    var totoelem= document.getElementById('to' + n);
+    var totoelem= document.getElementById('tt' + n);
     var tot = (parseInt(totelem.textContent));
     var toto = (parseInt(totoelem.textContent));
     var attoelem = document.getElementById('ao' + n);

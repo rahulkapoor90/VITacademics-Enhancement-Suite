@@ -85,6 +85,7 @@ table td tr:nth-child(5), tr:nth-child(4)
 }
 input[type="text"], input[type="password"] {
 	height:20px;
+  width:160px;
 	border: 1px solid #d9d9d9;
   border-top: 1px solid #c0c0c0;
   padding: 0 8px;
