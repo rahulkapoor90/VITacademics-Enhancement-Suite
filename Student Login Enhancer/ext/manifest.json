@@ -1,0 +1,12 @@
+{
+    "manifest_version"  :   2,
+    "name"  : "VTOP scripts",
+    "version"   :  "0.3",
+    "description"   :   "Redirect the sttree and stapp scripts to customised ones.",
+    "author"    :   "Harshal Varday <harshalvarday1@gmail.com>",
+    "permissions"   :   ["webRequestBlocking","webRequest","*://*.vit.ac.in/*"],
+    "background":{
+        "scripts":["background.js"],
+        "persistent": true
+    }
+}
