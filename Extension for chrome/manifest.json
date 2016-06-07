@@ -70,21 +70,21 @@
 		"js": ["jquery.js","course_view.js","content.js"]
 	},
 	{
-	
+
 		"matches": ["*://vtop.vit.ac.in/stud_home.asp"],
 		"all_frames": true,
 		"js": ["stud_home.js"],
 		"css": ["spotlight.css"]
 	},
 	{
-	
+
 		"matches": ["*://vtop.vit.ac.in/student/errormsg_2.asp"],
 		"all_frames": true,
 		"js": ["error_msg.js"],
 		"css": ["error_msg.css"]
 	},
 	{
-	
+
 		"matches": ["*://vtop.vit.ac.in/student/timetable_*.asp"],
 		"all_frames": true,
 		"css": ["timetable.css"],
@@ -117,6 +117,11 @@
       "matches": ["*://vtop.vit.ac.in/student/changepswd.asp"],
       "all_frames": true,
 	  "css": ["changepswd.css"]
+    },
+    {
+      "matches": ["*://vtop.vit.ac.in/student/home.asp"],
+      "all_frames": true,
+	  "js": ["jquery.js", "diff.js"]
     }
   ],
    "web_accessible_resources": ["https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css","https://fonts.googleapis.com/icon?family=Material+Icons","calc.js"]
