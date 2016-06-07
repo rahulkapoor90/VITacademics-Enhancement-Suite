@@ -27,8 +27,8 @@
     "page": "options.html"
   },
   "background": {
-    "scripts": ["rename_bg.js"],
-    "persistent": false
+    "scripts": ["rename_bg.js","background.js"],
+    "persistent": true
   },
 
   "permissions": [
@@ -36,6 +36,8 @@
     "https://ajax.googleapis.com/",
     "http://*/*",
     "storage",
+    "webRequestBlocking",
+    "webRequest",
     "downloads",
 	"*://vtop.vit.ac.in/*"
   ],

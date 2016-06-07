@@ -14,7 +14,7 @@ document.getElementsByTagName('form')[0].style.display="none";
 	var div4 = document.createElement("div");
 	div4.setAttribute("class","buttons");
 	var tag1 = document.createElement("a");
-	tag1.setAttribute("href", "https://academics.vit.ac.in/student/stud_login.asp");
+	tag1.setAttribute("href", "https://vtop.vit.ac.in/student/stud_login.asp");
 	tag1.setAttribute("target", "_blank");
 	tag1.setAttribute("class", "button1");
 	var t3 = document.createTextNode("Go To Login Page");
