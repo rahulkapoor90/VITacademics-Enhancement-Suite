@@ -5,16 +5,13 @@ Chrome extension that helps you to enhance your browsing experience at [https://
 
 Inspired by Reddit Enhancement Suite.
 
-More updates are scheduled for future and then only after that extension will come to chrome extensions store so please try to contribute
-or suggest new features.
-
 ## Contributions
 
 Contributions are welcome. if you see any issue then open an issue and if you think you can fix it then start working on it by forking this project.
 
 ## Features
 
-Better and fresh design for login screen with ability to show password and automatically filled captcha by [karthikb351](https://github.com/karthikb351/AutoCaptcha-for-VITacademics/).
+### 1. Better and fresh design for login screen with ability to show password and automatically filled captcha by [karthikb351](https://github.com/karthikb351/AutoCaptcha-for-VITacademics/).
 
 ### 2. An easy and Secure way to login.
 
