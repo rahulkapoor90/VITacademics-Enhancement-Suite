@@ -1,14 +1,32 @@
 subject_name = "";
 teacher_name = "";
 
-chrome.runtime.onMessage.addListener
-(
+chrome.runtime.onMessage.addListener(function(request, sender, response){
+    switch (request.type) {
+        case "rename":
+            rename(request);
+            break;
+        case "notifications":
+            notify(request);
+            break;
+    }
+});
 
-  function(request, sender, sendResponse) 
-    {
-          links = request.links;
-          subject_name = request.subject;
-          teacher_name = request.teacher;
+var notify = function(data){
+    var options = {
+        "title" :   "Marks Change Notification",
+        "type"  :   "list",
+        "iconUrl"   :   chrome.extension.getURL('github-logo.png'),
+        "message"   :   "Following marks have been changed.",
+        "items" :   data.list
+    };
+    chrome.notifications.create(options);
+}
+
+var rename = function(data){
+          links = data.links;
+          subject_name = data.subject;
+          teacher_name = data.teacher;
 
           console.log(links);
           for (i=0; i<links.length; i++)
@@ -21,11 +39,9 @@ chrome.runtime.onMessage.addListener
               url: links[i]
               // filename: "VIT Course Material"+ "/" + subject_name + "/" + teacher_name + "/" + links[i].replace(/^.*[\\\/]/, '')
             });
-            
-          }
-    }
 
-);
+          }
+}
 
 var getLocation = function(href) {
     var l = document.createElement("a");

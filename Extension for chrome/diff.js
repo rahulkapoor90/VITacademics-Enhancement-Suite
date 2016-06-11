@@ -122,46 +122,70 @@ store = function(data){
         }
     });
 }
+notify = function(changes){
+    var notifications=[];
+    changes.forEach(function(val){
+        if(isNaN(val.old) && !isNaN(val.new)){
+            notifications.push({"title" : val.code, "message" : "Marks uploaded for "+val.eval+" - "+val.new});
+        }
+        else{
+            notifications.push({"title" : val.code, "message" : "Marks changed for "+val.eval+" - "+val.new});
+        }
+    });
+    chrome.runtime.sendMessage({"type": "notifications", "list":notifications});
+}
 diff = function(data){
     chrome.storage.local.get("VITmarks", function(obj){
         if(Object.keys(obj).length){
             console.warn(obj);
             //  Changes returned as array of strings.
-            changes = check(obj.VITmarks.marks,data.marks);
+            notify(check(obj.VITmarks.marks,data.marks));
         }
     });
 }
 //  Changes will be logged as "<CourseCode>-<Evaluation>"
 check = function(P, Q){
-    changes = [];
+    var changes = [], obj={"code":"", "eval":"", "old":"", "new":""};
     eval = ["Assignment", "CAT1", "CAT2", "quiz1", "quiz2", "quiz3"];
     P.forEach(function(val,i){
         if(val.learning=="PBL"){
             val.marks.forEach(function(item, j){
                 if(item.score!=Q[i].marks[j].score){
-                    changes.push(val.code+"-"+item.title);
+                    changes.push({
+                        "code": val.code,
+                        "eval": val.title,
+                        "old" : item.score,
+                        "new" : Q[i].marks[j].score
+                    });
                 }
             });
         }
         else{
             eval.forEach(function(item){
                 if(val.marks[item]!=Q[i].marks[item]){
-                    changes.push(val.code+"-"+item);
+                    changes.push({
+                        "code": val.code,
+                        "eval": item,
+                        "old" : val.marks[item],
+                        "new" : Q[i].marks[item]
+                    });
                 }
             });
         }
     })
-    console.log("new changes-");
-    console.log(changes);
     if(changes.length){
-        alert("New Change");
-        alert(changes);
+        console.log("new changes-");
+        console.log(changes);
+        //alert("New Change-"+changes);
+    }
+    else{
+        console.log("No changes.");
     }
     return changes;
 }
-/*  Only for testing.
+//  Only for testing.
 //  For testing - Change in storage, try running in Extension/background console
-
+var test = function(){
     chrome.storage.local.get("VITmarks", function(obj){
         if(chrome.runtime.lastError){
             console.error(chrome.runtime.lastError);
@@ -183,5 +207,4 @@ check = function(P, Q){
             }
         });
     })
-
-*/
+}

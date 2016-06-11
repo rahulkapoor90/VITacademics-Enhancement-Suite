@@ -5,9 +5,8 @@
   "manifest_version": 2,
   "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
   "permissions": [
-            "downloads", "*://vtop.vit.ac.in/*", "storage"
+            "downloads", "*://vtop.vit.ac.in/*", "storage", "notifications"
           ],
-  "permissions": ["*://vtop.vit.ac.in/*"],
   "icons" : {
   	"16": "icon.png",
     "19": "icon19.png",
@@ -39,7 +38,8 @@
     "webRequestBlocking",
     "webRequest",
     "downloads",
-	"*://vtop.vit.ac.in/*"
+	"*://vtop.vit.ac.in/*",
+    "notifications"
   ],
   "content_scripts": [
     {
