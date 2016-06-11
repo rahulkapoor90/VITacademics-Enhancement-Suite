@@ -1,118 +1,120 @@
 a=[], marks={},url = "https://vtop.vit.ac.in/student/marks.asp?sem=WS";
 //  To send AJAX request to url, then parse html to marks objects.
-$.get(url, function(data){
-    obj = {marks:{}};
-    TRF=function(i, val){
-        if(i>1){
-            $(val).find('td').each(TDF);
-            if(Object.keys(obj)){
-                a.push(Object.assign({},obj));
-            }
-        }
+onload = function(){
+
+    $.get(url, function(data){
         obj = {marks:{}};
-    }
-    TDF=function(i, item){
-        switch (i) {
-            case 2:
+        TRF=function(i, val){
+            if(i>1){
+                $(val).find('td').each(TDF);
+                if(Object.keys(obj)){
+                    a.push(Object.assign({},obj));
+                }
+            }
+            obj = {marks:{}};
+        }
+        TDF=function(i, item){
+            switch (i) {
+                case 2:
                 obj["code"] =   $(item).text();
                 break;
-            case 3:
+                case 3:
                 obj["learning"] = "CBL";
                 break;
-            case 4:
+                case 4:
                 obj["type"] = $(item).text();
                 break;
-        }
-        if(i>4 && obj.type.includes("Theory")){
-            switch (i) {
-                case 6:
+            }
+            if(i>4 && obj.type.includes("Theory")){
+                switch (i) {
+                    case 6:
                     obj.marks["CAT1"] =   $(item).text();
                     break;
-                case 8:
+                    case 8:
                     obj.marks["CAT2"] =   $(item).text();
                     break;
-                case 10:
+                    case 10:
                     obj.marks["quiz1"] =   $(item).text();
                     break;
-                case 12:
+                    case 12:
                     obj.marks["quiz2"] =   $(item).text();
                     break;
-                case 14:
+                    case 14:
                     obj.marks["quiz3"] =   $(item).text();
                     break;
-                case 16:
+                    case 16:
                     obj.marks["Assignment"] =   $(item).text();
                     break;
+                }
             }
-        }
-        if(i>4 && obj.type.includes("Lab")){
-            switch (i) {
+            if(i>4 && obj.type.includes("Lab")){
+                switch (i) {
                     case 7:
                     obj.marks["LabCam"] =   $(item).text();
-                break;
+                    break;
+                }
             }
         }
-    }
-    //  For CBL courses.
-    $(data).filter('table').first().find('table:nth-of-type(1)').find('tr').each(TRF);
-    //--------
-    rowSpan = parseInt($(data).filter('table').first().find('table:nth-of-type(2)').find('tr:nth-of-type(2)').find('td:first').attr('rowspan'));
-    tA=[], O={}, A=[], obj={}, marks=[];
-    TRF=function(i, val){
-        if(!i){return}
-        switch (i%rowSpan) {
-            case 1:
+        //  For CBL courses.
+        $(data).filter('table').first().find('table:nth-of-type(1)').find('tr').each(TRF);
+        //--------
+        rowSpan = parseInt($(data).filter('table').first().find('table:nth-of-type(2)').find('tr:nth-of-type(2)').find('td:first').attr('rowspan'));
+        tA=[], O={}, A=[], obj={}, marks=[];
+        TRF=function(i, val){
+            if(!i){return}
+            switch (i%rowSpan) {
+                case 1:
                 tA=[];
                 $(val).find('td').each(title);
                 break;
-            case 3:
+                case 3:
                 $(val).find('td').each(weightage);
                 break;
-            case 0:
+                case 0:
                 $(val).find('td').each(score);
                 chng();
                 break;
+            }
         }
-    }
-    title = function(i, val){
-        switch (i) {
-            case 2:
+        title = function(i, val){
+            switch (i) {
+                case 2:
                 obj["code"]=$(val).text();
                 break;
-            case 3:
+                case 3:
                 obj["learning"] = "PBL";
                 break;
-            case 4:
+                case 4:
                 obj["type"]=$(val).text();
+            }
+            if(i>5){
+                tA.push($(val).text());
+            }
         }
-        if(i>5){
-            tA.push($(val).text());
+        weightage = function(i, val){
+            if(i){
+                var t = $(val).text();
+                A.push(Object.assign({}, {"title":tA[i-1], "weightage":t}));
+            }
         }
-    }
-    weightage = function(i, val){
-        if(i){
-            var t = $(val).text();
-            A.push(Object.assign({}, {"title":tA[i-1], "weightage":t}));
+        score = function(i, val){
+            if(i){
+                A[i-1]["score"] = $(val).text();
+            }
         }
-    }
-    score = function(i, val){
-        if(i){
-            A[i-1]["score"] = $(val).text();
+        chng = function(){
+            a.push(Object.assign({}, obj, {"marks":A}));
+            A=[];
+            obj={};
         }
-    }
-    chng = function(){
-        a.push(Object.assign({}, obj, {"marks":A}));
-        A=[];
-        obj={};
-    }
-    $(data).filter('table').first().find('table:nth-of-type(2)').find('tr').each(TRF);
-    reg = $('table:nth-of-type(2)').find('tr td:first').text().trim().split(" - ")[1]
-    marks = {"Reg":reg, "marks":a}
-    console.log(marks);
-    diff(marks);
-    store(marks);
-    console.log("done");
-});
+        $(data).filter('table').first().find('table:nth-of-type(2)').find('tr').each(TRF);
+        reg = $('table:nth-of-type(2)').find('tr td:first').text().trim().split(" - ")[1]
+        marks = {"Reg":reg, "marks":a}
+        console.log(marks);
+        diff(marks);
+        store(marks);
+    });
+}
 
 store = function(data){
     chrome.storage.local.set({"VITmarks":data}, function(){
