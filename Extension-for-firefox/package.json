@@ -5,6 +5,6 @@
   "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
   "author": "Rahul Kapoor",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "lib/main.js"
 }
