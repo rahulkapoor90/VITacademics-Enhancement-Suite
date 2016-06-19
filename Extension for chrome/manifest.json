@@ -52,7 +52,10 @@
                 "*://27.251.102.132/student/"
             ],
             "js":[
-                "captcha.js"
+                //Development version
+                "scripts/captcha/captcha.js",
+                //Production version
+                "scripts/captcha/captcha.min.js"
             ]
         },
         {
