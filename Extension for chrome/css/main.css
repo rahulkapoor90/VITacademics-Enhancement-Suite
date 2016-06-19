@@ -1,0 +1,157 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css');
+@import url('http://fonts.googleapis.com/css?family=Quicksand');
+
+#navbar{
+  background-color:#0D304E;
+  height:85px;
+  width:100%;
+  top:-18px;left:0;right:0;
+  position:relative;
+  border-bottom:#875555 5px solid;
+  font-family:'Quicksand', sans-serif;
+  color:#fff;
+ -webkit-box-shadow: inset 0px -4px 13px 0px rgba rgb(13,48,78);
+  -moz-box-shadow:    inset 0px -4px 13px 0px rgb(13,48,78);
+  box-shadow:         inset 0px -4px 13px 0px rgb(13,48,78);
+  z-index:999;
+}
+#navbar a{
+  color:#fff;
+  text-decoration:none;
+  font-family:'Quicksand', sans-serif;
+  font-size:20px;
+}
+#parent_link {
+	text-align:center;
+	float:right;
+	margin-left:340px;
+	margin-top:30px;
+	font-size:22px !important;
+	font-family:'Quicksand', sans-serif !important;
+}
+#navbar ul{
+  list-style-type:none;
+  float:left;
+  padding:0;
+  margin:0;
+  margin-left:5px;
+}
+#navbar ul li{
+  display:inline-block;
+  padding-top:5px;
+  font-size:16px;
+  padding-left:10px;
+  padding-right:8px;
+}
+#navbar li ul{
+  display:none;
+  background-color:#ED8C1C;
+  border:#111 1px solid;
+  position:absolute;
+  padding-right:25px;
+  z-index:9991;
+}
+#navbar li:hover ul{
+  display:block;
+}
+#navbar li ul li{
+  display:block;
+  margin-top:-6px;
+  padding:7px;
+  font-size:16px;
+}
+#navwrap{
+  margin-top:16px;
+}
+.element_avatar.tiny img{
+  width:24px;
+  height:24px;
+}
+#enjin-bar .right{
+  position:fixed;
+  font-size: 24px;
+  font-family: 'Quicksand', sans-serif;
+  top: 30px;
+  z-index:99999;
+}
+#logo_main {
+	margin-top: 3px;
+	float:left;
+	margin-left:5px;
+}
+table td tr:nth-child(5), tr:nth-child(4)
+{
+    display:none;
+}
+input[type="text"], input[type="password"] {
+	height:20px;
+  width:160px;
+	border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  padding: 0 8px;
+}
+
+.textbox {
+	margin-top:10px;
+}
+#rahultag {
+	text-decoration:none;
+	margin-top:10px;
+	color: #c0392b;
+}
+input[type="submit"]{
+    /* end of placing */
+	cursor: pointer;
+	width: 63px;
+    height: 24px;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 1px solid;
+    border-color: #1486f9 #0f7de9 #0d6acf;
+    background: #1993fb;
+    border-radius: 4px;
+	background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+input[name="Reset"] {
+	cursor: pointer;
+	width: 63px;
+    height: 24px;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 1px solid;
+    border-color: #1486f9 #0f7de9 #0d6acf;
+    background: #1993fb;
+    border-radius: 4px;
+	background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+input[name="forgotPassword"] {
+	cursor: pointer;
+	width: 140px;
+    height: 24px;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 1px solid;
+    border-color: #1486f9 #0f7de9 #0d6acf;
+    background: #1993fb;
+    border-radius: 4px;
+	background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.info-msg {
+  margin: 10px 0;
+  width: 400px;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #059;
+  background-color: #BEF;
+}
+body { background-image: none !important;
+ }
