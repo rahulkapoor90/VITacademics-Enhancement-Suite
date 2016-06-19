@@ -23,8 +23,8 @@
     },
     "background":{
         "scripts":[
-            "rename_bg.js",
-            "background.js"
+            "scripts/background/rename_bg.js",
+            "scripts/background/background.js"
         ],
         "persistent":true
     },
