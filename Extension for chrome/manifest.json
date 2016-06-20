@@ -70,7 +70,7 @@
                 "css/main.css"
             ],
             "js": [
-                "jquery.js",
+                "scripts/jquery.min.js",
                 "scripts/main.js"
             ]
         },
@@ -83,9 +83,9 @@
                 "css/CoursePage/course_page.css"
             ],
             "js": [
-                "jquery.js",
-                "course_page.js",
-                "content.js"
+                "scripts/jquery.min.js",
+                "scripts/coursePage/course_page.js",
+                "scripts/coursePage/content.js"
             ]
         },
         {
@@ -97,8 +97,8 @@
                 "css/CoursePage/course_page.css", "css/bootstrap.min.css"
             ],
             "js": [
-                "jquery.js",
-                "marks.js"
+                "scripts/jquery.min.js",
+                "scripts/marks/marks.js" //currently empty file
             ]
         },
         {
@@ -107,12 +107,12 @@
             ],
             "all_frames": true,
             "css": [
-                "course_view.css"
+                "css/course/course_view.css"
             ],
             "js": [
-                "jquery.js",
-                "course_view.js",
-                "content.js"
+                "scripts/jquery.min.js",
+                "scripts/coursePage/course_view.js",
+                "scripts/coursePage/content.js"
             ]
         },
         {
@@ -121,10 +121,10 @@
             ],
             "all_frames": true,
             "js": [
-                "stud_home.js"
+                "scripts/home/stud_home.js"
             ],
             "css": [
-                "spotlight.css"
+                "css/home/spotlight.css"
             ]
         },
         {
@@ -133,10 +133,10 @@
             ],
             "all_frames": true,
             "js": [
-                "error_msg.js"
+                "scripts/errorMsg/error_msg.js"
             ],
             "css": [
-                "error_msg.css"
+                "css/errorMsg/error_msg.css"
             ]
         },
         {
@@ -145,17 +145,17 @@
             ],
             "all_frames": true,
             "css": [
-                "timetable.css"
+                "css/timeTable/timetable.css"
             ],
             "js": [
-                "jquery.js",
-                "tableExport.js",
-                "jquery.base64.js",
-                "html2canvas.js",
-                "base64.js",
-                "sprintf.js",
-                "jspdf.js",
-                "timetable.js"
+                "scripts/jquery.min.js",
+                "scripts/timeTable/tableExport.js",
+                "scripts/timeTable/jquery.base64.js",
+                "scripts/timeTable/html2canvas.js",
+                "scripts/timeTable/base64.js",
+                "scripts/timeTable/sprintf.js",
+                "scripts/timeTable/jspdf.js",
+                "scripts/timeTable/timetable.js"
             ]
         },
         {
@@ -166,13 +166,13 @@
             ],
             "all_frames": true,
             "js": [
-                "jquery.js",
-                "attendance.js",
-                "attend.js"
+                "scripts/jquery.min.js",
+                "scripts/attendance/attendance.js",
+                "scripts/attendance/attend.js"
             ],
             "css": [
-                "home.css",
-                "attendance.css"
+                "css/attendance/home.css",
+                "css/attendance/attendance.css"
             ]
         },
         {
@@ -183,7 +183,7 @@
             ],
             "all_frames": true,
             "css": [
-                "misc.css"
+                "css/misc.css"
             ]
         },
         {
@@ -192,10 +192,10 @@
             ],
             "all_frames": true,
             "css": [
-                "stud_menu.css"
+                "css/menu/stud_menu.css"
             ],
             "js": [
-                "stud_menu.js"
+                "scripts/menu/stud_menu.js"
             ]
         },
         {
@@ -205,10 +205,10 @@
             ],
             "all_frames": true,
             "css": [
-                "fac_profile.css"
+                "css/faculty/fac_profile.css"
             ],
             "js": [
-                "fac_profile.js"
+                "scripts/faculty/fac_profile.js"
             ]
         },
         {
@@ -217,7 +217,7 @@
             ],
             "all_frames": true,
             "css": [
-                "changepswd.css"
+                "css/changePassword/changepswd.css"
             ]
         },
         {
@@ -226,14 +226,14 @@
             ],
             "all_frames": true,
             "js": [
-                "jquery.js",
-                "diff.js"
+                "scripts/jquery.min.js",
+                "scripts/home/diff.js"
             ]
         }
     ],
     "web_accessible_resources": [
         "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css",
         "https://fonts.googleapis.com/icon?family=Material+Icons",
-        "calc.js"
+        "scripts/webResourse/calc.js"
     ]
 }
