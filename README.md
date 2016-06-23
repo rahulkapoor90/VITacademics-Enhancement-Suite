@@ -6,7 +6,7 @@
 > *This Repository is highly inspired from [Reddit Enhancement Suite.](https://github.com/honestbleeps/Reddit-Enhancement-Suite "RES")*
 > *Special thanks to [Harshal Varday](https://github.com/hvarday).*
 
-> Chrome and Firefox extension that helps you to enhance your browsing experience at [https://academics.vit.ac.in/student/stud_login.asp] (https://academics.vit.ac.in/student/stud_login.asp)
+> Chrome and Firefox extension that helps you to enhance your browsing experience at [VIT Student Login] (https://academics.vit.ac.in/student/stud_login.asp)
 
 ## Introduction
 
