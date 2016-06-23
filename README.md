@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/rahulkapoor90/VITacademics-Enhancement-Suite/master/Media/logo.gif">
+# <img src="https://raw.githubusercontent.com/rahulkapoor90/VITacademics-Enhancement-Suite/master/Media/logo.gif" width="500">
 
 [![ghit.me](https://ghit.me/badge.svg?repo=rahulkapoor90/VITacademics-Enhancement-Suite)](https://ghit.me/repo/rahulkapoor90/VITacademics-Enhancement-Suite)
 [![Code Climate](https://codeclimate.com/github/rahulkapoor90/VITacademics-Enhancement-Suite/badges/gpa.svg)](https://codeclimate.com/github/rahulkapoor90/VITacademics-Enhancement-Suite)
@@ -16,8 +16,8 @@ Contributions are welcome. if you see any issue then open an issue and if you th
 
 ## Project structure
 
-  - `Extension for Chrome/`: Chrome-specific VITacademics ES files
-  - `Extension for firefox/`: firefox-specific VITacademics ES files
+  - `Extension for Chrome/`: Chrome-specific  VES files
+  - `Extension for firefox/`: firefox-specific VES files
   - `Media/`: Image source
   - `CHANGELOG.md`: self-explanatory 
   - `README.md`: YOU ARE HERE, unless you're browsing on GitHub.
