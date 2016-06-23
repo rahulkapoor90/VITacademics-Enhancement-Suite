@@ -1,9 +1,16 @@
+# <img src="https://raw.githubusercontent.com/rahulkapoor90/VITacademics-Enhancement-Suite/master/media/logo.gif">
+
 [![ghit.me](https://ghit.me/badge.svg?repo=rahulkapoor90/VITacademics-Enhancement-Suite)](https://ghit.me/repo/rahulkapoor90/VITacademics-Enhancement-Suite)
-# VITacademics Enhancement Suite ![](http://i.imgur.com/BSu8VGu.png)
+[![Code Climate](https://codeclimate.com/github/rahulkapoor90/VITacademics-Enhancement-Suite/badges/gpa.svg)](https://codeclimate.com/github/rahulkapoor90/VITacademics-Enhancement-Suite)
 
-Chrome extension that helps you to enhance your browsing experience at [https://academics.vit.ac.in/student/stud_login.asp] (https://academics.vit.ac.in/student/stud_login.asp)
+> *This Repository is highly inspired from [Reddit Enhancement Suite.](https://github.com/honestbleeps/Reddit-Enhancement-Suite "RES")*
+> *Special thanks to [Harshal Varday](https://github.com/hvarday).*
 
-Inspired by Reddit Enhancement Suite.
+> Chrome and Firefox extension that helps you to enhance your browsing experience at [https://academics.vit.ac.in/student/stud_login.asp] (https://academics.vit.ac.in/student/stud_login.asp)
+
+## Introduction
+
+Hi there! Thanks for checking out VITacademics ES on GitHub.
 
 ## Contributions
 
@@ -46,24 +53,16 @@ Installation (for Users)
 [Download](https://addons.mozilla.org/en-US/firefox/addon/vit-enhancement-suite/) BETA addon for Mozilla Firefox.
 
 
+##### Building in Chrome
 
-## Manual Installation
+  1. Go to `Menu->Tools->Extensions` and tick the `Developer Mode` checkbox
+  2. Choose `Load unpacked extension` and point it to the `dist/chrome` folder. Make sure you only have one VITacademics ES version running at a time.
+  3. Any time you make changes to the script, you must go back to the `Menu->Tools->Extensions` page and `Reload` the extension.
 
-### Chrome
+##### Building in Firefox
 
-1. Download the zip file.
-
-2. Click on the three lines shown on the top-right corner in your browser, which will open a menu for you. Click on “Settings.” You will be redirected to your browser’s settings page.
-
-3. Once on the Settings page, click on the “Extensions” link given in the left-hand side of your screen. It will take you to the extensions page that shows all the extensions you have installed in your browser.
-
-4. On the extensions page, you should see a checkbox on the top saying “Developer mode.” Click on it.
-
-5. Click on Load unpacked extension...
-
-6. Once loaded, it will ask if you want to add the extension to your browser. Click on “Add” to manually install the extension.
-
-7. Done.
+  1. Install [jpm](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm) using `npm`: `npm install -g jpm`
+  2. Navigate to `dist/firefox` and run the command `jpm run`, which should launch a new Firefox browser using a temporary profile with only VITacademics ES installed.
 
 
 ## Screenshots
