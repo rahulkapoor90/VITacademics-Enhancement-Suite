@@ -16,17 +16,6 @@ Hi there! Thanks for checking out VITacademics ES on GitHub.
 
 Contributions are welcome. if you see any issue then open an issue and if you think you can fix it then start working on it by forking this project.
 
-Installation (for Users)
--------------------------
-
-### Chrome
-[Download](https://chrome.google.com/webstore/detail/vit-academics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb?hl=en-US&gl=IN) it from Chrome Web Store.
-
-### Firefox 
-
-[Download](https://addons.mozilla.org/en-US/firefox/addon/vit-enhancement-suite/) BETA addon for Mozilla Firefox.
-
-
 ##### Building in Chrome
 
   1. Go to `Menu->Tools->Extensions` and tick the `Developer Mode` checkbox
