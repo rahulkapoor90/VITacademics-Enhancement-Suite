@@ -8,13 +8,19 @@
 
 > Chrome and Firefox extension that helps you to enhance your browsing experience at [VIT Student Login] (https://academics.vit.ac.in/student/stud_login.asp)
 
-## Introduction
-
-Hi there! Thanks for checking out VITacademics ES on GitHub.
+For general documentation, visit the [VITacademics Enhancement Suite Wiki](https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/wiki).
 
 ## Contributions
 
 Contributions are welcome. if you see any issue then open an issue and if you think you can fix it then start working on it by forking this project.
+
+## Project structure
+
+  - `Extension for Chrome/`: Chrome-specific VITacademics ES files
+  - `Extension for firefox/`: firefox-specific VITacademics ES files
+  - `Media/`: Image source
+  - `CHANGELOG.md`: self-explanatory 
+  - `README.md`: YOU ARE HERE, unless you're browsing on GitHub.
 
 ##### Building in Chrome
 
@@ -26,16 +32,3 @@ Contributions are welcome. if you see any issue then open an issue and if you th
 
   1. Install [jpm](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm) using `npm`: `npm install -g jpm`
   2. Navigate to `dist/firefox` and run the command `jpm run`, which should launch a new Firefox browser using a temporary profile with only VITacademics ES installed.
-
-
-## Screenshots
-
-![Secure Loging] (http://i.imgur.com/CvBvrRQ.png)
-
-![Clean design] (http://i.imgur.com/T0Wdh2K.png)
-
-![Download Course Material] (http://i.imgur.com/yStmjHk.png)
-
-![Export Timetable] (http://i.imgur.com/aP1iUrb.png)
-
-![Tweaks everywhere] (http://i.imgur.com/8fpdOye.png)
