@@ -208,7 +208,9 @@
                 "css/faculty/fac_profile.css"
             ],
             "js": [
-                "scripts/faculty/fac_profile.js"
+                "scripts/jquery.min.js",
+                "scripts/faculty/fac_profile.js",
+                "scripts/faculty/fsearch.js"
             ]
         },
         {
