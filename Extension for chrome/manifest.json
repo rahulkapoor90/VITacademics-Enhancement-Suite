@@ -213,6 +213,11 @@
                 "scripts/faculty/fsearch.js"
             ]
         },
+          {
+    "matches": ["*://vtop.vit.ac.in/student/forgot_pswd.asp"],
+    "css": ["css/font-awesome.css","css/forgot_pswd/forgot.css"],
+    "js": ["scripts/jquery.min.js","scripts/captcha/captcha.js"]
+  },
         {
             "matches": [
                 "*://vtop.vit.ac.in/student/changepswd.asp"
