@@ -252,8 +252,7 @@
             ],
             "all_frames": true,
             "js": [
-                "scripts/jquery.min.js",
-                "scripts/home/message.js"
+                "scripts/jquery.min.js"
             ],
             "css": [
                 "css/home/remove_hr.css"
