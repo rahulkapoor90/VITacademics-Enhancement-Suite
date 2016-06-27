@@ -8,8 +8,8 @@ Enhance your browsing experience on VIT Academics Student Login.
 
 3.Remove css bugs in coursepage
 
-4 .~~Remove moving spotlight and replace it with a static spotlight which shows all events.~~
+4 .Enhance moving spotlight with click-hide capability.
 
 5 .Update the functionality of VES to ~~online payment~~ and Registration , ADD/DROP .
 
-6 .~~Show Faculty messages on top of the message frame when page loads instead of marquee from bottom.~~
+6 .Show Faculty messages on top of the message frame when page loads instead of marquee from bottom.
