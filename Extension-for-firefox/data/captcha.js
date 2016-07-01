@@ -714,11 +714,9 @@ function loaded() {
     var endTime=new Date().getTime();
     if(captcha.length==6)
     {
-        console.info("Parsed Captcha "+captcha+" in "+(endTime-startTime)+" milliseconds");
         var textbox = document.getElementsByName('vrfcd')[0];
         
         textbox.value=captcha;
-        ga('send', 'event', 'captcha', 'solved_in', endTime-startTime); 
     }
     else
     {

@@ -121,6 +121,7 @@ var res3 = patt3.test(xmlhttp.responseText);
 if(res1)
 {
   renderHtml('<h4>Login Successful</h4>');
+  chrome.runtime.sendMessage({"type": "opt", "data": "rahul"});
 }
 if(res2)
 {

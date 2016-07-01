@@ -1,4 +1,4 @@
-a=[], marks={},url = "https://vtop.vit.ac.in/student/marks.asp?sem=WS";
+a=[], marks={},url = "https://vtop.vit.ac.in/student/class_message_view.asp?sem=WS";
 //  To send AJAX request to url, then parse html to marks objects.
 onload = function(){
 
@@ -194,7 +194,7 @@ check = function(P, Q){
 }
 //  Only for testing.
 //  For testing - Change in storage, try running in Extension/background console
-var test = function(){
+/*var test = function(){
     chrome.storage.local.get("VITmarks", function(obj){
         if(chrome.runtime.lastError){
             console.error(chrome.runtime.lastError);
@@ -217,3 +217,4 @@ var test = function(){
         });
     })
 }
+*/

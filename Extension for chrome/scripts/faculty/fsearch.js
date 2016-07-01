@@ -1,3 +1,4 @@
+$("input, select, textarea").attr("autocomplete", "off");
 $("input[name='faculty']").on("change input", function(event){
     a($("input[name='faculty']").val());
 })

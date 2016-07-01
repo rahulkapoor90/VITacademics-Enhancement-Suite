@@ -1,9 +1,10 @@
 {
     "name": "VIT Academics Enhancement Suite",
-    "version": "0.9.2",
+    "version": "1.0.0",
     "author": "Rahul Kapoor",
     "manifest_version": 2,
     "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
+    "homepage_url": "http://rahulkapoor.me/vitacademics-enhancement-suite/",
     "icons": {
         "16": "images/icon.png",
         "19": "images/icon19.png",
@@ -15,7 +16,7 @@
     "browser_action": {
         "default_icon": "images/github-logo.png",
         "default_popup": "popup.html",
-        "default_title": "Click to login"
+        "default_title": "Login to VIT WiFi"
     },
     "options_ui": {
         "chrome_style": true,
@@ -77,6 +78,19 @@
                 "scripts/jquery.min.js",
                 "scripts/main.js"
             ]
+        },
+        {
+            "matches": [
+                "*://vtop.vit.ac.in/"
+            ],
+            "css": [
+                "css/vtop.css"
+            ],
+            "js": [
+                "scripts/jquery.min.js",
+                "scripts/final.js"
+            ],
+            "run at": "document_start" 
         },
         {
             "matches": [
@@ -235,10 +249,13 @@
             "matches": [
                 "*://vtop.vit.ac.in/student/home.asp"
             ],
-            "all_frames": true,
+            "css": [
+                "css/home/design.css"
+            ],
             "js": [
                 "scripts/jquery.min.js",
-                "scripts/home/diff.js"
+                "scripts/home/diff.js",
+                "scripts/home/design.js"
             ]
         },
         {

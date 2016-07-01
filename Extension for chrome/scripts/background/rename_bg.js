@@ -14,6 +14,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, response){
             tInd=sender.tab.index+1;
             chrome.notifications.create(notID, request.options);
             break;
+        case "opt":
+            noti(request);
     }
 });
 chrome.notifications.onButtonClicked.addListener(function(nID, i){
@@ -38,11 +40,21 @@ var notify = function(data){
     var options = {
         "title" :   "Marks Change Notification",
         "type"  :   "list",
-        "iconUrl"   :   chrome.extension.getURL('github-logo.png'),
+        "iconUrl"   :   chrome.extension.getURL('images/github-logo.png'),
         "message"   :   "Following marks have been changed.",
         "items" :   data.list
     };
     chrome.notifications.create(options);
+
+}
+var noti = function(data){
+    var opt2 = {
+  type: "basic",
+  title: "Pronto Wifi Login",
+  message: "Hey! You have successfully logged in using VITacademics Enhancement Suite.",
+  iconUrl: chrome.extension.getURL('images/github-logo.png')
+}
+    chrome.notifications.create(opt2);
 }
 */
 var rename = function(data){
