@@ -1,17 +1,40 @@
 subject_name = "";
 teacher_name = "";
-
+var counter=0, notID="", tInd=0;
 chrome.runtime.onMessage.addListener(function(request, sender, response){
     switch (request.type) {
         case "rename":
             rename(request);
             break;
         case "notifications":
-            notify(request);
+            notID=""
+            if(request.nMsg){
+                notID="M"+(++counter);
+            }
+            tInd=sender.tab.index+1;
+            chrome.notifications.create(notID, request.options);
             break;
     }
 });
-
+chrome.notifications.onButtonClicked.addListener(function(nID, i){
+    if(nID.length==2 && nID[0]=="M"){
+        switch (i) {
+            case 0:
+                alert("read");
+                chrome.tabs.create({
+                    "url"   :   "https://vtop.vit.ac.in/student/class_message_view.asp?sem=SS",
+                    "index" :   tInd
+                })
+                break;
+            case 1:
+                chrome.notifications.clear(nID);
+                break;
+        }
+    }
+    console.log(nID);
+    console.log(i);
+})
+/*
 var notify = function(data){
     var options = {
         "title" :   "Marks Change Notification",
@@ -22,7 +45,7 @@ var notify = function(data){
     };
     chrome.notifications.create(options);
 }
-
+*/
 var rename = function(data){
           links = data.links;
           subject_name = data.subject;

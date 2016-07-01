@@ -134,7 +134,14 @@ notify = function(changes){
             notifications.push({"title" : val.code, "message" : "Marks changed for "+val.eval+" - "+val.new});
         }
     });
-    chrome.runtime.sendMessage({"type": "notifications", "list":notifications});
+    var options = {
+        "title" :   "Marks Change Notification",
+        "type"  :   "list",
+        "iconUrl"   :   chrome.extension.getURL('images/github-logo.png'),
+        "message"   :   "Following marks have been changed.",
+        "items" :   notifications
+    };
+    chrome.runtime.sendMessage({"type": "notifications", "options":options});
 }
 diff = function(data){
     chrome.storage.local.get("VITmarks", function(obj){

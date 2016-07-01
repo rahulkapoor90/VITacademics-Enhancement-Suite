@@ -236,6 +236,16 @@
                 "scripts/jquery.min.js",
                 "scripts/home/diff.js"
             ]
+        },
+        {
+            "matches":  [
+                "*://vtop.vit.ac.in/student/stud_home.asp"
+            ],
+            "all_frames": true,
+            "js": [
+                "scripts/jquery.min.js",
+                "scripts/home/msg.js"
+            ]
         }
     ],
     "web_accessible_resources": ["https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css","https://fonts.googleapis.com/icon?family=Material+Icons","calc.js"]
