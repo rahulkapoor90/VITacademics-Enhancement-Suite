@@ -20,7 +20,6 @@ chrome.notifications.onButtonClicked.addListener(function(nID, i){
     if(nID.length==2 && nID[0]=="M"){
         switch (i) {
             case 0:
-                alert("read");
                 chrome.tabs.create({
                     "url"   :   "https://vtop.vit.ac.in/student/class_message_view.asp?sem=SS",
                     "index" :   tInd

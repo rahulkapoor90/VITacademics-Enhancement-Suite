@@ -16,11 +16,11 @@ function init() {
         chrome.storage.local.get("VITMsg", function(obj){
             var n=false, d, ind=[];
             Object.keys(obj).length ? d = obj.VITMsg.timeStamps :   n = true;
+            if(n){
+                return;
+            }
             data.timeStamps.forEach(function(val, i){
-                if(n){
-                    ind.push(i);
-                }
-                else if(d.lastIndexOf(val) == -1){
+                if(d.lastIndexOf(val) == -1){
                     ind.push(i);
                 }
             });
