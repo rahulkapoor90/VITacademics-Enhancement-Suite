@@ -4,14 +4,6 @@ s.src = chrome.extension.getURL('calc.js');
 s.onload = function() {
     s.parentNode.removeChild(s);
 };
-var readyState=setInterval(function(){
-    if(document.readyState==='complete')
-    {
-        clearInterval(readyState);
-        init();
-    }
-},10);
-
 function init()
 {
     var d = document.getElementsByTagName("table")[3];
@@ -54,3 +46,4 @@ function init()
         }
     }
 }
+onload = init();

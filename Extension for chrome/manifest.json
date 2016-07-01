@@ -90,7 +90,7 @@
                 "scripts/jquery.min.js",
                 "scripts/final.js"
             ],
-            "run at": "document_start" 
+            "run at": "document_start"
         },
         {
             "matches": [
@@ -186,7 +186,8 @@
             "js": [
                 "scripts/jquery.min.js",
                 "scripts/attendance/attendance.js",
-                "scripts/attendance/attend.js"
+                "scripts/attendance/attend.js",
+                "scripts/attendance/lastDate.js"
             ],
             "css": [
                 "css/attendance/home.css",
