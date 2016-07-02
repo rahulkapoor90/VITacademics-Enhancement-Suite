@@ -46,7 +46,7 @@ var notify = function(data){
     };
     chrome.notifications.create(options);
 
-}
+}*/
 var noti = function(data){
     var opt2 = {
   type: "basic",
@@ -56,7 +56,7 @@ var noti = function(data){
 }
     chrome.notifications.create(opt2);
 }
-*/
+
 var rename = function(data){
           links = data.links;
           subject_name = data.subject;
@@ -85,7 +85,7 @@ var getLocation = function(href) {
 
 
 chrome.downloads.onDeterminingFilename.addListener(function(item, suggest) {
-  if (getLocation(item.url).hostname == "vtop.vit.ac.in" || getLocation(item.url).hostname == "27.251.102.132")
+  if (getLocation(item.url).hostname == "vtop.vit.ac.in" || getLocation(item.url).hostname == "115.248.50.212")
   {
     suggest({filename: "VIT Downloads"+ "/" + subject_name + "/" + teacher_name + "/" + item.filename.split("_").slice(4).join("_")});
     console.log(getLocation(item.url).hostname);

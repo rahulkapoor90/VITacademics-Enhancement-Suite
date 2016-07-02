@@ -55,11 +55,9 @@
                 "*://academics.vit.ac.in/studpay/stud_login.asp"
             ],
             "js": [
-                //Development version
+            
                 "scripts/captcha/captcha.js",
-                //Production version
                 "scripts/captcha/captcha.min.js",
-                //Added support to jquery
                 "scripts/jquery.min.js"
             ]
         },
@@ -114,7 +112,7 @@
             ],
             "js": [
                 "scripts/jquery.min.js",
-                "scripts/marks/marks.js" //currently empty file
+                "scripts/marks/marks.js"
             ]
         },
         {
