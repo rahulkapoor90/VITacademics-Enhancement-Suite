@@ -97,3 +97,26 @@ window.addEventListener('message', function(event) {
   chrome.runtime.sendMessage(message);
   // console.log(message.links);
 });
+
+//**    for the download all button.
+
+var init = function(){
+	var links = [];
+	var dA = function(){
+		alert("dAll.");
+		var subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[9].innerText;
+		var teacher_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[11].innerText;
+		chrome.runtime.sendMessage({
+			"type":"rename", "links": links, "subject": subject_name, "teacher": teacher_name
+		})
+	}
+	var a=`<tr>
+	<td bgcolor="#5A768D" width="22%" height="30"><font color="#FFFFFF">Download All Contents</font></td>
+			  <td width="75" bgcolor="#EDEADE">  <input class="submit" type="submit" value="Download All"> </td>
+	</tr>`
+	a=$(a);
+	$('table:nth-of-type(2)').find('tbody').prepend(a);
+	$('input[name="downloadSelect"]').each(function(i, val){links.push($(val).attr('value'))});
+	$(a).find('input:submit').click(dA);
+}
+onload = init();
