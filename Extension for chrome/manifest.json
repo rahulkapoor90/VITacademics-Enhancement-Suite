@@ -66,9 +66,7 @@
         {
             "matches": [
                 "*://vtop.vit.ac.in/student/stud_login.asp",
-                "*://vtop.vit.ac.in/student/",
-                "*://academics.vit.ac.in/studpay/",
-                "*://academics.vit.ac.in/studpay/stud_login.asp"
+                "*://vtop.vit.ac.in/student/"
             ],
             "css": [
                 "css/font-awesome.css",
