@@ -1,6 +1,6 @@
 {
     "name": "VIT Academics Enhancement Suite",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Rahul Kapoor",
     "manifest_version": 2,
     "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
@@ -23,10 +23,7 @@
         "page": "options.html"
     },
     "background": {
-        "scripts": [
-            "scripts/background/rename_bg.js",
-            "scripts/background/background.js"
-        ],
+        "page": "background.html",
         "persistent": true
     },
     "permissions": [
@@ -266,5 +263,6 @@
             ]
         }
     ],
-    "web_accessible_resources": ["https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css","https://fonts.googleapis.com/icon?family=Material+Icons","calc.js"]
+    "web_accessible_resources": ["https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css","https://fonts.googleapis.com/icon?family=Material+Icons","calc.js"],
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
