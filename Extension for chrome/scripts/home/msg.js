@@ -58,8 +58,13 @@ function init() {
         "messages"  :   Object.assign({}, a)
     }
     console.log(o);
+    // help(o.messages , o.timeStamps.length);
     diffMsg(o);
     store(o);
+    function help_final() {
+        return o.messages;
+    }
+    window.message_object = help_final;
 }
 
 //  Only for testing.
