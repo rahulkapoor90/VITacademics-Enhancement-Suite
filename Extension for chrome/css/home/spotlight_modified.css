@@ -1,0 +1,48 @@
+#attendance{
+	height: 200px;
+    width: 300px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-top: 150px;
+	/* border :2px solid black; */
+	border-radius: 5px;
+	margin-left: 50px;
+}
+
+#message{
+	height: 200px;
+    width: 300px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-top: 150px;
+	/* border :2px solid black; */
+	border-radius: 5px;
+}
+
+#spotlight{
+	height: 200px;
+    width: 300px;
+    padding-right: 20px;
+    margin-right: 20px;
+    margin-top: 150px;
+	/* border :2px solid black; */
+	border-radius: 5px;
+}
+
+.title-box{
+	/* width:200px;
+	height:200px; */
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+	background-color:#3370B1;
+	text-align : center;
+}
+
+button{
+	padding: 10px;
+}
+
+.main-div{
+	border: 1px solid black;
+}

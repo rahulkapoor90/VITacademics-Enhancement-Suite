@@ -257,9 +257,14 @@
                 "*://vtop.vit.ac.in/student/stud_home.asp"
             ],
             "all_frames": true,
+            "css":[
+                "css/home/spotlight_modified.css",
+                "css/bootstrap.min.css"
+            ],
             "js": [
                 "scripts/jquery.min.js",
-                "scripts/home/msg.js"
+                "scripts/home/msg.js",
+                "scripts/home/modify_spotlight.js"
             ]
         }
     ],
