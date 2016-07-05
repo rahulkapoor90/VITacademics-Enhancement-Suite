@@ -1,31 +1,31 @@
 #attendance{
-	height: 200px;
-    width: 300px;
+	height: 250px;
+    width: 310px;
     padding-right: 20px;
     margin-right: 20px;
     margin-top: 150px;
-	/* border :2px solid black; */
+	border :2px solid black;
 	border-radius: 5px;
-	margin-left: 50px;
+	margin-left: 10px;
 }
 
 #message{
-	height: 200px;
-    width: 300px;
+	height: 250px;
+    width: 310px;
     padding-right: 20px;
     margin-right: 20px;
     margin-top: 150px;
-	/* border :2px solid black; */
+	border :2px solid black;
 	border-radius: 5px;
 }
 
 #spotlight{
-	height: 200px;
-    width: 300px;
+	height: 250px;
+    width: 310px;
     padding-right: 20px;
     margin-right: 20px;
     margin-top: 150px;
-	/* border :2px solid black; */
+	border :2px solid black;
 	border-radius: 5px;
 }
 
@@ -43,6 +43,18 @@ button{
 	padding: 10px;
 }
 
-.main-div{
+
+hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+.sub-div{
+	-webkit-border-radius: 1em;
+	        border-radius: 1em;
 	border: 1px solid black;
+	
 }
