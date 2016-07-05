@@ -1,10 +1,10 @@
 message_object = message_object()
         str = JSON.stringify(message_object, null, 4);
 
-console.log(str)
+// console.log(str)
 
 $(document).ready(function() {
-    console.log("ready!");
+    // console.log("ready!");
     $('table').hide();
     $('body').append('<div class="container><div class="row" id="main-row" ></div></div>');
     $('#main-row').append('<div class="col-md-4 text-center" id="attendance"><button type="button" class="btn btn-primary"><span class="text-right">Attendance<span></button></div>');
@@ -15,7 +15,10 @@ $(document).ready(function() {
 
     var table = $("table tbody table");
 
-    //console.log(table)
+    var span = $('table').find('span')
+    $('#attendance').append(span[4]);
+
+    // console.log(table)
     var element = table[1];
 
 
