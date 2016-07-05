@@ -29,8 +29,9 @@ $(document).ready(function() {
     });
         //console.log(spotlight_message)
     $('#spotlight').append('<marquee behaviour="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay="75"  direction="up" width="100%" height="210px">'+spotlight_message+'</marquee>')
-    $('#message').append('<div class="main-div"></div>')
-    $('.main-div').wrap('<marquee behaviour="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay="75" direction="up" width="100%" height="210px"></marquee>')
+    // $('#message').append('<div class="main-div"></div>')
+    var html ='<div class="main-div">';
+
 
     // $('.main-div').append('<div class="sub-div"></div>')
     // console.log(message_object)
@@ -40,15 +41,17 @@ $(document).ready(function() {
         // console.log(str)
 
         var  inner = message_object[messages]
-        console.log(inner.length)
+        // console.log(inner.length)
+            html+='<div class="sub-div">';
+            html+='<div class="faculty">'+inner.Faculty+'</div>';
+            html+='<div class="course">'+inner.Course+'</div>';
+            html+='<div class="message">'+inner.Message.replace(/[^\x20-\x7E]/gmi, "")+'</div>';
+            html+='<div class="sent">'+inner['Sent On']+'</div></div>';
 
-        $('.main-div').append('<div class="faculty">'+inner.Faculty+'</div>')
-        $('.main-div').append('<div class="course">'+inner.Course+'</div>')
-        $('.main-div').append('<div class="message">'+inner.Message.replace(/[^\x20-\x7E]/gmi, "")+'</div>')
-        $('.main-div').append('<div class="sent">'+inner['Sent On']+'</div>')
-        $('.main-div').append('<hr />')
+        }
+$('#message').append(html+'</div>');
+    $('.main-div').wrap('<marquee behaviour="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay="75" direction="up" width="100%" height="210px"></marquee>')
 
-    }
 });
 
 
