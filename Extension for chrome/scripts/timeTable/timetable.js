@@ -1,8 +1,8 @@
-$(document).ready(function () {
+//$(document).ready(function () {
 	//$('table:first-child ul:first-child').hide();
-        $('table:nth-child(1) td:nth-child(15), td:nth-child(14)').hide();
-});
-var textbox = document.getElementsByName('regular')[0];
+ //       $('table:nth-child(1) td:nth-child(15), td:nth-child(14)').hide();
+//});
+var textbox = document.getElementsByName('course_regular')[0];
     var para = document.createElement("input");
 	var png = document.createElement("input");
 	var pdf = document.createElement("input");
