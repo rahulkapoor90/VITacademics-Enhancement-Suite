@@ -66,6 +66,9 @@
   width:24px;
   height:24px;
 }
+#cbutton{
+  margin-top: 40px !important;
+}
 #enjin-bar .right{
   position:fixed;
   font-size: 24px;

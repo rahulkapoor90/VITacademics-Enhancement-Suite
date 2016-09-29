@@ -182,10 +182,6 @@
                 "scripts/attendance/attendance.js",
                 "scripts/attendance/attend.js",
                 "scripts/attendance/lastDate.js"
-            ],
-            "css": [
-                "css/attendance/home.css",
-                "css/attendance/attendance.css"
             ]
         },
         {

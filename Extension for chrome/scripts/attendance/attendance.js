@@ -15,7 +15,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 	var link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/orange/pace-theme-flat-top.css';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flat-top.css';
     document.getElementsByTagName('head')[0].appendChild(link);
     var script1 = document.createElement('script');
     script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js';

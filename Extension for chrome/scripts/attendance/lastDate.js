@@ -22,7 +22,7 @@ var init = function(){
         });
     }
     var addC = function(data){
-        $('table:nth-of-type(2)').find('tr').each(function(i, val){
+        $('table:nth-of-type(3)').find('tr').each(function(i, val){
             if(i){
                 var elem = $("<td></td>").text(data[i-1].toString());
                 $(val).append(elem);

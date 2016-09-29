@@ -6,7 +6,7 @@ s.onload = function() {
 };
 function init()
 {
-    var d = document.getElementsByTagName("table")[3];
+    var d = document.getElementsByTagName("table")[5];
     d = d.childNodes[0];
     for (var i = 0; i < d.childNodes[0].childNodes.length; i++) {
 

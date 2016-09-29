@@ -5,8 +5,12 @@ var link = document.createElement('link');
     document.getElementsByTagName('head')[0].appendChild(link);
 
 document.getElementsByTagName('head')[0].appendChild(link);
+//hide the upper part and the default side links
 document.getElementsByTagName('table')[0].style.display = "none";
 document.getElementsByTagName('table')[2].style.display = "none";
+
+
+// make custom header
 var nav = document.getElementsByTagName('table')[0];
 var div1 = document.createElement("table");
 div1.setAttribute("width", "100%");
@@ -51,10 +55,11 @@ div2.appendChild(div4);
 div1.appendChild(div2);
 
 nav.parentElement.insertBefore(div1, nav);
+//end custom header
 
 var tab = document.getElementsByTagName('table')[3];
 var tabl = document.createElement("table");
-tabl.setAttribute("height", "130");
+tabl.setAttribute("height", "180");
 tabl.setAttribute("width", "204");
 tabl.setAttribute("border", "0");
 tabl.setAttribute("cellpadding", "0");
@@ -86,16 +91,33 @@ im1.setAttribute("src","https://i.imgur.com/zow3cXY.png");
 //im1.setAttribute("width","178");
 //im1.setAttribute("height","35");
 
+
+var tr2 = document.createElement("tr");
+var tad2 = document.createElement("td");
+tad2.setAttribute("align","center");
+var hr2 = document.createElement("a");
+hr2.setAttribute("href","https://vtop.vit.ac.in/faculty/fac_login.asp");
+hr2.setAttribute("target","_blank");
+var im2 = document.createElement("img");
+im2.setAttribute("border","0");
+im2.setAttribute("src","https://i.imgur.com/jMSJbK6.png");
+
 hr1.appendChild(im1);
 tad1.appendChild(hr1);
 tr1.appendChild(tad1);
+
+hr2.appendChild(im2);
+tad2.appendChild(hr2);
+tr2.appendChild(tad2);
 
 hr.appendChild(im);
 tad.appendChild(hr);
 tr.appendChild(tad);
 
+tbo.appendChild(tr2);
 tbo.appendChild(tr);
 tbo.appendChild(tr1);
+
 tabl.appendChild(tbo);
 
 tab.parentElement.insertBefore(tabl, tab);
