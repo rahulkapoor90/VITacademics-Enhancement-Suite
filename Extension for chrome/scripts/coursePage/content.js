@@ -24,10 +24,9 @@ for (i=0; i<s.length; i++)
 	att.value = s[i].innerText;
 	box.setAttributeNode(att);
 
-	s[i].parentNode.insertBefore(box, s[i])
+	s[i].parentNode.insertBefore(box, s[i]);
 }
 
-//injecting script to addon click event for the multi download button
 var script = document.createElement("script");
 
 var script_content = `
@@ -39,8 +38,8 @@ for (i = 0; i<checkedBoxes.length; i++)
 	links.push(checkedBoxes[i].value);
 	// links[checkedBoxes[i].getAttribute("data-filename")] = checkedBoxes[i].value;
 }
-subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[9].innerText;
-teacher_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[11].innerText;
+subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[8].innerText;
+teacher_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[12].innerText;
 window.postMessage({links: links, subject: subject_name, teacher: teacher_name}, '*');
 `
 
@@ -50,9 +49,6 @@ script.textContent = "function download(){\n" + script_content + "}";
 script.parentNode.removeChild(script);
 
 
-
-
-// injecting html for the multi download button
 var button = document.createElement("input");
 
 var att = document.createAttribute("type");
@@ -75,7 +71,7 @@ var att = document.createAttribute("onclick");
 att.value = "download()";
 button.setAttributeNode(att);
 
-document.getElementsByName("coursepage")[0].appendChild(button)
+document.getElementsByName("courseplan")[0].appendChild(button)
 
 
 
@@ -93,7 +89,7 @@ window.addEventListener('message', function(event) {
     return;
   }
   //	request type
-  message.type = "rename";
+  //message.type = "rename";
   chrome.runtime.sendMessage(message);
   // console.log(message.links);
 });
@@ -103,9 +99,9 @@ window.addEventListener('message', function(event) {
 var init = function(){
 	var links = [];
 	var dA = function(){
-		alert("dAll.");
-		var subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[9].innerText;
-		var teacher_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[11].innerText;
+		alert("VES will now download all the study material available.");
+		var subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[8].innerText;
+		var teacher_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[12].innerText;
 		chrome.runtime.sendMessage({
 			"type":"rename", "links": links, "subject": subject_name, "teacher": teacher_name
 		})

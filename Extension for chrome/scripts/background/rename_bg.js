@@ -85,9 +85,9 @@ var getLocation = function(href) {
 
 
 chrome.downloads.onDeterminingFilename.addListener(function(item, suggest) {
-  if (getLocation(item.url).hostname == "vtop.vit.ac.in" || getLocation(item.url).hostname == "115.248.50.212")
+  if (getLocation(item.url).hostname == "vtop.vit.ac.in" || getLocation(item.url).hostname == "27.251.102.132")
   {
-    suggest({filename: "VIT Downloads"+ "/" + subject_name + "/" + teacher_name + "/" + item.filename.split("_").slice(4).join("_")});
+    suggest({filename: "VIT Downloads"+ "/" + subject_name + "/" + teacher_name + "/" + item.filename});
     console.log(getLocation(item.url).hostname);
   }
 
