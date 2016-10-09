@@ -4,11 +4,28 @@ s.src = chrome.extension.getURL('calc.js');
 s.onload = function() {
     s.parentNode.removeChild(s);
 };
+
+function fixVITCode(){
+    var d = document.getElementsByTagName("table")[4];
+    d = d.getElementsByTagName('tbody')[0]
+    d = d.getElementsByTagName('tr');
+    console.log(d);
+    for(var i=1; i<d.length; i++){
+        var formTag = d[i].getElementsByTagName('form')[0];
+        temp = formTag.outerHTML.split('><');
+        temp['0']+='>';
+        temp['1'] = '<'+temp['1'];
+        var viewCol = d[i].getElementsByTagName('td')[10];
+        viewCol.innerHTML = temp['0']+viewCol.innerHTML+temp['1'];
+    }
+}
+
 function init()
 {
-    var d = document.getElementsByTagName("table")[5];
-    d = d.childNodes[0];
-    for (var i = 0; i < d.childNodes[0].childNodes.length; i++) {
+    fixVITCode();
+    var d = document.getElementsByTagName("table")[4];
+    d = d.getElementsByTagName('tr');
+    for (var i = 0; i < d[0].childNodes.length; i++) {
 
         var e = document.createElement("button");
         e.value = "+";
@@ -30,19 +47,15 @@ function init()
         f.innerHTML = "-";
         f.setAttribute("onclick", "calc(2," + i + ")");
 
-        d.childNodes[i].innerHTML += d.childNodes[i].getElementsByTagName("td")[10].outerHTML;
+        d[i].innerHTML += d[i].getElementsByTagName("td")[10].outerHTML;
         if (i == 0) {
-            d.childNodes[i].getElementsByTagName("td")[11].childNodes[0].childNodes[0].textContent = 'Check Your Attendance';
+            d[i].getElementsByTagName("td")[11].childNodes[0].childNodes[0].textContent = 'Check Your Attendance';
         }
         else {
-            d.childNodes[i].getElementsByTagName("td")[11].innerHTML =  e.outerHTML+h.outerHTML+"<p id='at"+i+"'>Attend:0</p>"+ g.outerHTML+f.outerHTML+ "<p id='mi"+i+"'>Miss: 0</p>";
-            d.childNodes[i].getElementsByTagName("td")[6].innerHTML = "<p id='ao" + i + "'>" + d.childNodes[i].getElementsByTagName("td")[6].innerHTML + "</p><p id='a" + i + "'>" + d.childNodes[i].getElementsByTagName("td")[6].innerHTML;
-            d.childNodes[i].getElementsByTagName("td")[8].innerHTML = "<p id='po" + i + "'>" + d.childNodes[i].getElementsByTagName("td")[8].innerHTML + "</p>" + "<p id='p" + i + "'>" + d.childNodes[i].getElementsByTagName("td")[8].innerHTML + "</p>";
-            d.childNodes[i].getElementsByTagName("td")[7].innerHTML = "<p id='tt" + i + "'>" + d.childNodes[i].getElementsByTagName("td")[7].innerHTML + "</p>" + "<p id='t" + i + "'>" + d.childNodes[i].getElementsByTagName("td")[7].innerHTML + "</p>";
-            var x=d.childNodes[i].childNodes[10].outerHTML.split(">")[0]+">";
-            var x1=d.childNodes[i].getElementsByTagName("td")[10].innerHTML;
-            x1=x+x1+"</form>";
-            d.childNodes[i].getElementsByTagName("td")[10].innerHTML=x1;
+            d[i].getElementsByTagName("td")[11].innerHTML =  e.outerHTML+h.outerHTML+"<p id='at"+i+"'>Attend:0</p>"+ g.outerHTML+f.outerHTML+ "<p id='mi"+i+"'>Miss: 0</p>";
+            d[i].getElementsByTagName("td")[6].innerHTML = "<p id='ao" + i + "'>" + d[i].getElementsByTagName("td")[6].innerHTML + "</p><p id='a" + i + "'>" + d[i].getElementsByTagName("td")[6].innerHTML;
+            d[i].getElementsByTagName("td")[8].innerHTML = "<p id='po" + i + "'>" + d[i].getElementsByTagName("td")[8].innerHTML + "</p>" + "<p id='p" + i + "'>" + d[i].getElementsByTagName("td")[8].innerHTML + "</p>";
+            d[i].getElementsByTagName("td")[7].innerHTML = "<p id='tt" + i + "'>" + d[i].getElementsByTagName("td")[7].innerHTML + "</p>" + "<p id='t" + i + "'>" + d[i].getElementsByTagName("td")[7].innerHTML + "</p>";
         }
     }
 }
