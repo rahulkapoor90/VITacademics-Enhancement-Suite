@@ -1,5 +1,7 @@
-a=[], marks={},url = "https://vtop.vit.ac.in/student/class_message_view.asp?sem=WS";
 //  To send AJAX request to url, then parse html to marks objects.
+/*
+a=[], marks={};
+url = "https://vtop.vit.ac.in/student/class_message_view.asp?sem=FS";
 onload = function(){
 
     $.get(url, function(data){
@@ -192,6 +194,7 @@ check = function(P, Q){
     }
     return changes;
 }
+*/
 //  Only for testing.
 //  For testing - Change in storage, try running in Extension/background console
 /*var test = function(){
@@ -218,3 +221,184 @@ check = function(P, Q){
     })
 }
 */
+
+/*New updated parser.*/
+
+//  Parse a table element with marks.
+function parse(elem, code){
+
+    var a = {}; //assessments
+
+    $(elem).find('tr').each(function(i,e){
+
+        if(i==0)return; // header row.
+
+        var obj = {};
+        var temp = $(e).find('td');
+        var title = $(temp[1]).text().trim();
+        var marks = $(temp[5]).text().trim();
+        if(marks == '')marks=0;
+        obj[title] = marks;
+        a = Object.assign(a, obj);
+
+    })
+    //console.warn(a);
+    Marks[code]=a;
+
+}
+
+Marks = {};
+//  Get the marks page and start parsing.
+$.get("https://vtop.vit.ac.in/student/marks.asp?sem=FS", function(data){
+    $($(data).filter('table').find('table')[0]).find('table')
+    .each(function(i,e){
+
+        parent =
+        $(
+            $(
+                $(e).parent()[0]
+            ).parent()[0]
+        ).prev().find('td');
+
+        var temp = $(parent[2]).text();
+        temp += $(parent[4]).text().includes('Lab') ? ':L' : ':T' ;
+        //console.warn(temp);
+        parse(e, temp);
+    });
+
+    check();
+
+});
+
+function regno(){
+    var reg ;
+    document.cookie.split(';').every(function(e){
+        if(e.includes('stud')){
+            reg = (e.split('=')[1]);
+            return false;
+        }
+    });
+    return reg;
+}
+
+function storeMarks(data){
+    console.warn("Storing");
+    var obj = {};
+    obj[regno()+"Marks"] = data;
+    chrome.storage.local.set(obj, function(){
+        if(chrome.runtime.lastError){
+            console.error("Error!");
+            console.error(chrome.runtime.lastError);
+        }
+        console.warn("Done");
+    });
+}
+
+function check(){
+    //console.error("Checking");
+    var temp = regno()+"Marks";
+    chrome.storage.local.get(temp, function(obj){
+        if(Object.keys(obj).length){
+            diff(obj[temp], Marks);
+            storeMarks(Marks);
+        }else{
+            storeMarks(Marks);
+        }
+    });
+}
+
+//************************************************
+//    Changes accounted for
+//        > Addition of marks table
+//        > Change of marks for existing courses.
+//************************************************
+
+function diff(old, current){
+    console.log(old);
+    console.log(current);
+    //  check if table of marks for any course has been added.
+    var t1 = Object.keys(old), t2 = Object.keys(current);
+    var obj = jsondiffpatch.diff(t1, t2);
+    Object.keys(obj).every(function(e){
+        if(e.includes('_')){
+            delete(obj[e]);
+        }
+    })
+    if(obj != null  && obj != {} ){
+        //console.error(obj);
+        console.warn(obj[Object.keys(obj)[0]]+" added");
+        console.warn(obj);
+    }
+    var temp = Object.keys(obj)[0];
+
+    //  Add notitification for newly added course.
+
+    obj = jsondiffpatch.diff(old, current);
+    if(obj == null) return;
+    console.log(changeLog(obj));
+
+    delete(obj[temp]);
+    Object.keys(obj).every(function(e){
+        if(e.includes('_')){
+            delete(obj[e]);
+        }
+    })
+    notify(changeLog(obj));
+}
+
+function changeLog(data){
+
+    //template
+    var t = {
+        course : "course",
+        assessment : "assessment",
+        changes : [-1, 0]
+    };
+    var changes = [];
+
+    Object.keys(data).forEach(function(course){
+
+        Object.keys(data[course]).forEach(function(assessment){
+
+            t.course = course;
+            t.assessment = assessment;
+            t.changes = data[course][assessment];
+            changes.push(Object.assign({}, t));
+
+        });
+
+    });
+    console.warn(changes);
+    return changes;
+}
+
+function notify(changes){
+    var notifications=[];
+    changes.forEach(function(val){
+        notifications.push({"title" : val.course, "message" : val.assessment+" -> "+val.changes});
+    });
+    var options = {
+        "title" :   "Marks Change Notification",
+        "type"  :   "list",
+        "iconUrl"   :   chrome.extension.getURL('images/github-logo.png'),
+        "message"   :   "Following marks have been changed.",
+        "items" :   notifications
+    };
+    chrome.runtime.sendMessage({"type": "notifications", "options":options});
+}
+
+//  Only for testing.
+//  For testing - Change in storage, try running in Extension/background console
+var test = function(){
+    var a ;
+    chrome.storage.local.get(null, function(obj){
+        a=obj;
+        var temp = regno()+"Marks";
+        var key1 = Object.keys(a[temp])[0];
+        var key2 = Object.keys(a[temp][key1])[0];
+        a[temp][key1][key2]=1999;
+        //console.error("TESTING");
+        chrome.storage.local.set(a, function(obj){});
+    });
+}
+//test();

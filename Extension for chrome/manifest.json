@@ -79,13 +79,17 @@
       "matches": [ "*://vtop.vit.ac.in/student/changepswd.asp" ]
    }, {
       "css": [ "css/home/design.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/home/diff.js", "scripts/home/design.js" ],
+      "js": [ "scripts/jquery.min.js", "scripts/jsondiffpatch-full.min.js", "scripts/home/diff.js", "scripts/home/design.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/home.asp" ]
    }, {
       "all_frames": true,
       "js": [ "scripts/jquery.min.js", "scripts/home/msg.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
-   } ],
+  },  {
+      "all_frames": true,
+      "js": [ "scripts/jquery.min.js", "scripts/active.js" ],
+      "matches": [ "*://vtop.vit.ac.in/student/*" ]
+  } ],
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
    "homepage_url": "http://rahulkapoor.me/vitacademics-enhancement-suite/",

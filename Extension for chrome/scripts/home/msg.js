@@ -1,4 +1,4 @@
-function init() {
+/*function init() {
     var a=[], o={}, t=[];
     cb = function(i, item){
         if($(item).find('hr').length){
@@ -83,3 +83,4 @@ var test = function(){
 }
 
 onload = init();
+*/
