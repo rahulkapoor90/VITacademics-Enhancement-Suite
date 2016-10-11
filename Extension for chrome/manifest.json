@@ -83,7 +83,7 @@
       "matches": [ "*://vtop.vit.ac.in/student/home.asp" ]
    }, {
       "all_frames": true,
-      "js": [ "scripts/jquery.min.js", "scripts/home/msg.js" ],
+      "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
   },  {
       "all_frames": true,
