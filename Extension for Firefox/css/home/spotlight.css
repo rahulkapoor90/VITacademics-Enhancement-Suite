@@ -1,0 +1,11 @@
+span{
+	font-size:16px;
+}
+.chart6_title {
+    background-color: #418bbc;
+	padding: 2px;
+	font-size: 6.1em;
+	text-transform: underline;
+	font-weight: bold;
+	color: white;
+}
