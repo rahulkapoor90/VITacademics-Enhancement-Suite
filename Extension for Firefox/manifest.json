@@ -84,14 +84,13 @@
       "matches": [ "*://vtop.vit.ac.in/student/home.asp" ]
    }, {
       "all_frames": true,
-      "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js" ],
+      "js": [ "scripts/jquery.min.js", "scripts/home/msg.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
   },  {
       "all_frames": true,
       "js": [ "scripts/jquery.min.js", "scripts/active.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/*" ]
   } ],
-   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
    "homepage_url": "http://rahulkapoor.me/vitacademics-enhancement-suite/",
    "icons": {
@@ -110,6 +109,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications" ],
    "short_name": "VES",
-   "version": "1.1",
+   "version": "1.1.1",
    "web_accessible_resources": [ "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js" ]
 }
