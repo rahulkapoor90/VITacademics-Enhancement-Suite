@@ -23,7 +23,7 @@ chrome.notifications.onButtonClicked.addListener(function(nID, i){
         switch (i) {
             case 0:
                 chrome.tabs.create({
-                    "url"   :   "https://vtop.vit.ac.in/student/class_message_view.asp?sem=SS",
+                    "url"   :   "https://vtop.vit.ac.in/student/class_message_view.asp?sem=FS",
                     "index" :   tInd
                 })
                 break;

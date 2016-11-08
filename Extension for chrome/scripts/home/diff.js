@@ -282,26 +282,29 @@ function regno(){
 }
 
 function storeMarks(data){
-    console.warn("Storing");
+    //console.warn("Storing");
     var obj = {};
     obj[regno()+"Marks"] = data;
+    console.warn(JSON.stringify(obj));
     chrome.storage.local.set(obj, function(){
         if(chrome.runtime.lastError){
             console.error("Error!");
             console.error(chrome.runtime.lastError);
         }
-        console.warn("Done");
+        //console.warn("Done");
     });
 }
 
 function check(){
     //console.error("Checking");
     var temp = regno()+"Marks";
+    console.warn(JSON.stringify(Marks));
     chrome.storage.local.get(temp, function(obj){
         if(Object.keys(obj).length){
             diff(obj[temp], Marks);
             storeMarks(Marks);
         }else{
+            console.warn("Storing First time!");
             storeMarks(Marks);
         }
     });

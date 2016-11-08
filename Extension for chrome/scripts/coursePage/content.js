@@ -89,7 +89,7 @@ window.addEventListener('message', function(event) {
     return;
   }
   //	request type
-  //message.type = "rename";
+  message.type = "rename";
   chrome.runtime.sendMessage(message);
   // console.log(message.links);
 });
