@@ -1,3 +1,8 @@
+/*
+TODO-
+    >   Delete this script after fixing the new one.
+*/
+
 /*function init() {
     var a=[], o={}, t=[];
     cb = function(i, item){

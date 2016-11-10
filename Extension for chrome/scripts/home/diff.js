@@ -1,3 +1,10 @@
+/*
+TODO-
+     >  fix this script.
+     >  remove useless code.
+     -----------------------
+*/
+
 //  To send AJAX request to url, then parse html to marks objects.
 /*
 a=[], marks={};
@@ -222,7 +229,13 @@ check = function(P, Q){
 }
 */
 
-/*New updated parser.*/
+/*
+    ----------------------
+
+    New updated parser.
+
+    ----------------------
+*/
 
 //  Parse a table element with marks.
 function parse(elem, code){
@@ -246,7 +259,7 @@ function parse(elem, code){
     Marks[code]=a;
 
 }
-
+/*
 Marks = {};
 //  Get the marks page and start parsing.
 $.get("https://vtop.vit.ac.in/student/marks.asp?sem=FS", function(data){
@@ -269,7 +282,7 @@ $.get("https://vtop.vit.ac.in/student/marks.asp?sem=FS", function(data){
     check();
 
 });
-
+*/
 function regno(){
     var reg ;
     document.cookie.split(';').every(function(e){
