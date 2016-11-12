@@ -287,7 +287,7 @@ var hooknotesLinkText = document.createTextNode("hooknotes");
 
 
 var t2 = document.createTextNode("Click here");
-var t4 = document.createTextNode("Made with love for VITians by ");
+var t4 = document.createTextNode("Made with ♥ for VITians by ");
 var t5 = document.createTextNode("Rahul Kapoor ");
 var t3 = document.createTextNode(" Any suggestions? ");
 var br = document.createElement("br");
