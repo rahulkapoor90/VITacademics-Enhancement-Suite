@@ -5,7 +5,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
  ga('create', 'UA-73159092-1', 'auto');
     ga('send', 'pageview');
-    
+
 /*<div id="fb-root"></div>*/
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -263,10 +263,15 @@ document.getElementsByTagName('head')[0].appendChild(link);
 
 var note = document.getElementsByName('stud_login')[0];
 var par = document.createElement("div");
+var hooknotesDiv = document.createElement("div");
 var tag = document.createElement("a");
 var tag1 = document.createElement("a");
 var tag2 = document.createElement("a");
 var tag3 = document.createElement("a");
+var hooknotesTag = document.createElement("a");
+var devFBTag = document.createElement("a");
+var devTWTag = document.createElement("a");
+
 
 var icon = document.createElement("i");
 icon.setAttribute("class", "fa fa-twitter");
@@ -277,6 +282,10 @@ icon1.setAttribute("class", "fa fa-facebook");
 icon1.setAttribute("aria-hidden", "true");
 
 var t1 = document.createTextNode(" Hello! Please try to refresh page again if the verification is not filled properly.");
+var hooknotesText = document.createTextNode(" Exam tomorrow? Need class notes? Go to ");
+var hooknotesLinkText = document.createTextNode("hooknotes");
+
+
 var t2 = document.createTextNode("Click here");
 var t4 = document.createTextNode("Made with love for VITians by ");
 var t5 = document.createTextNode("Rahul Kapoor ");
@@ -285,6 +294,7 @@ var br = document.createElement("br");
 var credit = document.createElement("p");
 par.setAttribute("class", "info-msg");
 par.appendChild(t1);
+hooknotesDiv.appendChild(hooknotesText);
 credit.appendChild(t4);
 tag.setAttribute("href", "http://goo.gl/forms/QI8gPMfKML");
 tag.setAttribute("target", "_blank");
@@ -296,12 +306,44 @@ tag2.setAttribute("href", "https://twitter.com/iamrahulkapoor");
 tag2.setAttribute("target", "_blank");
 tag3.setAttribute("href", "https://facebook.com/rahulkapoor99");
 tag3.setAttribute("target", "_blank");
+hooknotesTag.setAttribute("href", "http://beta.hooknotes.com");
+hooknotesTag.setAttribute("target", "_blank");
+hooknotesTag.setAttribute("id", "rahultag");
+var h3Tag = document.createElement('h3');
+h3Tag.appendChild(hooknotesText);
+//h3Tag.appendChild(linebrk);
+hooknotesTag.innerHTML = "<h3 id='rahultag'>hooknotes</h3>";
+h3Tag.appendChild(hooknotesTag);
+/* credits  */
+var iconTW = document.createElement("i");
+iconTW.setAttribute("class", "fa fa-twitter");
+iconTW.setAttribute("aria-hidden", "true");
 
+var iconFB = document.createElement("i");
+iconFB.setAttribute("class", "fa fa-facebook");
+iconFB.setAttribute("aria-hidden", "true");
+
+devTWTag.setAttribute("href", "https://twitter.com/HVarday");
+devTWTag.setAttribute("target", "_blank");
+devTWTag.appendChild(iconTW);
+
+devFBTag.setAttribute("href", "https://facebook.com/hvarday");
+devFBTag.setAttribute("target", "_blank");
+devFBTag.appendChild(iconFB);
+var devLink = document.createElement('a');
+devLink.setAttribute('id', "rahultag");
+devLink.setAttribute('href', "https://github.com/hvarday");
+devLink.setAttribute("target", "_blank");
+devLink.innerText=("Harshal Varday ");
+var textS = document.createTextNode(' & ');
+/********/
 par.appendChild(t3);
 tag.appendChild(t2);
 tag1.appendChild(t5);
 tag2.appendChild(icon);
 tag3.appendChild(icon1);
+
+
 /*<div class="fb-like" data-href="http://rahulkapoor.me/vitacademics-enhancement-suite/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true">
 </div>*/
 var linebrk = document.createElement("br");
@@ -323,12 +365,19 @@ var hrt = document.createTextNode("Share");
 fbhr.appendChild(hrt);
 
 par.appendChild(tag);
+hooknotesDiv.appendChild(h3Tag);
 par.appendChild(linebrk);
 par.appendChild(linebrk1);
 par.appendChild(fb);
 credit.appendChild(tag1);
 credit.appendChild(tag2);
 credit.appendChild(tag3);
+credit.appendChild(textS);
+credit.appendChild(devLink);
+credit.appendChild(devFBTag);
+credit.appendChild(devTWTag);
+note.parentElement.appendChild(hooknotesDiv);
+note.parentElement.appendChild(linebrk);
 note.parentElement.appendChild(par);
 
 var credits = document.getElementsByClassName('info-msg')[0];
@@ -342,7 +391,7 @@ div1.setAttribute("id", "navbar");
 var div2 = document.createElement("div");
 div2.setAttribute("id", "navwrap");
 var tag1 = document.createElement("a");
-tag1.setAttribute("href", "https://academics.vit.ac.in/student/stud_login.asp");
+tag1.setAttribute("href", "https://vtop.vit.ac.in/student/stud_login.asp");
 tag1.setAttribute("target", "_blank");
 var t4 = document.createElement("img");
 t4.setAttribute("src", "http://www.vit.ac.in/images/logo.png");
