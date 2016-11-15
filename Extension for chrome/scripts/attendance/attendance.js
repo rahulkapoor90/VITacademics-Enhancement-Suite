@@ -6,7 +6,6 @@ function getDateString(date) {
 			+"-"+
 			date.getFullYear();
 }
-
 document.getElementsByName("to_date")[0].value=getDateString(new Date());
 $(document).ready(function () {
 	//$('table:first-child ul:first-child').hide();

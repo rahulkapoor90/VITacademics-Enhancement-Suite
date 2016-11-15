@@ -99,6 +99,11 @@ input[type="text"], input[type="password"] {
 	margin-top:10px;
 	color: #c0392b;
 }
+#rahultag2 {
+  text-decoration:none;
+  font-size:14px;
+  color: #c0392b;
+}
 input[type="submit"]{
     /* end of placing */
 	cursor: pointer;
