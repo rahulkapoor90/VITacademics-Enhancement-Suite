@@ -49,7 +49,7 @@
    }, {
       "all_frames": true,
       "css": [ "css/timeTable/timetable.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/timeTable/tableExport.js", "scripts/timeTable/jquery.base64.js", "scripts/timeTable/html2canvas.js", "scripts/timeTable/base64.js", "scripts/timeTable/sprintf.js", "scripts/timeTable/jspdf.js", "scripts/timeTable/timetable.js" ],
+      "js": [ "scripts/jquery.min.js", "scripts/timeTable/jquery.base64.js", "scripts/timeTable/html2canvas.js", "scripts/timeTable/base64.js", "scripts/timeTable/sprintf.js", "scripts/timeTable/jspdf.js", "scripts/timeTable/timetable.js", "scripts/timeTable/tableExport.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/timetable_*.asp", "https://vtop.vit.ac.in/student/course_regular.asp?sem=*" ]
    }, {
       "all_frames": true,
@@ -86,10 +86,6 @@
       "all_frames": true,
       "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
-  },  {
-      "all_frames": true,
-      "js": [ "scripts/jquery.min.js", "scripts/active.js" ],
-      "matches": [ "*://vtop.vit.ac.in/student/*" ]
   } ],
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
@@ -110,6 +106,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications" ],
    "short_name": "VES",
-   "version": "1.1",
+   "version": "1.1.4",
    "web_accessible_resources": [ "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js" ]
 }
