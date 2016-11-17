@@ -27,9 +27,9 @@ chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
         switch (details.url) {
             case "https://vtop.vit.ac.in/student/images/round_orange.gif":
-                return {redirectUrl: "https://i.imgur.com/nAnJHcz.png" };
+                return {redirectUrl: "https://res.cloudinary.com/dadfowug4/image/upload/v1479314802/nAnJHcz_kt2did.png" };
             case "https://vtop.vit.ac.in/student/images/round_blue.gif":
-                return {redirectUrl: "https://i.imgur.com/YFcV4bO.png" };
+                return {redirectUrl: "https://res.cloudinary.com/dadfowug4/image/upload/v1479314802/YFcV4bO_oppp1h.png" };
         }
     },
     {urls: ["*://*.vit.ac.in/*.gif"]},

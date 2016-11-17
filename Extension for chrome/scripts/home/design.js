@@ -1,7 +1,7 @@
 var link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = 'https://foodonz.com/images/favicon.ico';
+    link.href = 'https://res.cloudinary.com/dadfowug4/image/upload/v1479304973/favicon_rkdd0w.ico';
     document.getElementsByTagName('head')[0].appendChild(link);
     
 document.getElementsByTagName('table')[0].style.display = "none";
@@ -22,7 +22,7 @@ div3.setAttribute("width", "25%");
 div3.setAttribute("align", "left");
 
 var t4 = document.createElement("img");
-t4.setAttribute("src", "http://www.vit.ac.in/images/logo.png");
+t4.setAttribute("src", "https://res.cloudinary.com/dadfowug4/image/upload/v1479304837/logo_oqljl1.png");
 t4.setAttribute("width", "190");
 t4.setAttribute("height", "70");
 

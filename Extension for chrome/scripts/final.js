@@ -1,7 +1,7 @@
 var link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
-    link.href = 'https://foodonz.com/images/favicon.ico';
+    link.href = 'https://res.cloudinary.com/dadfowug4/image/upload/v1479304973/favicon_rkdd0w.ico';
     document.getElementsByTagName('head')[0].appendChild(link);
 
 document.getElementsByTagName('head')[0].appendChild(link);
@@ -28,7 +28,7 @@ div3.setAttribute("width", "25%");
 div3.setAttribute("align", "left");
 
 var t4 = document.createElement("img");
-t4.setAttribute("src", "http://www.vit.ac.in/images/logo.png");
+t4.setAttribute("src", "https://res.cloudinary.com/dadfowug4/image/upload/v1479304837/logo_oqljl1.png");
 t4.setAttribute("width", "190");
 t4.setAttribute("height", "70");
 
@@ -75,7 +75,7 @@ hr.setAttribute("href","https://vtop.vit.ac.in/student/stud_login.asp");
 hr.setAttribute("target","_blank");
 var im = document.createElement("img");
 im.setAttribute("border","0");
-im.setAttribute("src","https://i.imgur.com/r0JaDsp.png");
+im.setAttribute("src","https://res.cloudinary.com/dadfowug4/image/upload/v1479304581/studentlogin_fnj4ah.png");
 //im.setAttribute("width","178");
 //im.setAttribute("height","35");
 
@@ -87,7 +87,7 @@ hr1.setAttribute("href","https://vtop.vit.ac.in/parent/parent_login.asp");
 hr1.setAttribute("target","_blank");
 var im1 = document.createElement("img");
 im1.setAttribute("border","0");
-im1.setAttribute("src","https://i.imgur.com/zow3cXY.png");
+im1.setAttribute("src","https://res.cloudinary.com/dadfowug4/image/upload/v1479304581/parentlogin_g2u4re.png");
 //im1.setAttribute("width","178");
 //im1.setAttribute("height","35");
 
@@ -100,7 +100,7 @@ hr2.setAttribute("href","https://vtop.vit.ac.in/faculty/fac_login.asp");
 hr2.setAttribute("target","_blank");
 var im2 = document.createElement("img");
 im2.setAttribute("border","0");
-im2.setAttribute("src","https://i.imgur.com/jMSJbK6.png");
+im2.setAttribute("src","https://res.cloudinary.com/dadfowug4/image/upload/v1479304581/facultylogin_nojusn.png");
 
 hr1.appendChild(im1);
 tad1.appendChild(hr1);

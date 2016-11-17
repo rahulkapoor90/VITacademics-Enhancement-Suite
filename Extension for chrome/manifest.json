@@ -106,6 +106,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications" ],
    "short_name": "VES",
-   "version": "1.1.4",
+   "version": "1.1.6",
    "web_accessible_resources": [ "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js" ]
 }
