@@ -84,7 +84,7 @@
       "matches": [ "*://vtop.vit.ac.in/student/home.asp" ]
    }, {
       "all_frames": true,
-      "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js" ],
+      "js": [ "scripts/raven.min.js", "scripts/jquery.min.js", "scripts/home/msgNew.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
   } ],
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
