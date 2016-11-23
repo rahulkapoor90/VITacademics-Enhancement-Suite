@@ -2,14 +2,11 @@
 a.src = "https://cdn.ravenjs.com/3.8.1/raven.min.js";
 document.head.append(a);
 */
-while(!Raven){
-    console.warn("Waiting!");
-}
-
-console.warn("Loaded!");
+//  Raven Configuration.
 Raven.config('https://cd8ad21e630d48cd8bfbf163223577a1@sentry.io/116461').install();
 try {
-    init();
+        //  disabled for now.
+        //init();
 } catch (e) {
         console.error(e);
         Raven.captureException(e);
