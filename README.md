@@ -10,7 +10,7 @@
 
 For general documentation, visit the [VITacademics Enhancement Suite Wiki](https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/wiki).
 
-<img src="https://i.imgur.com/hqTinIX.png" style="300px;">
+<img src="https://i.imgur.com/OHswLAn.png">
 ## Contributions
 
 Contributions are welcome. if you see any issue then open an issue and if you think you can fix it then start working on it by forking this project.
