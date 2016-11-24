@@ -98,6 +98,41 @@ window.addEventListener('message', function(event) {
 
 var init = function(){
 	var links = [];
+	var dZip = function(){
+
+		var Promise = window.Promise;
+		if (!Promise) {        Promise = JSZip.external.Promise;    }
+
+		function urlToPromise(url) {
+			return new Promise(function(resolve, reject) {
+				JSZipUtils.getBinaryContent(url, function (err, data) {
+					if(err) {
+						reject(err);
+					} else {
+						resolve(data);
+					}
+				});
+			});
+		}
+
+		var zip = new JSZip();
+		links.forEach(function(e, i){
+			zip.file("filename"+i+".pdf", urlToPromise(e), {binary:true});
+		})
+
+		// when everything has been downloaded, we can trigger the dl
+		zip.generateAsync({type:"blob"})
+		.then(function callback(blob) {
+
+			// see FileSaver.js
+			saveAs(blob, "Material.zip");
+
+			console.log("done !");
+		}, function (e) {
+			console.error(e);
+		});
+
+	}
 	var dA = function(){
 		alert("VES will now download all the study material available.");
 		var subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[8].innerText;
@@ -106,13 +141,22 @@ var init = function(){
 			"type":"rename", "links": links, "subject": subject_name, "teacher": teacher_name
 		})
 	}
+
 	var a=`<tr>
 	<td bgcolor="#5A768D" width="22%" height="30"><font color="#FFFFFF">Download All Contents</font></td>
 			  <td width="75" bgcolor="#EDEADE">  <input class="submit" type="submit" value="Download All"> </td>
 	</tr>`
 	a=$(a);
 	$('table:nth-of-type(2)').find('tbody').prepend(a);
+
+	var b=`<tr>
+	<td bgcolor="#5A768D" width="22%" height="30"><font color="#FFFFFF">Download All Zip</font></td>
+			  <td width="75" bgcolor="#EDEADE">  <input class="submit" type="submit" value="Download All Zip"> </td>
+	</tr>`
+	b=$(b);
+	$('table:nth-of-type(2)').find('tbody').prepend(b);
 	$('input[name="downloadSelect"]').each(function(i, val){links.push($(val).attr('value'))});
 	$(a).find('input:submit').click(dA);
+	$(b).find('input:submit').click(dZip);
 }
 onload = init();
