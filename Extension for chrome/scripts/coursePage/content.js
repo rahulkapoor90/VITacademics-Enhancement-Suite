@@ -153,10 +153,10 @@ var init = function(){
 	<td bgcolor="#5A768D" width="22%" height="30"><font color="#FFFFFF">Download All Zip</font></td>
 			  <td width="75" bgcolor="#EDEADE">  <input class="submit" type="submit" value="Download All Zip"> </td>
 	</tr>`
-	b=$(b);
-	$('table:nth-of-type(2)').find('tbody').prepend(b);
-	$('input[name="downloadSelect"]').each(function(i, val){links.push($(val).attr('value'))});
-	$(a).find('input:submit').click(dA);
+/*	b=$(b);
 	$(b).find('input:submit').click(dZip);
+	$('table:nth-of-type(2)').find('tbody').prepend(b);
+*/	$('input[name="downloadSelect"]').each(function(i, val){links.push($(val).attr('value'))});
+	$(a).find('input:submit').click(dA);
 }
 onload = init();
