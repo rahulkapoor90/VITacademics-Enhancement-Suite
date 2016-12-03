@@ -18,7 +18,7 @@ var notify1 = function(data){
         "title" :   "Marks Change Notification",
         "type"  :   "basic",
         "iconUrl"   :   chrome.extension.getURL('images/github-logo.png'),
-        "message"   :   "Following marks have been changed.",
+        "message"   :   "Following marks have been changed."
     };
     chrome.notifications.create(options);
 }
