@@ -21,3 +21,5 @@ $(document).ready(function () {
     document.getElementsByTagName('head')[0].appendChild(script1);
     
 });
+
+document.getElementsByName('from_date')[0].value = '01-JAN-2016'
