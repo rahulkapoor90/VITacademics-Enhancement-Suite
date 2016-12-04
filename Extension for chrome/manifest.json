@@ -38,7 +38,7 @@
    }, {
       "all_frames": true,
       "css": [ "css/course/course_view.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/coursePage/course_view.js", "scripts/coursePage/content.js", "scripts/coursePage/zipDownload.js"],
+      "js": [ "scripts/jquery.min.js", "scripts/coursePage/course_view.js", "scripts/coursePage/content.js"],
       "matches": [ "*://vtop.vit.ac.in/student/coursepage_view3.asp", "https://vtop.vit.ac.in/student/coursepage_plan_display.asp" ]
    }, {
       "all_frames": true,
@@ -110,6 +110,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications" ],
    "short_name": "VES",
-   "version": "1.2.0",
+   "version": "1.2.1",
    "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js" ]
 }

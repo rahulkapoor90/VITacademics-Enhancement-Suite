@@ -58,7 +58,11 @@ input[type="checkbox"] {
     padding-right: 20px;
     width: 60px;
     -webkit-appearance: none;
+    -moz-appearance: none;
     -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+
 }
 
 a font{
@@ -74,6 +78,9 @@ a font:hover{
 input[type="checkbox"]:after {
     background-color: #eee;
     background-image: -webkit-linear-gradient(hsla(0,0%,100%,.1), hsla(0,0%,0%,.1));
+    background-image: -o-linear-gradient(hsla(0,0%,100%,.1), hsla(0,0%,0%,.1));
+    background-image: -ms-linear-gradient(hsla(0,0%,100%,.1), hsla(0,0%,0%,.1));
+
     border-radius: 25px;
     content: '';
         box-shadow: inset 0 1px 1px 1px hsla(0,0%,100%,1),

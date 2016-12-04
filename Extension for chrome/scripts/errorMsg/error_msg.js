@@ -1,3 +1,9 @@
+var link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = 'http://fonts.googleapis.com/css?family=Raleway:700';
+document.getElementsByTagName('head')[0].appendChild(link);
+
 document.getElementsByTagName('form')[0].style.display="none";
  var nav = document.getElementsByTagName('form')[0];
 	var div1 = document.createElement("div");
