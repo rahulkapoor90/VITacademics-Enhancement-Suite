@@ -320,4 +320,3 @@
     ],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
->>>>>>> b3e41901e85ab2597f84ae6a65a1b40344643da2
