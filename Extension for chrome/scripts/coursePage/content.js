@@ -8,21 +8,21 @@ for (i=0; i<s.length; i++)
 	att.value = "checkbox";
 	box.setAttributeNode(att);
 
-	var att = document.createAttribute("name");
-	att.value = "downloadSelect";
-	box.setAttributeNode(att);
+	var att1 = document.createAttribute("name");
+	att1.value = "downloadSelect";
+	box.setAttributeNode(att1);
 
-	var att = document.createAttribute("value");
-	att.value = s[i].href;
-	box.setAttributeNode(att);
+	var att2 = document.createAttribute("value");
+	att2.value = s[i].href;
+	box.setAttributeNode(att2);
 
-	var att = document.createAttribute("class");
-	att.value = "sexy-input";
-	box.setAttributeNode(att);
+	var att3 = document.createAttribute("class");
+	att3.value = "sexy-input";
+	box.setAttributeNode(att3);
 
-	var att = document.createAttribute("data-filename");
-	att.value = s[i].innerText;
-	box.setAttributeNode(att);
+	var att4 = document.createAttribute("data-filename");
+	att4.value = s[i].innerText;
+	box.setAttributeNode(att4);
 
 	s[i].parentNode.insertBefore(box, s[i]);
 }
@@ -134,7 +134,6 @@ var init = function(){
 
 	}
 	var dA = function(){
-		alert("VES will now download all the study material available.");
 		var subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[8].innerText;
 		var teacher_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[12].innerText;
 		chrome.runtime.sendMessage({

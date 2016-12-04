@@ -5,7 +5,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
  ga('create', 'UA-73159092-1', 'auto');
     ga('send', 'pageview');
-    
+
 /*<div id="fb-root"></div>*/
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -294,7 +294,7 @@ tag.setAttribute("href", "http://goo.gl/forms/QI8gPMfKML");
 tag.setAttribute("target", "_blank");
 tag.setAttribute("id", "rahultag");
 tag1.setAttribute("href", "https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/graphs/contributors");
-tag1.setAttribute("target", "_blank"); 
+tag1.setAttribute("target", "_blank");
 tag1.setAttribute("id", "rahultag");
 
 
@@ -341,24 +341,24 @@ div2.setAttribute("id", "navwrap");
 var tag1 = document.createElement("a");
 tag1.setAttribute("href", "https://vtop.vit.ac.in/student/stud_login.asp");
 tag1.setAttribute("target", "_blank");
-var t4 = document.createElement("img");
-t4.setAttribute("src", "https://res.cloudinary.com/dadfowug4/image/upload/v1479304837/logo_oqljl1.png");
-t4.setAttribute("width", "190px");
-t4.setAttribute("height", "70px");
-t4.setAttribute("id", "logo_main");
+var imgt = document.createElement("img");
+imgt.setAttribute("src", "https://res.cloudinary.com/dadfowug4/image/upload/v1479304837/logo_oqljl1.png");
+imgt.setAttribute("width", "190px");
+imgt.setAttribute("height", "70px");
+imgt.setAttribute("id", "logo_main");
 var ul1 = document.createElement("ul");
 var li1 = document.createElement("li");
-var tag2 = document.createElement("p");
+var ptag = document.createElement("p");
 //tag2.setAttribute("href", "https://vtop.vit.ac.in/student/stud_login.asp");
 //tag2.setAttribute("target", "_blank");
-tag2.setAttribute("id", "parent_link");
-var t5 = document.createTextNode("Student Login | VIT University");
-tag2.appendChild(t5);
+ptag.setAttribute("id", "parent_link");
+var studtag = document.createTextNode("Student Login | VIT University");
+ptag.appendChild(studtag);
 li1.appendChild(tag1);
-li1.appendChild(tag2);
+li1.appendChild(ptag);
 ul1.appendChild(li1);
 div2.appendChild(ul1);
-tag1.appendChild(t4);
+tag1.appendChild(imgt);
 div1.appendChild(div2);
 nav.parentElement.insertBefore(div1, nav);
 var elem = document.getElementsByName('regno')[0];
