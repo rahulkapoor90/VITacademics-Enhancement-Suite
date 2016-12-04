@@ -81,7 +81,7 @@
             "js": [
                 "scripts/jquery.min.js",
                 "scripts/materialize.min.js",
-                "scripts/final.js"
+                "scripts/vtop.js"
             ],
             "run at": "document_start"
         },
