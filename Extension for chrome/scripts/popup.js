@@ -16,7 +16,7 @@ function getCurrentTabUrl(callback) {
     currentWindow: true
   };
 
-  chrome.tabs.query(queryInfo, function(tabs) {
+  chrome.tabs.query(queryInfo, function (tabs) {
     // chrome.tabs.query invokes the callback with a list of tabs that match the
     // query. When the popup is opened, there is certainly a window and at least
     // one tab, so we can safely assume that |tabs| is a non-empty array.
@@ -55,93 +55,78 @@ function getCurrentTabUrl(callback) {
  *   The callback gets a string that describes the failure reason.
  */
 
-function logout()
-{
+function logout() {
   var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET","http://phc.prontonetworks.com/cgi-bin/authlogout",true);
-    xmlhttp.send();
-     xmlhttp.onreadystatechange=function()
-    {
-      if (xmlhttp.readyState==4 && xmlhttp.status==200)
-{
-var patt1 = new RegExp(/successfully logged out/i);
-var res1 = patt1.test(xmlhttp.responseText);
-if(res1)
-{
-  renderHtml('<h4>Logout Successful</h4>');
-}
-
-else if(!res1)
-{
-  renderStatus('<h4>Logout failure.</h4>');
-}
-}
+  xmlhttp.open("GET", "http://phc.prontonetworks.com/cgi-bin/authlogout", true);
+  xmlhttp.send();
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      var patt1 = new RegExp(/successfully logged out/i);
+      var res1 = patt1.test(xmlhttp.responseText);
+      if (res1) {
+        renderHtml('<h4>Logout Successful</h4>');
+      } else if (!res1) {
+        renderStatus('<h4>Logout failure.</h4>');
+      }
     }
+  }
 }
 
-function update()
-{
+function update() {
   renderHtml('<h2>Save Credentials</h2><form><div class="form-group"><input type="text" class="form-control" id="username" placeholder="Username"></div><div class="form-group"><input type="password" class="form-control" id="password" placeholder="Password"></div><div class="form-group"><button id="save" style="float:right;margin-bottom:10px;" class="btn btn-info">Save</button></div></form>');
-  document.getElementById('save').addEventListener('click',save_options);
+  document.getElementById('save').addEventListener('click', save_options);
 }
 
 function login() {
   var xmlhttp = new XMLHttpRequest();
   chrome.storage.sync.get({
-    username : "",
+    username: "",
     password: ""
-  }, function(items) {
-     var username = items.username;
+  }, function (items) {
+    var username = items.username;
     var password = items.password;
     // return;
-    if(username=='')
-  {
-    //window.renderStatus('Please save username, password from options in extensions page.');
-    //window.renderHtml('<input type="text" id="username" placeholder="Username"><input type="password" id="password" placeholder="Password"><div id="status"></div><br><button id="save">Save</button>');
-    return;
-  }
-  else
-  {
-    renderHtml("<h4>Logging in as " +username + "</h4>");
-    xmlhttp.open("POST","http://phc.prontonetworks.com/cgi-bin/authlogin",true);
-    xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xmlhttp.send("userId="+username+"&password="+password+"&serviceName=ProntoAuthentication&Submit22=Login");
+    if (username == '') {
+      //window.renderStatus('Please save username, password from options in extensions page.');
+      //window.renderHtml('<input type="text" id="username" placeholder="Username"><input type="password" id="password" placeholder="Password"><div id="status"></div><br><button id="save">Save</button>');
+      return;
+    } else {
+      renderHtml("<h4>Logging in as " + username + "</h4>");
+      xmlhttp.open("POST", "http://phc.prontonetworks.com/cgi-bin/authlogin", true);
+      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xmlhttp.send("userId=" + username + "&password=" + password + "&serviceName=ProntoAuthentication&Submit22=Login");
 
-    xmlhttp.onreadystatechange=function()
-    {
-      if (xmlhttp.readyState==4 && xmlhttp.status==200)
-{
-var patt1 = new RegExp(/Congratulations/i);
-var patt2 = new RegExp(/already logged/i);
-var patt3 = new RegExp(/quota is over/i);
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var patt1 = new RegExp(/Congratulations/i);
+          var patt2 = new RegExp(/already logged/i);
+          var patt3 = new RegExp(/quota is over/i);
 
-var res1 = patt1.test(xmlhttp.responseText);
-var res2 = patt2.test(xmlhttp.responseText);
-var res3 = patt3.test(xmlhttp.responseText);
-if(res1)
-{
-  renderHtml('<h4>Login Successful</h4>');
-  chrome.runtime.sendMessage({"type": "opt", "data": "rahul"});
-}
-if(res2)
-{
-  renderHtml('<h4>Already logged in</h4><button class="btn btn-info pull-left btn-sm" id="update-button" style="margin-bottom:10px;">Update</button><button class="btn btn-danger btn-sm pull-right" id="logout-button" style="margin-bottom:10px;">Logout</button>');
-  document.getElementById('logout-button').addEventListener('click',logout);
-  document.getElementById('update-button').addEventListener('click',update);
-}
-if(res3)
-{
-  renderHtml('<h4>Access Quota Over</h4> <button class="btn btn-info btn-sm pull-right" id="update-button" style="margin-bottom:10px;">Update</button>');
-  document.getElementById('update-button').addEventListener('click',update);
-}
-else if(!res1 && !res2 && !res3)
-{
-  renderHtml('<h4>Login Failure</h4> <button class="btn btn-info btn-sm pull-right" id="update-button" style="margin-bottom:10px;">Update</button>');
-  document.getElementById('update-button').addEventListener('click',update);
-}
-}
+          var res1 = patt1.test(xmlhttp.responseText);
+          var res2 = patt2.test(xmlhttp.responseText);
+          var res3 = patt3.test(xmlhttp.responseText);
+          if (res1) {
+            renderHtml('<h4>Login Successful</h4>');
+            chrome.runtime.sendMessage({
+              "type": "opt",
+              "data": "rahul"
+            });
+          }
+          if (res2) {
+            renderHtml('<h4>Already logged in</h4><button class="btn btn-info pull-left btn-sm" id="update-button" style="margin-bottom:10px;">Update</button><button class="btn btn-danger btn-sm pull-right" id="logout-button" style="margin-bottom:10px;">Logout</button>');
+            document.getElementById('logout-button').addEventListener('click', logout);
+            document.getElementById('update-button').addEventListener('click', update);
+          }
+          if (res3) {
+            renderHtml('<h4>Access Quota Over</h4> <button class="btn btn-info btn-sm pull-right" id="update-button" style="margin-bottom:10px;">Update</button>');
+            document.getElementById('update-button').addEventListener('click', update);
+          } else if (!res1 && !res2 && !res3) {
+            renderHtml('<h4>Login Failure</h4> <button class="btn btn-info btn-sm pull-right" id="update-button" style="margin-bottom:10px;">Update</button>');
+            document.getElementById('update-button').addEventListener('click', update);
+          }
+        }
+      }
     }
-  }
 
   });
 }
@@ -154,11 +139,15 @@ function renderHtml(markup) {
   document.getElementById('content').innerHTML = markup;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  getCurrentTabUrl(function(url) {
+document.addEventListener('DOMContentLoaded', function () {
+  getCurrentTabUrl(function (url) {
     // Put the image URL in Google search.
     //renderStatus('Logging you In ' + url);
 
     login();
   });
 });
+
+$(function () {
+  $('#username').focus();
+})
