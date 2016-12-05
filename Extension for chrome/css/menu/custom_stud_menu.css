@@ -1,0 +1,29 @@
+body {
+    background-color: #f5f5f5!important;
+    background: none!important;
+    color: #616161!important;
+    font-weight: 300!important;
+}
+
+table, tr, td, th, tbody {
+    color: #616161 !important;
+    background-color: #f5f5f5!important;
+    background: none!important;
+    padding: 0!important;
+    margin: 0!important;
+    background-image: none !important;
+}
+
+.collapsible-header {
+    border-bottom: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.btn {
+    width: 100%!important;
+}
+
+.collapsible-header:hover {
+    background-color: whitesmoke;
+}

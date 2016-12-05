@@ -37,286 +37,271 @@
         "*://vtop.vit.ac.in/*",
         "notifications"
     ],
-    "content_scripts": [
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/parent/parent_login.asp",
-                "*://vtop.vit.ac.in/parent/",
-                "*://vtop.vit.ac.in/student/",
-                "*://115.248.50.212/parent/parent_login.asp",
-                "*://115.248.50.212/parent/",
-                "*://115.248.50.212/student/",
-                "*://academics.vit.ac.in/studpay",
-                "*://academics.vit.ac.in/studpay/stud_login.asp"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/captcha/captcha.js",
-                "scripts/captcha/captcha.min.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/stud_login.asp",
-                "*://115.248.50.212/student/stud_login.asp"
-            ],
-            "css": [
-                "css/materialize.min.css",
-                "css/stud_login/stud_login.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/stud_login/stud_login.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/"
-            ],
-            "css": [
-                "css/materialize.min.css",
-                "css/vtop.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/vtop.js"
-            ],
-            "run at": "document_start"
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/coursepage_view.asp?*"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/CoursePage/course_page.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/coursePage/course_page.js",
-                "scripts/coursePage/content.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/marks.asp?*"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/CoursePage/course_page.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/marks/marks.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/coursepage_view3.asp"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/course/course_view.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/coursePage/course_view.js",
-                "scripts/coursePage/content.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/stud_home.asp"
-            ],
-            "all_frames": true,
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/home/stud_home.js"
-            ],
-            "css": [
-                "css/materialize.min.css",
-                "css/home/spotlight.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/errormsg_2.asp"
-            ],
-            "all_frames": true,
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/errorMsg/error_msg.js"
-            ],
-            "css": [
-                "css/materialize.min.css",
-                "css/errorMsg/error_msg.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/timetable_*.asp"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/timeTable/timetable.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/timeTable/tableExport.js",
-                "scripts/timeTable/jquery.base64.js",
-                "scripts/timeTable/html2canvas.js",
-                "scripts/timeTable/base64.js",
-                "scripts/timeTable/sprintf.js",
-                "scripts/timeTable/jspdf.js",
-                "scripts/timeTable/timetable.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/*/attn_report.asp*",
-                "*://vtop.vit.ac.in/student/attn_report_details.asp",
-                "*://115.248.50.212/*/attn_report.asp*"
-            ],
-            "all_frames": true,
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/attendance/attendance.js",
-                "scripts/attendance/attend.js",
-                "scripts/attendance/lastDate.js"
-            ],
-            "css": [
-                "css/materialize.min.css",
-                "css/attendance/home.css",
-                "css/attendance/attendance.css"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/stud_riviera_home.asp",
-                "*://vtop.vit.ac.in/student/stud_riviera_info.asp",
-                "*://academics.vit.ac.in/student/stud_riviera_event_info.asp"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/misc.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/stud_menu.asp"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/menu/stud_menu.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/menu/stud_menu.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/fac_profile.asp",
-                "*://vtop.vit.ac.in/student/fac_profile.asp?*"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/faculty/fac_profile.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/faculty/fac_profile.js",
-                "scripts/faculty/fsearch.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/forgot_pswd.asp"
-            ],
-            "css": [
-                "css/materialize.min.css",
-                "css/forgot_pswd/forgot.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/captcha/captcha.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/changepswd.asp"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/changePassword/changepswd.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/home.asp"
-            ],
-            "css": [
-                "css/materialize.min.css",
-                "css/home/design.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/home/diff.js",
-                "scripts/home/design.js"
-            ]
-        },
-        {
-            "matches": [
-                "*://vtop.vit.ac.in/student/stud_home.asp"
-            ],
-            "all_frames": true,
-            "css": [
-                "css/materialize.min.css",
-                "css/home/spotlight_modified.css",
-                "css/materialize.min.css"
-            ],
-            "js": [
-                "scripts/jquery.min.js",
-                "scripts/materialize.min.js",
-                "scripts/home/msg.js",
-                "scripts/home/modify_spotlight.js"
-            ]
-        }
-    ],
+    "content_scripts": [{
+        "matches": [
+            "*://vtop.vit.ac.in/parent/parent_login.asp",
+            "*://vtop.vit.ac.in/parent/",
+            "*://vtop.vit.ac.in/student/",
+            "*://115.248.50.212/parent/parent_login.asp",
+            "*://115.248.50.212/parent/",
+            "*://115.248.50.212/student/",
+            "*://academics.vit.ac.in/studpay",
+            "*://academics.vit.ac.in/studpay/stud_login.asp"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/captcha/captcha.js",
+            "scripts/captcha/captcha.min.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/stud_login.asp",
+            "*://115.248.50.212/student/stud_login.asp"
+        ],
+        "css": [
+            "css/materialize.min.css",
+            "css/stud_login/stud_login.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/stud_login/stud_login.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/"
+        ],
+        "css": [
+            "css/materialize.min.css",
+            "css/vtop.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/vtop.js"
+        ],
+        "run at": "document_start"
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/coursepage_view.asp?*"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/CoursePage/course_page.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/coursePage/course_page.js",
+            "scripts/coursePage/content.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/marks.asp?*"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/CoursePage/course_page.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/marks/marks.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/coursepage_view3.asp"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/course/course_view.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/coursePage/course_view.js",
+            "scripts/coursePage/content.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/stud_home.asp"
+        ],
+        "all_frames": true,
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/home/stud_home.js"
+        ],
+        "css": [
+            "css/materialize.min.css",
+            "css/home/spotlight.css"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/errormsg_2.asp"
+        ],
+        "all_frames": true,
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/errorMsg/error_msg.js"
+        ],
+        "css": [
+            "css/materialize.min.css",
+            "css/errorMsg/error_msg.css"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/timetable_*.asp"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/timeTable/timetable.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/timeTable/tableExport.js",
+            "scripts/timeTable/jquery.base64.js",
+            "scripts/timeTable/html2canvas.js",
+            "scripts/timeTable/base64.js",
+            "scripts/timeTable/sprintf.js",
+            "scripts/timeTable/jspdf.js",
+            "scripts/timeTable/timetable.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/*/attn_report.asp*",
+            "*://vtop.vit.ac.in/student/attn_report_details.asp",
+            "*://115.248.50.212/*/attn_report.asp*"
+        ],
+        "all_frames": true,
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/attendance/attendance.js",
+            "scripts/attendance/attend.js",
+            "scripts/attendance/lastDate.js"
+        ],
+        "css": [
+            "css/materialize.min.css",
+            "css/attendance/home.css",
+            "css/attendance/attendance.css"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/stud_riviera_home.asp",
+            "*://vtop.vit.ac.in/student/stud_riviera_info.asp",
+            "*://academics.vit.ac.in/student/stud_riviera_event_info.asp"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/misc.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/stud_menu.asp"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/menu/stud_menu.css",
+            "css/menu/custom_stud_menu.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/menu/stud_menu.js",
+            "scripts/menu/custom_stud_menu.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/fac_profile.asp",
+            "*://vtop.vit.ac.in/student/fac_profile.asp?*"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/faculty/fac_profile.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/faculty/fac_profile.js",
+            "scripts/faculty/fsearch.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/forgot_pswd.asp"
+        ],
+        "css": [
+            "css/materialize.min.css",
+            "css/forgot_pswd/forgot.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/captcha/captcha.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/changepswd.asp"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/changePassword/changepswd.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/home.asp"
+        ],
+        "css": [
+            "css/materialize.min.css",
+            "css/home/design.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/home/diff.js",
+            "scripts/home/design.js"
+        ]
+    }, {
+        "matches": [
+            "*://vtop.vit.ac.in/student/stud_home.asp"
+        ],
+        "all_frames": true,
+        "css": [
+            "css/materialize.min.css",
+            "css/home/spotlight_modified.css",
+            "css/materialize.min.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/home/msg.js",
+            "scripts/home/modify_spotlight.js"
+        ]
+    }],
     "web_accessible_resources": [
         "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css",
         "https://fonts.googleapis.com/icon?family=Material+Icons",
         "calc.js",
-        "scripts/stud_login/stud_login.html"
+        "scripts/stud_login/stud_login.html",
+        "custom_stud_menu.html"
     ],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
