@@ -1,3 +1,21 @@
+function audioNotification(){
+    var yourSound = new Audio('audio/notification.mp3');
+    yourSound.play();
+}
+chrome.runtime.onInstalled.addListener(function(details){
+      if(details.reason == "update"){
+        var thisVersion = chrome.runtime.getManifest().version;
+        audioNotification();
+        var opt = {
+          type: "basic",
+          title: "Hello Friend!",
+          message: "VITacademics Enhancement Suite has been updated with new features and bug fixes.",
+          iconUrl: chrome.extension.getURL('images/github-logo.png')
+        }
+            chrome.notifications.create(opt);
+    }
+});
+
 function install_notice() {
     if (localStorage.getItem('install_time'))
         return;
@@ -11,6 +29,7 @@ var opt = {
   message: "Thank You for installing VITacademics Enhancement Suite.",
   iconUrl: chrome.extension.getURL('images/github-logo.png')
 }
+    audioNotification();
     chrome.notifications.create(opt);
 }
 var notify1 = function(data){
