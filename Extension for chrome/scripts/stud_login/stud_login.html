@@ -1,29 +1,36 @@
-<div class="card-panel hoverable">
-	<div class="row">
-		<h4 class="center-align">VIT Academics Enhancement Suite</h4>
+<!--<div class="card-panel hoverable">-->
+<div class="row">
+	<div class="card">
+		<div class="card-image">
+			<img src="https://www.google.com/logos/doodles/2014/doodle-4-google-2013-new-zealand-winner-5595355081080832-hp.jpg" style="width: 400px;">
+			<span class="card-title">Doodle Title</span>
+		</div>
+		<div class="card-content">
+			<p>Sample V-Top Doodle</p>
+		</div>
+		<div class="card-action">
+			<a href="#">This is a link</a>
+		</div>
 	</div>
+	<!--<h4 class="center-align">VIT Academics Enhancement Suite</h4>-->
 </div>
-
+<!--</div>-->
 <div class="card-panel hoverable">
 	<form name="stud_login" action="stud_login_submit.asp" method="post">
-
 		<input type="hidden" name="message" value="">
-
 		<div class="row">
 			<label>Register No.</label>
 			<div>
 				<input type="text" name="regno" class="textbox2" size="20" maxlength="9" tabindex="1" style="text-transform:uppercase;" placeholder="Don't worry about lower case!"
-					onchange="this.value=this.value.toUpperCase()">
+								onchange="this.value=this.value.toUpperCase()">
 			</div>
 		</div>
-
 		<div class="row">
 			<label>Password</label>
 			<div>
 				<input type="password" name="passwd" class="textbox" size="30" maxlength="25" tabindex="1">
 			</div>
 		</div>
-
 		<div class="row">
 			<label>Verification Code</label>
 			<div style="margin-top: 1rem;">
@@ -31,14 +38,12 @@
 			</div>
 			<div>
 				<input type="text" name="vrfcd" class="textbox" size="10" maxlength="6" tabindex="1" style="text-transform:uppercase;" placeholder="Don't worry about lower case!"
-					onchange="this.value=this.value.toUpperCase()">
+								onchange="this.value=this.value.toUpperCase()">
 				<a href="javascript:void(0);" onclick="RefreshImage('imgCaptcha');">Change Verification Code</a>
 			</div>
 		</div>
-
 		<div class="row">
 			<div>
-
 				<div class="col">
 					<input type="submit" value="Login" class="btn" onclick="return captchaTextUpperCase()" tabindex="1">
 				</div>
@@ -48,7 +53,6 @@
 				<div class="col">
 					<input type="button" value="Forgot Password ?" class="btn" onclick="call_fgpwd()" tabindex="1">
 				</div>
-
 			</div>
 		</div>
 	</form>
