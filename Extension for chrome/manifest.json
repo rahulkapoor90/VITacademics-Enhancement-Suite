@@ -103,7 +103,7 @@
         "all_frames": true,
         "css": [
             "css/materialize.min.css",
-            "css/CoursePage/course_page.css"
+            "css/marks/marks.css"
         ],
         "js": [
             "scripts/jquery.min.js",
