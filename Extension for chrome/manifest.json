@@ -294,6 +294,20 @@
             "scripts/home/msg.js",
             "scripts/home/modify_spotlight.js"
         ]
+    }, {
+        "css": [
+            "css/materialize.min.css",
+            "css/exam/exam.css"
+        ],
+        "js": [
+            "scripts/jquery.min.js",
+            "scripts/materialize.min.js",
+            "scripts/exam/exam.js"
+        ],
+        "matches": [
+            "*://vtop.vit.ac.in/student/exam_schedule.asp*"
+        ],
+        "all_frames": true
     }],
     "web_accessible_resources": [
         "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css",
