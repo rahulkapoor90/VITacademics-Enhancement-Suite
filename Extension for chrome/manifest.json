@@ -271,13 +271,13 @@
         ],
         "css": [
             "css/materialize.min.css",
-            "css/home/design.css"
+            "css/home/home.css"
         ],
         "js": [
             "scripts/jquery.min.js",
             "scripts/materialize.min.js",
             "scripts/home/diff.js",
-            "scripts/home/design.js"
+            "scripts/home/home.js"
         ]
     }, {
         "matches": [

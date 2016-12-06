@@ -1,0 +1,14 @@
+body {
+  background-color: #f5f5f5 !important;
+  color: #616161 !important;
+  font-weight: 300 !important;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+#header-section {
+  margin-bottom: 10px;
+}
