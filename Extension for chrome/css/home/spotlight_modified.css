@@ -1,60 +1,23 @@
-#attendance{
-	height: 250px;
-    width: 310px;
-    padding-right: 20px;
-    margin-right: 20px;
-    margin-top: 150px;
-	border :2px solid black;
-	border-radius: 5px;
-	margin-left: 10px;
+body {
+	background-color: #f5f5f5 !important;
+	background: none!important;
+	color: #616161 !important;
+	font-weight: 300 !important;
 }
 
-#message{
-	height: 250px;
-    width: 310px;
-    padding-right: 20px;
-    margin-right: 20px;
-    margin-top: 150px;
-	border :2px solid black;
-	border-radius: 5px;
+marquee {
+	max-height: 400px;
 }
 
-#spotlight{
-	height: 250px;
-    width: 310px;
-    padding-right: 20px;
-    margin-right: 20px;
-    margin-top: 150px;
-	border :2px solid black;
-	border-radius: 5px;
+marquee a:hover {
+	transition: font-size 0.5s !important;
 }
 
-.title-box{
-	/* width:200px;
-	height:200px; */
-	-webkit-border-radius: 9px;
-	-moz-border-radius: 9px;
-	border-radius: 9px;
-	background-color:#3370B1;
-	text-align : center;
+marquee a:hover {
+	font-size: larger !important;
+	transition: font-size 0.25s !important;
 }
 
-button{
-	padding: 10px;
-}
-
-
-hr {
-    border: none;
-    height: 1px;
-    /* Set the hr color */
-    color: #333; /* old IE */
-    background-color: #333; /* Modern Browsers */
-}
-
-.sub-div{
-	-webkit-border-radius: 1em;
-	        border-radius: 1em;
-	border: 1px solid black;
-	
+#attendenceCard {
+	font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }

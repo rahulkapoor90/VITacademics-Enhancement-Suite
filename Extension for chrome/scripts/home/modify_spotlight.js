@@ -1,60 +1,75 @@
-message_object = message_object()
-        str = JSON.stringify(message_object, null, 4);
+$(function () {
+    $('link[href="style.css"]').remove(); //remove remove default css file
+    $('link[href="style2.css"]').remove();
 
-// console.log(str)
+    // Removing inline css
+    $('font').contents().unwrap();
+    $('u').contents().unwrap();
+    $('*[style]').removeAttr('style');
+    $('*').removeAttr('cellspacing');
+    $('*').removeAttr('cellpadding');
+    $('*').removeAttr('width');
+    $('*').removeAttr('height');
+    $('*').removeAttr('bordercolor');
+    $('*').removeAttr('bgcolor');
+    $('*').removeAttr('border');
+    $('*').removeAttr('align');
+    $('*').removeAttr('valign');
+    $('*').removeAttr('colspan');
 
-$(document).ready(function() {
-    // console.log("ready!");
-    $('table').hide();
-    $('body').append('<div class="container><div class="row" id="main-row" ></div></div>');
-    $('#main-row').append('<div class="col-md-4 text-center" id="attendance"><button type="button" class="btn btn-primary"><span class="text-right">Attendance<span></button></div>');
-    $('#main-row').append('<div class="col-md-4 text-center" id="message"><button type="button" class="btn btn-primary"><span class="text-right">Messages<span></button></div>');
-    $('#main-row').append('<div class="col-md-4 text-center" id="spotlight"><button type="button" class="btn btn-primary"><span class="text-right">Spotlight<span></button></div>');
+    // marquee title
+    var x_marquee = $('marquee');
+    var x_title = $("a[onclick]");
+    for (var i = 0; i < x_marquee.length; ++i) {
+        var title = x_marquee.eq(i).find('title').text();
+        var title_onclick = x_title.eq(i).attr('onclick');
+        x_marquee.eq(i).before('<hr><a href="#" onclick="' + title_onclick + '">' + title + '</a><div class="divider"></div>');
+    }
+    x_title.remove();
 
+    $('marquee').addClass('card-panel');
 
+    // Remove unnecessary elements
+    $('br').remove();
 
-    var table = $("table tbody table");
+    // Replace table and its childrens with div or appropriate tag
+    while ($('table').length > 0) {
+        $('table').eq(0).replaceWith('<div class="container-fluid">' + $('table').eq(0).html() + '</div>');
+    }
+    while ($('tr').length > 0) {
+        $('tr').eq(0).replaceWith('<div class="row card-panel">' + $('tr').eq(0).html() + '</div>');
+    }
+    while ($('td').length > 0) {
+        $('td').eq(0).replaceWith('<div class="col">' + $('td').eq(0).html() + '</div>');
+    }
+    while ($('tbody').length > 0) {
+        $('tbody').eq(0).replaceWith('<div>' + $('tbody').eq(0).html() + '</div>');
+    }
+    while ($('th').length > 0) {
+        $('th').eq(0).replaceWith('<h6>' + $('th').eq(0).html() + '</h6>');
+    }
+    while ($('b').length > 0) {
+        $('b').eq(0).replaceWith("<p>" + $('b').eq(0).html() + "</p>");
+    }
 
-    var span = $('table').find('span')
-    $('#attendance').append(span[4]);
+    //Attendence
+    $("<div class='card-panel'><div class='row' id='attendenceCard'></div></div>").insertBefore(".main_content");
+    while ($("img[src='HTMLGraph/images/1x1_83C4FE.gif']").length > 0) {
+        var imgTitle = $("img[src='HTMLGraph/images/1x1_83C4FE.gif']").eq(0).attr('title');
+        imgTitle = imgTitle.split(":");
+        // >75
+        $("#attendenceCard").append("<div class='col'>" + imgTitle[0] + " " + "<b>" + imgTitle[1] + "%</b>" + "<div class='progress'><div class='determinate' style='width: " + imgTitle[1] + "%'></div></div></div>");
+        $("img[src='HTMLGraph/images/1x1_83C4FE.gif']").eq(0).remove();
+    }
+    while ($("img[src='HTMLGraph/images/1x1_FFC19F.gif']").length > 0) {
+        var imgTitlel75 = $("img[src='HTMLGraph/images/1x1_FFC19F.gif']").eq(0).attr('title');
+        imgTitlel75 = imgTitlel75.split(":");
+        // <75
+        $("#attendenceCard").append("<div class='col' style='color:red'>" + imgTitlel75[0] + " " + "<b>" + imgTitlel75[1] + "%</b>" + "<div class='progress'><div class='determinate' style='width: " + imgTitlel75[1] + "%'></div></div></div>");
+        $("img[src='HTMLGraph/images/1x1_FFC19F.gif']").eq(0).remove();
+    }
 
-    // console.log(table)
-    var element = table[1];
+    $(".main_content").remove();
 
-
-    var spotlight  = $(element).find('tbody');
-    //console.log($(element).find('tbody'))
-
-    spotlight_message = ''
-    spotlight.find('tr').each(function (key , val) {
-        var $tds =$(this).find('td')
-        spotlight_message += $tds.html()
-    });
-        //console.log(spotlight_message)
-    $('#spotlight').append('<marquee behaviour="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay="75"  direction="up" width="100%" height="210px">'+spotlight_message+'</marquee>')
-    // $('#message').append('<div class="main-div"></div>')
-    var html ='<div class="main-div">';
-
-
-    // $('.main-div').append('<div class="sub-div"></div>')
-    // console.log(message_object)
-    for (var messages in message_object){
-        // console.log(message_object[messages])
-        str = JSON.stringify(message_object[messages], null, 4);
-        // console.log(str)
-
-        var  inner = message_object[messages]
-        // console.log(inner.length)
-            html+='<div class="sub-div">';
-            html+='<div class="faculty">'+inner.Faculty+'</div>';
-            html+='<div class="course">'+inner.Course+'</div>';
-            html+='<div class="message">'+inner.Message.replace(/[^\x20-\x7E]/gmi, "")+'</div>';
-            html+='<div class="sent">'+inner['Sent On']+'</div></div>';
-
-        }
-$('#message').append(html+'</div>');
-    $('.main-div').wrap('<marquee behaviour="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" scrolldelay="75" direction="up" width="100%" height="210px"></marquee>')
-
+    $('.card-panel').addClass('hoverable');
 });
-
-

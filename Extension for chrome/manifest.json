@@ -286,8 +286,7 @@
         "all_frames": true,
         "css": [
             "css/materialize.min.css",
-            "css/home/spotlight_modified.css",
-            "css/materialize.min.css"
+            "css/home/spotlight_modified.css"
         ],
         "js": [
             "scripts/jquery.min.js",
