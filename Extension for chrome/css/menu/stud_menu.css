@@ -1,13 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 table{
 	padding: 0px 0px 3px 0;
-	
+
 	font-family: "Roboto", helvetica, arial, sans-serif !important;
 }
 .sttd {
    font-weight: normal;
    color:#686868 !important;
 text-decoration:none !important;
+}
+.sta{
+	margin-left: 10px !important;
 }
 .sta:hover {
 	color: rgb(0,0,0) !important;

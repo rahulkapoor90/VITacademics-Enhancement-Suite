@@ -66,8 +66,8 @@
       "matches": [ "*://vtop.vit.ac.in/student/stud_riviera_home.asp", "*://vtop.vit.ac.in/student/stud_riviera_info.asp", "*://academics.vit.ac.in/student/stud_riviera_event_info.asp" ]
    }, {
       "all_frames": true,
-      "css": [ "css/menu/stud_menu.css" ],
-      "js": [ "scripts/menu/stud_menu.js" ],
+      "css": [ "css/menu/stud_menu.css","css/materialize.min.css","css/menu/custom_stud_menu.css"],
+      "js": [ "scripts/jquery.min.js","scripts/materialize.min.js","scripts/menu/stud_menu.js","scripts/menu/custom_stud_menu.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_menu.asp" ]
    }, {
       "all_frames": true,
@@ -110,6 +110,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications" ],
    "short_name": "VES",
-   "version": "1.2.2",
-   "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js" ]
+   "version": "1.3.1",
+   "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js","custom_stud_menu.html" ]
 }
