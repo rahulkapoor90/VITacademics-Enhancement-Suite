@@ -182,13 +182,12 @@
         "js": [
             "scripts/jquery.min.js",
             "scripts/materialize.min.js",
-            "scripts/attendance/attendance.js",
             "scripts/attendance/attend.js",
+            "scripts/attendance/attendance.js",
             "scripts/attendance/lastDate.js"
         ],
         "css": [
             "css/materialize.min.css",
-            "css/attendance/home.css",
             "css/attendance/attendance.css"
         ]
     }, {
