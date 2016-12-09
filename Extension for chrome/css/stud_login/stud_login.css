@@ -10,3 +10,51 @@ input:-webkit-autofill {
     font-weight: 300 !important;
     color: #616161 !important;
 }
+
+
+/* 
+* pre loader 
+* reference: https://codepad.co/snippet/3uYrYuvi
+*/
+
+@keyframes pink {
+    50% {
+        transform: translateX(30px);
+    }
+}
+
+@keyframes blue {
+    0% {
+        z-index: 1;
+    }
+    50% {
+        transform: translateX(-30px);
+    }
+}
+
+#preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.dot-blue,
+.dot-pink {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    animation: blue 1.15s infinite ease-in-out;
+}
+
+.dot-blue {
+    background: #0163DB;
+    transform: translateX(30px);
+}
+
+.dot-pink {
+    background: #ED4B70;
+    transform: translateX(-30px);
+    animation-name: pink;
+}
