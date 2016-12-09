@@ -35,7 +35,8 @@
         "webRequest",
         "downloads",
         "*://vtop.vit.ac.in/*",
-        "notifications"
+        "notifications",
+        "https://vtop-doodle.azurewebsites.net/doodle.txt"
     ],
     "content_scripts": [{
         "matches": [
