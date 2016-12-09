@@ -47,7 +47,7 @@ $(function () {
 
     // marquee title
     var x_marquee = $('marquee');
-    var x_title = $("a[onclick]");
+    var x_title = $("a[onclick]").not('a[onclick="popup2(\'http://vtop2.vit.ac.in:8080/ONLINEPAYMENT/\')"]');
     for (var i = 0; i < x_marquee.length; ++i) {
         var title = x_marquee.eq(i).find('title').text();
         var title_onclick = x_title.eq(i).attr('onclick');
