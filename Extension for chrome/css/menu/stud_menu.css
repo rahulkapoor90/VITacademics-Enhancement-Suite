@@ -1,22 +1,70 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-table{
+table {
 	padding: 0px 0px 3px 0;
-
 	font-family: "Roboto", helvetica, arial, sans-serif !important;
 }
+
 .sttd {
-   font-weight: normal;
-   color:#686868 !important;
-text-decoration:none !important;
+	font-weight: normal;
+	color: #686868 !important;
+	text-decoration: none !important;
 }
-.sta{
+
+.sta {
 	margin-left: 10px !important;
 }
+
 .sta:hover {
-	color: rgb(0,0,0) !important;
+	color: rgb(0, 0, 0) !important;
 }
-body::-webkit-scrollbar,#transcript-scrollbox::-webkit-scrollbar,ul::-webkit-scrollbar,ol::-webkit-scrollbar{width:13px!important;height:10px!important;background:#e1e1e1!important;border:1px solid rgba(0,0,0,.12)!important}
-body::-webkit-scrollbar-button,#transcript-scrollbox::-webkit-scrollbar-button,ul::-webkit-scrollbar-button,ol::-webkit-scrollbar-button{display:none!important}
-body::-webkit-scrollbar-thumb,#transcript-scrollbox::-webkit-scrollbar-thumb,ul::-webkit-scrollbar-thumb,ol::-webkit-scrollbar-thumb,body::-webkit-scrollbar-track,#transcript-scrollbox::-webkit-scrollbar-track,ul::-webkit-scrollbar-track,ol::-webkit-scrollbar-track{border:0!important;box-shadow:none!important}
-body::-webkit-scrollbar-thumb,#transcript-scrollbox::-webkit-scrollbar-thumb,ul::-webkit-scrollbar-thumb,ol::-webkit-scrollbar-thumb{min-height:28px!important;background:#b3b3b3!important}
-body::-webkit-scrollbar-corner,#transcript-scrollbox::-webkit-scrollbar-corner,ul::-webkit-scrollbar-corner,ol::-webkit-scrollbar-corner{background:#ededed!important}
+
+body::-webkit-scrollbar,
+#transcript-scrollbox::-webkit-scrollbar,
+ul::-webkit-scrollbar,
+ol::-webkit-scrollbar {
+	width: 13px!important;
+	height: 10px!important;
+	background: #e1e1e1!important;
+	border: 1px solid rgba(0, 0, 0, .12)!important
+}
+
+body::-webkit-scrollbar-button,
+#transcript-scrollbox::-webkit-scrollbar-button,
+ul::-webkit-scrollbar-button,
+ol::-webkit-scrollbar-button {
+	display: none!important
+}
+
+body::-webkit-scrollbar-thumb,
+#transcript-scrollbox::-webkit-scrollbar-thumb,
+ul::-webkit-scrollbar-thumb,
+ol::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-track,
+#transcript-scrollbox::-webkit-scrollbar-track,
+ul::-webkit-scrollbar-track,
+ol::-webkit-scrollbar-track {
+	border: 0!important;
+	box-shadow: none!important
+}
+
+body::-webkit-scrollbar-thumb,
+#transcript-scrollbox::-webkit-scrollbar-thumb,
+ul::-webkit-scrollbar-thumb,
+ol::-webkit-scrollbar-thumb {
+	min-height: 28px!important;
+	background: #b3b3b3!important
+}
+
+body::-webkit-scrollbar-corner,
+#transcript-scrollbox::-webkit-scrollbar-corner,
+ul::-webkit-scrollbar-corner,
+ol::-webkit-scrollbar-corner {
+	background: #ededed!important
+}
+
+
+/* remove verticle scroll */
+
+body {
+	overflow-x: hidden;
+}
