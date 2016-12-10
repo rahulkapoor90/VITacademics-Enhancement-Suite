@@ -63,7 +63,7 @@ ol::-webkit-scrollbar-corner {
 }
 
 
-/* remove verticle scroll */
+/* hide horizontal scroll */
 
 body {
 	overflow-x: hidden;
