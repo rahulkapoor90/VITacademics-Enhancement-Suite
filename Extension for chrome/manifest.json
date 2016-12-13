@@ -6,15 +6,11 @@
     "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
     "homepage_url": "http://rahulkapoor.me/vitacademics-enhancement-suite/",
     "icons": {
-        "16": "images/icon.png",
-        "19": "images/icon19.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png",
-        "130": "images/icon130.png",
-        "550": "images/icon550.png"
+        "16": "images/new icons/icon16.png",
+        "48": "images/new icons/icon48.png",
+        "128": "images/new icons/icon128.png"
     },
     "browser_action": {
-        "default_icon": "images/github-logo.png",
         "default_popup": "popup.html",
         "default_title": "Login to VIT WiFi"
     },
