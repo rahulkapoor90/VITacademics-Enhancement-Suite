@@ -18,8 +18,8 @@
       "js": [ "scripts/captcha/captcha.js", "scripts/captcha/captcha.min.js", "scripts/jquery.min.js" ],
       "matches": [ "*://vtop.vit.ac.in/parent/parent_login.asp", "*://vtop.vit.ac.in/student/stud_login.asp", "*://vtop.vit.ac.in/parent/", "*://vtop.vit.ac.in/student/", "*://27.251.102.132/parent/parent_login.asp", "*://27.251.102.132/student/stud_login.asp", "*://27.251.102.132/parent/", "*://27.251.102.132/student/", "*://academics.vit.ac.in/studpay", "*://academics.vit.ac.in/studpay/stud_login.asp" ]
    }, {
-      "css": [ "css/font-awesome.css", "css/main.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/main.js" ],
+      "css": [ "css/font-awesome.css", "css/christmas.css" ],
+      "js": [ "scripts/jquery.min.js", "scripts/christmas_main.js","scripts/christmas.js"],
       "matches": [ "*://vtop.vit.ac.in/student/stud_login.asp", "*://vtop.vit.ac.in/student/" ]
    }, {
       "css": [ "css/vtop.css" ],
@@ -110,6 +110,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications" ],
    "short_name": "VES",
-   "version": "1.3.3",
+   "version": "1.3.4",
    "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js","custom_stud_menu.html" ]
 }
