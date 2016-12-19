@@ -190,12 +190,13 @@ input[name="forgotPassword"] {
 	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .info-msg {
-  margin: 10px 0;
+  padding:8px 8px 4px 8px;
+  text-align:center;
+   overflow:hidden;
+    background-color:#fcc;
   width: 400px;
   padding: 10px;
   border-radius: 3px 3px 3px 3px;
-  color: #059;
-  background-color: #BEF;
 }
 body { background-image: none !important;
  }

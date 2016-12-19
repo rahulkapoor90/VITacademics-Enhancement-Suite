@@ -277,7 +277,7 @@ var icon1 = document.createElement("i");
 icon1.setAttribute("class", "fa fa-facebook");
 icon1.setAttribute("aria-hidden", "true");
 
-var t1 = document.createTextNode(" Hey! if this extension helps you please share it on facebook and help other VITians.");
+var t1 = document.createTextNode("❤ LIKE THE EXTENSION? TELL ME WITH 2 CLICKS!");
 
 var t2 = document.createTextNode("Click here");
 var t4 = document.createTextNode("Made with ♥ for VITians. ");
@@ -286,25 +286,19 @@ var t3 = document.createTextNode(" Any feedback? ");
 var br = document.createElement("br");
 var credit = document.createElement("p");
 par.setAttribute("class", "info-msg");
-par.appendChild(t1);
+
+var spa = document.createElement("span");
+spa.setAttribute("style","display:block; padding-bottom:12px; font-family:Arial,sans-serif; font-size:13.5px; color:#cc181e; font-weight:bold;");
+spa.appendChild(t1);
+var desktop = document.createElement("img");
+desktop.setAttribute("src","https://i.imgur.com/8sS2UnI.png");
+desktop.setAttribute("alt","desktop");
+desktop.setAttribute("width","20px");
+desktop.setAttribute("height","20px");
+desktop.setAttribute("title","+1 the browser extension");
+desktop.setAttribute("style","margin-right:2px; opacity:0.5;");
 
 
-credit.appendChild(t4);
-tag.setAttribute("href", "http://goo.gl/forms/QI8gPMfKML");
-tag.setAttribute("target", "_blank");
-tag.setAttribute("id", "rahultag");
-tag1.setAttribute("href", "https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/graphs/contributors");
-tag1.setAttribute("target", "_blank");
-tag1.setAttribute("id", "rahultag");
-
-
-par.appendChild(t3);
-tag.appendChild(t2);
-tag1.appendChild(t5);
-/*<div class="fb-like" data-href="http://rahulkapoor.me/vitacademics-enhancement-suite/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true">
-</div>*/
-var linebrk = document.createElement("br");
-var linebrk1 = document.createElement("br");
 var fb = document.createElement("div");
 fb.setAttribute("class","fb-like");
 fb.setAttribute("data-href","https://www.facebook.com/VITAcademicsEnhancementSuite/");
@@ -321,10 +315,36 @@ fbhr.setAttribute("href","https://www.facebook.com/sharer/sharer.php?u=http%3A%2
 var hrt = document.createTextNode("Share");
 fbhr.appendChild(hrt);
 
-par.appendChild(tag);
+
+par.appendChild(spa);
+var midspan = document.createElement("span");
+midspan.setAttribute("style","display:table;margin:0 auto;");
+midspan.appendChild(desktop);
+midspan.appendChild(fb);
+par.appendChild(midspan);
+
+
+credit.appendChild(t4);
+tag.setAttribute("href", "http://goo.gl/forms/QI8gPMfKML");
+tag.setAttribute("target", "_blank");
+tag.setAttribute("id", "rahultag");
+tag1.setAttribute("href", "https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/graphs/contributors");
+tag1.setAttribute("target", "_blank");
+tag1.setAttribute("id", "rahultag");
+
+
+
+tag.appendChild(t2);
+tag1.appendChild(t5);
+/*<div class="fb-like" data-href="http://rahulkapoor.me/vitacademics-enhancement-suite/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+</div>*/
+var linebrk = document.createElement("br");
+var linebrk1 = document.createElement("br");
+
+
 par.appendChild(linebrk);
-par.appendChild(linebrk1);
-par.appendChild(fb);
+par.appendChild(t3);
+par.appendChild(tag);
 credit.appendChild(tag1);
 note.parentElement.appendChild(par);
 
