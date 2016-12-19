@@ -10,7 +10,7 @@ chrome.runtime.onInstalled.addListener(function(details){
         var opt = {
           type: "basic",
           title: "Hello Friend!",
-          message: "VITacademics Enhancement Suite has been updated with new features and bug fixes.",
+          message: "Fall Semester Results are out! Just a heads up.",
           iconUrl: chrome.extension.getURL('images/github-logo.png')
         }
             chrome.notifications.create(opt);
