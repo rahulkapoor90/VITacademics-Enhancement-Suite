@@ -1,3 +1,14 @@
+function getword() {
+  chrome.tabs.create({
+    url: "https://vtop.vit.ac.in/student/stud_login.asp",
+  });
+}
+chrome.contextMenus.create({
+  title: "Open Student Login",
+  contexts:["all"],
+  onclick: getword,
+});
+
 function audioNotification(){
     var yourSound = new Audio('audio/notification.mp3');
     yourSound.play();
@@ -10,7 +21,7 @@ chrome.runtime.onInstalled.addListener(function(details){
         var opt = {
           type: "basic",
           title: "Hello Friend!",
-          message: "Fall Semester Results are out! Just a heads up.",
+          message: "VITacademics Enhancement Suite has been updated with new features and bug fixes.",
           iconUrl: chrome.extension.getURL('images/github-logo.png')
         }
             chrome.notifications.create(opt);
