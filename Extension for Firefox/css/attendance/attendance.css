@@ -1,6 +1,6 @@
 p[id^=t] {
 	font-weight:bold;
-	color: #669644 !important;
+	color: #669644;
 }
 p[id^=po] {
     font-weight: bold;
@@ -10,20 +10,25 @@ p[id^=p] {
 }
 p[id^=tt]{
 	font-weight: bold;
-	color: #E74C3C !important;
+	color: #E74C3C;
 }
 button{
 	position: relative;
-	text-decoration: none;	
+	text-decoration: none;
 	margin-right: 6px;
 	border-bottom: 5px solid #959595;
 	transition: all 0.1s;
+	-moz-transition: all 0.1s;
+	-o-transition: all 0.1s;
 	-webkit-transition: all 0.1s;
 	cursor: pointer;
 }
 button:active
 {
 	transform: translate(0px,5px);
+	-moz-transform: translate(0px,5px);
+	-ms-transform: translate(0px,5px);
+	-o-transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
 }

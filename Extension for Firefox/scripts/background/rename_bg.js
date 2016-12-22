@@ -23,7 +23,7 @@ chrome.notifications.onButtonClicked.addListener(function(nID, i){
         switch (i) {
             case 0:
                 chrome.tabs.create({
-                    "url"   :   "https://vtop.vit.ac.in/student/class_message_view.asp?sem=SS",
+                    "url"   :   "https://vtop.vit.ac.in/student/class_message_view.asp?sem=FS",
                     "index" :   tInd
                 })
                 break;
@@ -87,8 +87,14 @@ var getLocation = function(href) {
 chrome.downloads.onDeterminingFilename.addListener(function(item, suggest) {
   if (getLocation(item.url).hostname == "vtop.vit.ac.in" || getLocation(item.url).hostname == "27.251.102.132")
   {
-    suggest({filename: "VIT Downloads"+ "/" + subject_name + "/" + teacher_name + "/" + item.filename});
-    console.log(getLocation(item.url).hostname);
+
+      if(subject_name && teacher_name){
+          suggest({filename: "VIT Downloads"+ "/" + subject_name + "/" + teacher_name + "/" + item.filename});
+          console.log(getLocation(item.url).hostname);
+      }
+      else{
+          console.log("Couldn't");
+      }
   }
 
 });

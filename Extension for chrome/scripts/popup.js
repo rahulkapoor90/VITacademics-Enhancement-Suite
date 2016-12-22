@@ -1,3 +1,43 @@
+function p(data){
+
+var elems = [];
+var baseURL = "https://vtop.vit.ac.in/student/";
+
+function addLink(e){
+var a = document.createElement('a');
+var b = document.createElement('br');
+a.innerText=e.text;
+a.setAttribute('HREF', baseURL + e.url);
+a.setAttribute('target','_blank');
+a.setAttribute('id','spotlinks');
+document.body.appendChild(a);
+document.body.appendChild(b);
+elems.push(a);
+
+}
+
+data.spotlight.academics.forEach(addLink);
+data.spotlight.coe.forEach(addLink);
+data.spotlight.research.forEach(addLink);
+
+return elems;
+}
+
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if (request.readyState === 4) {
+        if (request.status === 200) {
+            document.body.className = 'ok';
+            var data = JSON.parse(request.responseText);
+            p(data);
+        } else {
+            document.body.className = 'error';
+        }
+    }
+};
+request.open("GET", "https://vitacademics-rel.herokuapp.com/api/v2/vellore/spotlight" , true);
+request.send(null);
+
 // Copyright (c) 2014 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.

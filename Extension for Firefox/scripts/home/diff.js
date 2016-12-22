@@ -1,3 +1,10 @@
+/*
+TODO-
+     >  fix this script.
+     >  remove useless code.
+     -----------------------
+*/
+
 //  To send AJAX request to url, then parse html to marks objects.
 /*
 a=[], marks={};
@@ -222,7 +229,13 @@ check = function(P, Q){
 }
 */
 
-/*New updated parser.*/
+/*
+    ----------------------
+
+    New updated parser.
+
+    ----------------------
+*/
 
 //  Parse a table element with marks.
 function parse(elem, code){
@@ -246,7 +259,7 @@ function parse(elem, code){
     Marks[code]=a;
 
 }
-
+/*
 Marks = {};
 //  Get the marks page and start parsing.
 $.get("https://vtop.vit.ac.in/student/marks.asp?sem=FS", function(data){
@@ -269,7 +282,7 @@ $.get("https://vtop.vit.ac.in/student/marks.asp?sem=FS", function(data){
     check();
 
 });
-
+*/
 function regno(){
     var reg ;
     document.cookie.split(';').every(function(e){
@@ -282,26 +295,29 @@ function regno(){
 }
 
 function storeMarks(data){
-    console.warn("Storing");
+    //console.warn("Storing");
     var obj = {};
     obj[regno()+"Marks"] = data;
+    console.warn(JSON.stringify(obj));
     chrome.storage.local.set(obj, function(){
         if(chrome.runtime.lastError){
             console.error("Error!");
             console.error(chrome.runtime.lastError);
         }
-        console.warn("Done");
+        //console.warn("Done");
     });
 }
 
 function check(){
     //console.error("Checking");
     var temp = regno()+"Marks";
+    console.warn(JSON.stringify(Marks));
     chrome.storage.local.get(temp, function(obj){
         if(Object.keys(obj).length){
             diff(obj[temp], Marks);
             storeMarks(Marks);
         }else{
+            console.warn("Storing First time!");
             storeMarks(Marks);
         }
     });

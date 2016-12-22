@@ -6,13 +6,12 @@ function getDateString(date) {
 			+"-"+
 			date.getFullYear();
 }
-
 document.getElementsByName("to_date")[0].value=getDateString(new Date());
 $(document).ready(function () {
 	//$('table:first-child ul:first-child').hide();
    //     $('table:nth-child(1) td:nth-child(7)').hide();
 });
-/*$(document).ready(function () {
+$(document).ready(function () {
 	var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flat-top.css';
@@ -22,4 +21,5 @@ $(document).ready(function () {
     document.getElementsByTagName('head')[0].appendChild(script1);
     
 });
-*/
+
+document.getElementsByName('from_date')[0].value = '01-JAN-2016'

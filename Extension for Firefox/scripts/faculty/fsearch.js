@@ -21,7 +21,7 @@ function req(fName){
     var xhr = new XMLHttpRequest();
     var url = "getfacdet.asp?fac="+fName;
     xhr.onreadystatechange=function(){
-        $('#txtHint').html('<img src="http://demo.marcofolio.net/facebook_loader/images/loading.gif">');
+        $('#txtHint').html('<img src="https://res.cloudinary.com/dadfowug4/image/upload/v1479314945/loading_bkeixv.gif">');
         if (xhr.readyState==4 && xhr.status==200){
             $('#txtHint').html(xhr.responseText);
         }

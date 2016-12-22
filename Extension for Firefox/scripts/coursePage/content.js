@@ -8,21 +8,21 @@ for (i=0; i<s.length; i++)
 	att.value = "checkbox";
 	box.setAttributeNode(att);
 
-	var att = document.createAttribute("name");
-	att.value = "downloadSelect";
-	box.setAttributeNode(att);
+	var att1 = document.createAttribute("name");
+	att1.value = "downloadSelect";
+	box.setAttributeNode(att1);
 
-	var att = document.createAttribute("value");
-	att.value = s[i].href;
-	box.setAttributeNode(att);
+	var att2 = document.createAttribute("value");
+	att2.value = s[i].href;
+	box.setAttributeNode(att2);
 
-	var att = document.createAttribute("class");
-	att.value = "sexy-input";
-	box.setAttributeNode(att);
+	var att3 = document.createAttribute("class");
+	att3.value = "sexy-input";
+	box.setAttributeNode(att3);
 
-	var att = document.createAttribute("data-filename");
-	att.value = s[i].innerText;
-	box.setAttributeNode(att);
+	var att4 = document.createAttribute("data-filename");
+	att4.value = s[i].innerText;
+	box.setAttributeNode(att4);
 
 	s[i].parentNode.insertBefore(box, s[i]);
 }
@@ -89,7 +89,7 @@ window.addEventListener('message', function(event) {
     return;
   }
   //	request type
-  //message.type = "rename";
+  message.type = "rename";
   chrome.runtime.sendMessage(message);
   // console.log(message.links);
 });
@@ -98,21 +98,64 @@ window.addEventListener('message', function(event) {
 
 var init = function(){
 	var links = [];
+	var dZip = function(){
+
+		var Promise = window.Promise;
+		if (!Promise) {        Promise = JSZip.external.Promise;    }
+
+		function urlToPromise(url) {
+			return new Promise(function(resolve, reject) {
+				JSZipUtils.getBinaryContent(url, function (err, data) {
+					if(err) {
+						reject(err);
+					} else {
+						resolve(data);
+					}
+				});
+			});
+		}
+
+		var zip = new JSZip();
+		links.forEach(function(e, i){
+			zip.file("filename"+i+".pdf", urlToPromise(e), {binary:true});
+		})
+
+		// when everything has been downloaded, we can trigger the dl
+		zip.generateAsync({type:"blob"})
+		.then(function callback(blob) {
+
+			// see FileSaver.js
+			saveAs(blob, "Material.zip");
+
+			console.log("done !");
+		}, function (e) {
+			console.error(e);
+		});
+
+	}
 	var dA = function(){
-		alert("VES will now download all the study material available.");
 		var subject_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[8].innerText;
 		var teacher_name = document.getElementsByTagName("table")[1].getElementsByTagName("td")[12].innerText;
 		chrome.runtime.sendMessage({
 			"type":"rename", "links": links, "subject": subject_name, "teacher": teacher_name
 		})
 	}
+
 	var a=`<tr>
 	<td bgcolor="#5A768D" width="22%" height="30"><font color="#FFFFFF">Download All Contents</font></td>
 			  <td width="75" bgcolor="#EDEADE">  <input class="submit" type="submit" value="Download All"> </td>
 	</tr>`
 	a=$(a);
 	$('table:nth-of-type(2)').find('tbody').prepend(a);
-	$('input[name="downloadSelect"]').each(function(i, val){links.push($(val).attr('value'))});
+
+	var b=`<tr>
+	<td bgcolor="#5A768D" width="22%" height="30"><font color="#FFFFFF">Download All Zip</font></td>
+			  <td width="75" bgcolor="#EDEADE">  <input class="submit" type="submit" value="Download All Zip"> </td>
+	</tr>`
+/*	b=$(b);
+	$(b).find('input:submit').click(dZip);
+	$('table:nth-of-type(2)').find('tbody').prepend(b);
+*/	$('input[name="downloadSelect"]').each(function(i, val){links.push($(val).attr('value'))});
 	$(a).find('input:submit').click(dA);
 }
 onload = init();

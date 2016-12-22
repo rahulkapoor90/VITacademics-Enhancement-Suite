@@ -1,5 +1,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css');
 @import url('http://fonts.googleapis.com/css?family=Quicksand');
+@import url(https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700);
 
 #navbar{
   background-color:#0D304E;
@@ -21,14 +22,52 @@
   font-family:'Quicksand', sans-serif;
   font-size:20px;
 }
-#parent_link {
-	text-align:center;
-	float:right;
-	margin-left:340px;
-	margin-top:30px;
-	font-size:22px !important;
-	font-family:'Quicksand', sans-serif !important;
+.christmas-blue {
+color: #035ee2;
+	background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/blue_glitter.gif) repeat;
+	background: -o-linear-gradient(transparent, transparent) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	margin: 0;
+	padding: 0;
+
+	font-weight: 900;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1px;
+	z-index: 999999;
+	-webkit-background-clip: text;
 }
+
+.christmas-gold {
+	color: #D81E1E;
+
+color: gold;
+	background: -webkit-linear-gradient(transparent, transparent), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/gold_glitter.gif) repeat;
+	background: -o-linear-gradient(transparent, transparent) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+	margin: 0;
+	padding: 0;
+
+	font-weight: 900;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1px;
+	z-index: 999999;
+	-webkit-background-clip: text;
+}
+.christmas {position:absolute;font-size: 23px;
+  text-align:center;
+  max-height:100px;
+  z-index:-1;
+line-height:0;
+  margin-top:35px;
+  margin-left:490px;
+  color:#fff;
+	font-family: 'Mountains of Christmas', cursive;
+}
+
 #navbar ul{
   list-style-type:none;
   float:left;
@@ -79,6 +118,10 @@
 	float:left;
 	margin-left:5px;
 }
+table td tr:nth-child(5), tr:nth-child(4)
+{
+    display:none;
+}
 input[type="text"], input[type="password"] {
 	height:20px;
   width:160px;
@@ -95,35 +138,40 @@ input[type="text"], input[type="password"] {
 	margin-top:10px;
 	color: #c0392b;
 }
+#rahultag2 {
+  text-decoration:none;
+  font-size:14px;
+  color: #c0392b;
+}
 input[type="submit"]{
     /* end of placing */
 	cursor: pointer;
-	width: 143px;
+	width: 63px;
     height: 24px;
     padding: 0;
     font-weight: bold;
     color: white;
     text-align: center;
     border: 1px solid;
-    border-color: #1486f9 #0f7de9 #0d6acf;
-    background: #1993fb;
+    border-color: #D64550 #D64550 #D64550;
+    background: #D64550;
     border-radius: 4px;
-	background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+	background-image: linear-gradient(to bottom, #D64550, #D64550 40%, #D64550);
 	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
-input[type="button"] {
+input[name="Reset"] {
 	cursor: pointer;
-	width: 93px;
+	width: 63px;
     height: 24px;
     padding: 0;
     font-weight: bold;
     color: white;
     text-align: center;
     border: 1px solid;
-    border-color: #1486f9 #0f7de9 #0d6acf;
-    background: #1993fb;
+    border-color: #D64550 #D64550 #D64550;
+    background: #D64550;
     border-radius: 4px;
-	background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+	background-image: linear-gradient(to bottom, #D64550, #D64550 40%, #D64550);
 	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 input[name="forgotPassword"] {
@@ -135,19 +183,20 @@ input[name="forgotPassword"] {
     color: white;
     text-align: center;
     border: 1px solid;
-    border-color: #1486f9 #0f7de9 #0d6acf;
-    background: #1993fb;
+    border-color: #D64550 #D64550 #D64550;
+    background: #D64550;
     border-radius: 4px;
-	background-image: linear-gradient(to bottom, #4cb1fe, #229afc 40%, #138df6);
+	background-image: linear-gradient(to bottom, #D64550, #D64550 40%, #D64550);
 	box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .info-msg {
-  margin: 10px 0;
+  padding:8px 8px 4px 8px;
+  text-align:center;
+   overflow:hidden;
+    background-color:#fcc;
   width: 400px;
   padding: 10px;
   border-radius: 3px 3px 3px 3px;
-  color: #059;
-  background-color: #BEF;
 }
 body { background-image: none !important;
  }

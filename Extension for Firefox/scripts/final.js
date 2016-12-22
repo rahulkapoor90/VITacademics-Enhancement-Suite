@@ -1,9 +1,3 @@
-var link = document.createElement('link');
-    link.type = 'image/x-icon';
-    link.rel = 'shortcut icon';
-    link.href = 'https://foodonz.com/images/favicon.ico';
-    document.getElementsByTagName('head')[0].appendChild(link);
-
 document.getElementsByTagName('head')[0].appendChild(link);
 //hide the upper part and the default side links
 document.getElementsByTagName('table')[0].style.display = "none";
@@ -28,7 +22,7 @@ div3.setAttribute("width", "25%");
 div3.setAttribute("align", "left");
 
 var t4 = document.createElement("img");
-t4.setAttribute("src", "http://www.vit.ac.in/images/logo.png");
+t4.setAttribute("src", "https://res.cloudinary.com/dadfowug4/image/upload/v1479304837/logo_oqljl1.png");
 t4.setAttribute("width", "190");
 t4.setAttribute("height", "70");
 
@@ -72,10 +66,10 @@ var tad = document.createElement("td");
 tad.setAttribute("align","center");
 var hr = document.createElement("a");
 hr.setAttribute("href","https://vtop.vit.ac.in/student/stud_login.asp");
-hr.setAttribute("target","_blank");
+//hr.setAttribute("target","_blank");
 var im = document.createElement("img");
 im.setAttribute("border","0");
-im.setAttribute("src","https://i.imgur.com/r0JaDsp.png");
+im.setAttribute("src","https://res.cloudinary.com/dadfowug4/image/upload/v1479304581/studentlogin_fnj4ah.png");
 //im.setAttribute("width","178");
 //im.setAttribute("height","35");
 
@@ -84,10 +78,10 @@ var tad1 = document.createElement("td");
 tad1.setAttribute("align","center");
 var hr1 = document.createElement("a");
 hr1.setAttribute("href","https://vtop.vit.ac.in/parent/parent_login.asp");
-hr1.setAttribute("target","_blank");
+//hr1.setAttribute("target","_blank");
 var im1 = document.createElement("img");
 im1.setAttribute("border","0");
-im1.setAttribute("src","https://i.imgur.com/zow3cXY.png");
+im1.setAttribute("src","https://res.cloudinary.com/dadfowug4/image/upload/v1479304581/parentlogin_g2u4re.png");
 //im1.setAttribute("width","178");
 //im1.setAttribute("height","35");
 
@@ -97,10 +91,10 @@ var tad2 = document.createElement("td");
 tad2.setAttribute("align","center");
 var hr2 = document.createElement("a");
 hr2.setAttribute("href","https://vtop.vit.ac.in/faculty/fac_login.asp");
-hr2.setAttribute("target","_blank");
+//hr2.setAttribute("target","_blank");
 var im2 = document.createElement("img");
 im2.setAttribute("border","0");
-im2.setAttribute("src","https://i.imgur.com/jMSJbK6.png");
+im2.setAttribute("src","https://res.cloudinary.com/dadfowug4/image/upload/v1479304581/facultylogin_nojusn.png");
 
 hr1.appendChild(im1);
 tad1.appendChild(hr1);
@@ -121,4 +115,3 @@ tbo.appendChild(tr1);
 tabl.appendChild(tbo);
 
 tab.parentElement.insertBefore(tabl, tab);
-
