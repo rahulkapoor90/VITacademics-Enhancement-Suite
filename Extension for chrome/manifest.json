@@ -90,15 +90,7 @@
       "all_frames": true,
       "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
-  },
-{
-  "matches" : [
-    "http://*/*", "https://*/*"
-  ],
-  "js" : [ "scripts/av_inc.js" ],
-  "run_at" : "document_idle",
-  "all_frames" : false
-}
+  }
    ],
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
@@ -119,6 +111,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications", "contextMenus","https://vitacademics-rel.herokuapp.com/*" ],
    "short_name": "VES",
-   "version": "1.4.0",
+   "version": "1.4.1",
    "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js","custom_stud_menu.html" ]
 }
