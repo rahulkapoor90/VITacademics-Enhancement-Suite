@@ -18,12 +18,18 @@ table, th, tbody {
 table{
   margin-left: 10px !important;
 }
+
 tr,td {
   padding: 2px !important;
   color: #616161 !important;
   background-color: #f5f5f5!important;
   background: none!important;
 }
+
+tr,td,a {
+  font-size: 5vw !important;
+}
+
 .collapsible-header {
     border-bottom: 0!important;
     padding-left: 0!important;
