@@ -27,8 +27,8 @@
       "matches": [ "*://vtop.vit.ac.in/" ]
    }, {
       "all_frames": true,
-      "css": [ "css/CoursePage/course_page.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/coursePage/course_page.js", "scripts/coursePage/content.js" ],
+      "css": [ "css/CoursePage/course_page.css", "css/bootstrap.min.css" ],
+      "js": [ "scripts/jquery.min.js", "scripts/coursePage/course_page.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/coursepage_view.asp?*", "https://vtop.vit.ac.in/student/coursepage_plan_view.asp*" ]
    }, {
       "all_frames": true,
