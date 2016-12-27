@@ -26,10 +26,6 @@ tr,td {
   background: none!important;
 }
 
-tr,td,a {
-  font-size: 5vw !important;
-}
-
 .collapsible-header {
     border-bottom: 0!important;
     padding-left: 0!important;
