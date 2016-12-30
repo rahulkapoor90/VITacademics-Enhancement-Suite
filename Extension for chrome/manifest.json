@@ -66,7 +66,7 @@
         "matches": ["*://vtop.vit.ac.in/student/stud_riviera_home.asp", "*://vtop.vit.ac.in/student/stud_riviera_info.asp", "*://academics.vit.ac.in/student/stud_riviera_event_info.asp"]
     }, {
         "all_frames": true,
-        "css": ["css/menu/stud_menu.css", "css/materialize.min.css", "css/menu/custom_stud_menu.css"],
+        "css": ["css/materialize.min.css", "css/menu/custom_stud_menu.css"],
         "js": ["scripts/jquery.min.js", "scripts/materialize.min.js", "scripts/menu/stud_menu.js", "scripts/menu/custom_stud_menu.js"],
         "matches": ["*://vtop.vit.ac.in/student/stud_menu.asp"]
     }, {
