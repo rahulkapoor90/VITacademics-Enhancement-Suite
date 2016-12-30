@@ -32,7 +32,7 @@
         "downloads",
         "*://vtop.vit.ac.in/*",
         "notifications",
-        "https://vtop-doodle.azurewebsites.net/doodle.txt"
+        "https://raw.githubusercontent.com/VaTz88/VES-API/master/*"
     ],
     "content_scripts": [{
         "matches": [
@@ -322,8 +322,7 @@
         "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css",
         "https://fonts.googleapis.com/icon?family=Material+Icons",
         "calc.js",
-        "scripts/stud_login/stud_login.html",
-        "custom_stud_menu.html"
+        "scripts/stud_login/stud_login.html"
     ],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
