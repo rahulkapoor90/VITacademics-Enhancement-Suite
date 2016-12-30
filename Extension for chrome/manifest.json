@@ -53,7 +53,7 @@
     }, {
         "all_frames": true,
         "css": ["css/timeTable/timetable.css"],
-        "js": ["scripts/jquery.min.js", "scripts/timeTable/html2canvas.js", "scripts/timeTable/timetable.js"],
+        "js": ["scripts/jquery.min.js", "scripts/timeTable/html2canvas.min.js", "scripts/timeTable/timetable.js"],
         "matches": ["*://vtop.vit.ac.in/student/timetable_*.asp", "https://vtop.vit.ac.in/student/course_regular.asp?sem=*"]
     }, {
         "all_frames": true,
