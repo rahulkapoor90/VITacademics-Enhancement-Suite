@@ -22,6 +22,7 @@ document.getElementsByTagName('form')[0].style.display="none";
 	var tag1 = document.createElement("a");
 	tag1.setAttribute("href", "https://vtop.vit.ac.in/student/stud_login.asp");
 	tag1.setAttribute("target", "_blank");
+  tag1.setAttribute("onclick","_gaq.push(['_trackEvent', 'errorbutton', 'clicked'])");
 	tag1.setAttribute("class", "button1");
 	var t3 = document.createTextNode("Go To Login Page");
 	tag1.appendChild(t3);
