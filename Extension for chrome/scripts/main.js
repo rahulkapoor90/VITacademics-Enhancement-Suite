@@ -3,7 +3,7 @@ function trackButton(e) {
   };
   var buttons = document.querySelectorAll('.submit3');
     for (var i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('click', trackButtonClick);
+      buttons[i].addEventListener('click', trackButton);
     }
 /*<div id="fb-root"></div>*/
 (function(d, s, id) {
@@ -292,9 +292,11 @@ credit.appendChild(t4);
 tag.setAttribute("href", "http://goo.gl/forms/QI8gPMfKML");
 tag.setAttribute("target", "_blank");
 tag.setAttribute("id", "rahultag");
+tag.setAttribute("onclick","_gaq.push(['_trackEvent', 'feedback', 'clicked'])");
 tag1.setAttribute("href", "https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/graphs/contributors");
 tag1.setAttribute("target", "_blank");
 tag1.setAttribute("id", "rahultag");
+  tag1.setAttribute("onclick","_gaq.push(['_trackEvent', 'contribute', 'clicked'])");
 
 
 par.appendChild(t3);
