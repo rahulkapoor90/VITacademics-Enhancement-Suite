@@ -30,4 +30,4 @@ document.getElementsByTagName('form')[0].style.display="none";
 	div1.appendChild(div2);
 	div1.appendChild(div3);
 	div1.appendChild(div4);
-	 nav.parentElement.appendChild(div1);
+nav.parentElement.appendChild(div1);

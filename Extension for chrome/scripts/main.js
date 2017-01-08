@@ -1,3 +1,7 @@
+var gaa = document.createElement('script'); gaa.type = 'text/javascript';
+gaa.src = '//code.tidio.co/ijlw85pqhymfraljcemk1jzm5fnhpfip.js';
+var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(gaa, ss);
+
 function trackButton(e) {
     _gaq.push(['_trackEvent', e.target.id, 'clicked']);
   };
