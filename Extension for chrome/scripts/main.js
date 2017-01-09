@@ -1,11 +1,14 @@
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+var gaa = document.createElement('script'); gaa.type = 'text/javascript';
+gaa.src = '//code.tidio.co/ijlw85pqhymfraljcemk1jzm5fnhpfip.js';
+var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(gaa, ss);
 
- ga('create', 'UA-73159092-1', 'auto');
-    ga('send', 'pageview');
-
+function trackButton(e) {
+    _gaq.push(['_trackEvent', e.target.id, 'clicked']);
+  };
+  var buttons = document.querySelectorAll('.submit3');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', trackButton);
+    }
 /*<div id="fb-root"></div>*/
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -293,9 +296,11 @@ credit.appendChild(t4);
 tag.setAttribute("href", "http://goo.gl/forms/QI8gPMfKML");
 tag.setAttribute("target", "_blank");
 tag.setAttribute("id", "rahultag");
+tag.setAttribute("onclick","_gaq.push(['_trackEvent', 'feedback', 'clicked'])");
 tag1.setAttribute("href", "https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/graphs/contributors");
 tag1.setAttribute("target", "_blank");
 tag1.setAttribute("id", "rahultag");
+  tag1.setAttribute("onclick","_gaq.push(['_trackEvent', 'contribute', 'clicked'])");
 
 
 par.appendChild(t3);
