@@ -1,4 +1,3 @@
-
 OneSignal.init({appId: "ecaa66cf-5858-48fe-8e44-4ddc702f6fdf",
                 googleProjectNumber: "394621869407"});
 
