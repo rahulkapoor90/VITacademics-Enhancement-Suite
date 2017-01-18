@@ -29,7 +29,7 @@ Contributions are welcome. if you see any issue then open an issue and if you th
 VES is available for Chrome & Firefox users though the firefox is still in BETA phase. you can download the extension using the following links:
 
 * Google Chrome Download -> [VES](https://chrome.google.com/webstore/detail/vitacademics-enhancement/fdeagddeencldcpojhlngflmhipgkhbb)
-* Mozilla Firefox Download -> [VES](https://addons.mozilla.org/en-US/firefox/addon/vit-enhancement-suite/)
+* Mozilla Firefox Download -> [VES](https://addons.mozilla.org/en-US/firefox/addon/vitacademics-enhancement/)
 
 ## Project structure
 
