@@ -1,87 +1,36 @@
-/*$(document).ready(function () {
-	$('table:first-child ul:first-child').hide();
-       $('table:nth-child(1) td:nth-child(15), td:nth-child(14)').hide();
-});*/
-var textbox = document.getElementsByName('course_regular')[0];
-    var para = document.createElement("input");
-	var png = document.createElement("input");
-	var pdf = document.createElement("input");
-	var csv = document.createElement("input");
-	var xml = document.createElement("input");
-	var doc = document.createElement("input");
-	var txt = document.createElement("input");
-	var info = document.createElement("p");
-    var info1 = document.createElement("p");
-	  var para1 = document.createElement("input");
-	var png1 = document.createElement("input");
-	var pdf1 = document.createElement("input");
+function table2jpg(element, filename) {
+    var newWindow = window.open();
+    html2canvas(element, {
+        onrendered: function (canvas) {
+            timetable_img_src = canvas.toDataURL("image/jpeg");
+            newWindow_data =
+                '<html><head><title>VES</title></head><body><a href="' + timetable_img_src + '" download="' + filename + '"><img style="width:100%;" src="' + timetable_img_src + '" alt="FFCSonTheGo"/></a>' +
+                '<h1>Click on the image to download.</h1>';
 
-    info.setAttribute("type", "button"); 
-	var t2 = document.createTextNode("Export 1st Table into the following formats :");
-    info.setAttribute("id", "infoExport"); 
-	//para.setAttribute("class", "Export"); 
-	info.appendChild(t2);
-    textbox.parentElement.appendChild(info);
-	
-	para.setAttribute("type", "button"); 
-    para.setAttribute("id", "ExportEXCEL"); 
-	para.setAttribute("class", "Export"); 
-    para.setAttribute("value","Export into Excel");
-    textbox.parentElement.appendChild(para);
-	
-	png.setAttribute("type", "button"); 
-    png.setAttribute("id", "ExportPNG"); 
-	png.setAttribute("class", "Export"); 
-    png.setAttribute("value","Export into PNG");
-    textbox.parentElement.appendChild(png);
-	
-	pdf.setAttribute("type", "button"); 
-    pdf.setAttribute("id", "ExportPDF"); 
-	pdf.setAttribute("class", "Export"); 
-    pdf.setAttribute("value","Export into XML");
-    textbox.parentElement.appendChild(pdf);
+            newWindow.document.write(newWindow_data);
+        }
+    });
+}
 
-	 info1.setAttribute("type", "button"); 
-	var t3 = document.createTextNode("Export 2nd Table into the following formats :");
-    info1.setAttribute("id", "infoExport"); 
-	//para.setAttribute("class", "Export"); 
-	info1.appendChild(t3);
-    textbox.parentElement.appendChild(info1);
-	
-	para1.setAttribute("type", "button"); 
-    para1.setAttribute("id", "ExportEXCEL1"); 
-	para1.setAttribute("class", "Export"); 
-    para1.setAttribute("value","Export into Excel");
-    textbox.parentElement.appendChild(para1);
-	
-	png1.setAttribute("type", "button"); 
-    png1.setAttribute("id", "ExportPNG1"); 
-	png1.setAttribute("class", "Export"); 
-    png1.setAttribute("value","Export into PNG");
-    textbox.parentElement.appendChild(png1);
-	
-	pdf1.setAttribute("type", "button"); 
-    pdf1.setAttribute("id", "ExportPDF1"); 
-	pdf1.setAttribute("class", "Export"); 
-    pdf1.setAttribute("value","Export into XML");
-    textbox.parentElement.appendChild(pdf1);
-	
-$("#ExportEXCEL").click(function (e) {
-  $('table:nth-child(2)').tableExport({ type: 'excel', escape: 'false' });  
-});
-$("#ExportPNG").click(function (e) {
-  $('table:nth-child(2)').tableExport({ type: 'png', escape: 'false' });  
-});
-$("#ExportPDF").click(function (e) {
-  $('table:nth-child(2)').tableExport({ type: 'xml', escape: 'false' });  
-});
+$(function () {
 
-$("#ExportEXCEL1").click(function (e) {
-  $('table:first-child table:nth-child(odd)').tableExport({ type: 'excel', escape: 'false' });  
-});
-$("#ExportPNG1").click(function (e) {
-  $('table:first-child table:nth-child(odd)').tableExport({ type: 'png', escape: 'false' });  
-});
-$("#ExportPDF1").click(function (e) {
-  $('table:first-child table:nth-child(odd)').tableExport({ type: 'xml', escape: 'false' });  
+    // create buttons
+    var tableOne_btn = $('<input type="button" value="Export to JPG">');
+    var tableTwo_btn = $('<input type="button" value="Export to JPG">');
+
+    // add buttons
+    $('table').eq(1).after(tableOne_btn);
+    $('table').eq(2).after(tableTwo_btn);
+
+    // get table elements
+    var tableOneElement = $('table')[1];
+    var tableTwoElement = $('table')[2];
+
+    // add on click event listener
+    tableOne_btn.click(function () {
+        table2jpg(tableOneElement, "MyCourses");
+    });
+    tableTwo_btn.click(function () {
+        table2jpg(tableTwoElement, "MyTimetable");
+    });
 });
