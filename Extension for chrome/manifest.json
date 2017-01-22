@@ -1,25 +1,25 @@
 {
-    "author": "Rahul Kapoor",
-    "background": {
-        "page": "background.html",
-        "persistent": true
-    },
-    "browser_action": {
-        "default_icon": "images/github-logo.png",
-        "default_popup": "popup.html",
-        "default_title": "Login to VIT WiFi"
-    },
-    "content_scripts": [{
-        "all_frames": true,
-        "js": ["scripts/raven.min.js"],
-        "matches": ["*://vtop.vit.ac.in/*"],
-        "run_at": "document_start"
-   },{
+   "author": "Rahul Kapoor",
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "images/github-logo.png",
+      "default_popup": "popup.html",
+      "default_title": "Login to VIT WiFi"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "scripts/raven.min.js" ],
+      "matches": [ "*://vtop.vit.ac.in/*" ],
+      "run_at": "document_start"
+   }, {
       "js": [ "scripts/captcha/captcha.js", "scripts/captcha/captcha.min.js", "scripts/jquery.min.js" ],
       "matches": [ "*://vtop.vit.ac.in/parent/parent_login.asp", "*://vtop.vit.ac.in/student/stud_login.asp", "*://vtop.vit.ac.in/parent/", "*://vtop.vit.ac.in/student/", "*://27.251.102.132/parent/parent_login.asp", "*://27.251.102.132/student/stud_login.asp", "*://27.251.102.132/parent/", "*://27.251.102.132/student/", "*://academics.vit.ac.in/studpay", "*://academics.vit.ac.in/studpay/stud_login.asp", "http://52.74.28.223/registration/ffcs_login.asp" ]
    }, {
       "css": [ "css/font-awesome.css", "css/main.css" ],
-      "js": [ "scripts/google-analytics/ansyncTracking.js","scripts/jquery.min.js", "scripts/main.js"],
+      "js": [ "scripts/google-analytics/ansyncTracking.js", "scripts/jquery.min.js", "scripts/main.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_login.asp", "*://vtop.vit.ac.in/student/" ]
    }, {
       "css": [ "css/vtop.css" ],
@@ -38,7 +38,7 @@
    }, {
       "all_frames": true,
       "css": [ "css/course/course_view.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/coursePage/course_view.js", "scripts/coursePage/content.js"],
+      "js": [ "scripts/jquery.min.js", "scripts/coursePage/course_view.js", "scripts/coursePage/content.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/coursepage_view3.asp", "https://vtop.vit.ac.in/student/coursepage_plan_display.asp" ]
    }, {
       "all_frames": true,
@@ -48,7 +48,7 @@
    }, {
       "all_frames": true,
       "css": [ "css/errorMsg/error_msg.css" ],
-      "js": [ "scripts/google-analytics/ansyncTracking.js","scripts/errorMsg/error_msg.js" ],
+      "js": [ "scripts/google-analytics/ansyncTracking.js", "scripts/errorMsg/error_msg.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/errormsg_2.asp" ]
    }, {
       "all_frames": true,
@@ -57,7 +57,7 @@
       "matches": [ "*://vtop.vit.ac.in/student/timetable_*.asp", "https://vtop.vit.ac.in/student/course_regular.asp?sem=*" ]
    }, {
       "all_frames": true,
-      "css": ["css/course/course_view.css"],
+      "css": [ "css/course/course_view.css" ],
       "js": [ "scripts/jquery.min.js", "scripts/attendance/attendance.js", "scripts/attendance/attend.js", "scripts/attendance/lastDate.js" ],
       "matches": [ "*://vtop.vit.ac.in/*/attn_report.asp*", "*://vtop.vit.ac.in/student/attn_report_details.asp", "*://27.251.102.132/*/attn_report.asp*" ]
    }, {
@@ -66,8 +66,8 @@
       "matches": [ "*://vtop.vit.ac.in/student/stud_riviera_home.asp", "*://vtop.vit.ac.in/student/stud_riviera_info.asp", "*://academics.vit.ac.in/student/stud_riviera_event_info.asp" ]
    }, {
       "all_frames": true,
-      "css": [ "css/menu/stud_menu.css","css/materialize.min.css","css/menu/custom_stud_menu.css"],
-      "js": [ "scripts/jquery.min.js","scripts/materialize.min.js","scripts/menu/stud_menu.js","scripts/menu/custom_stud_menu.js" ],
+      "css": [ "css/menu/stud_menu.css", "css/materialize.min.css", "css/menu/custom_stud_menu.css" ],
+      "js": [ "scripts/jquery.min.js", "scripts/materialize.min.js", "scripts/menu/stud_menu.js", "scripts/menu/custom_stud_menu.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_menu.asp" ]
    }, {
       "all_frames": true,
@@ -90,8 +90,12 @@
       "all_frames": true,
       "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
-  }
-   ],
+   }, {
+      "all_frames": true,
+      "css": [ "css/errorMsg/error_msg.css" ],
+      "js": [ "scripts/pronto/logout.js" ],
+      "matches": [ "*://phc.prontonetworks.com/cgi-bin/authlogout" ]
+   } ],
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
    "homepage_url": "http://rahulkapoor.me/vitacademics-enhancement-suite/",
@@ -109,8 +113,9 @@
       "chrome_style": true,
       "page": "options.html"
    },
-   "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications", "contextMenus","https://vitacademics-rel.herokuapp.com/*", "identity", "gcm","https://raw.githubusercontent.com/VaTz88/VES-API/master/*" ],
+   "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications", "contextMenus", "https://vitacademics-rel.herokuapp.com/*", "identity", "gcm", "https://raw.githubusercontent.com/VaTz88/VES-API/master/*" ],
    "short_name": "VES",
-   "version": "1.5.1",
-   "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js","http://code.tidio.co" ]
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.4",
+   "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js", "http://code.tidio.co" ]
 }

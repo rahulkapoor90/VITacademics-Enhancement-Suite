@@ -14,8 +14,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, response){
             tInd=sender.tab.index+1;
             chrome.notifications.create(notID, request.options);
             break;
-        case "opt":
-            noti(request);
+        case "logout":
+            logout(request);
     }
 });
 chrome.notifications.onButtonClicked.addListener(function(nID, i){
@@ -52,6 +52,15 @@ var noti = function(data){
   type: "basic",
   title: "Pronto Wifi Login",
   message: "Hey! You have successfully logged in using VITacademics Enhancement Suite.",
+  iconUrl: chrome.extension.getURL('images/github-logo.png')
+}
+    chrome.notifications.create(opt2);
+}
+var logout = function(data){
+    var opt2 = {
+  type: "basic",
+  title: "Pronto Wifi Logout",
+  message: "Hey! You have successfully Logged out using VITacademics Enhancement Suite.",
   iconUrl: chrome.extension.getURL('images/github-logo.png')
 }
     chrome.notifications.create(opt2);
