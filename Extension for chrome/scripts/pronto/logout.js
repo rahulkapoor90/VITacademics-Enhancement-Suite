@@ -3,7 +3,6 @@ var link = document.createElement('link');
     link.rel = 'shortcut icon';
     link.href = 'https://res.cloudinary.com/dadfowug4/image/upload/v1479304973/favicon_rkdd0w.ico';
     document.getElementsByTagName('head')[0].appendChild(link);
-document.getElementsByTagName('head')[0].appendChild(link);
 
 chrome.runtime.sendMessage({"type": "logout", "data": "rahul"});
 

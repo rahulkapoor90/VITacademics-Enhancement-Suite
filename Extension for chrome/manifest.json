@@ -84,7 +84,7 @@
       "matches": [ "*://vtop.vit.ac.in/student/changepswd.asp" ]
    }, {
       "css": [ "css/home/design.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/jsondiffpatch-full.min.js", "scripts/home/diff.js", "scripts/home/design.js" ],
+      "js": [ "scripts/jquery.min.js", "scripts/home/diff.js", "scripts/home/design.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/home.asp" ]
    }, {
       "all_frames": true,
@@ -115,7 +115,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications", "contextMenus", "https://vitacademics-rel.herokuapp.com/*", "identity", "gcm", "https://raw.githubusercontent.com/VaTz88/VES-API/master/*" ],
    "short_name": "VES",
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.5.4",
+   "version": "1.5.8",
    "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js", "http://code.tidio.co" ]
 }
