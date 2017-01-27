@@ -8,7 +8,7 @@ $(function () {
    $('.collapsible').collapsible({
      accordion: false
    });
-   });		 
+   });
     $('#menuSwitch').on('change', function () {
         $('#customMenu').toggle(400);
         $('table').toggle();

@@ -23,7 +23,7 @@
       "matches": [ "*://vtop.vit.ac.in/student/stud_login.asp", "*://vtop.vit.ac.in/student/" ]
    }, {
       "css": [ "css/vtop.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/final.js" ],
+      "js": [ "scripts/google-analytics/ansyncTracking.js", "scripts/jquery.min.js", "scripts/final.js" ],
       "matches": [ "*://vtop.vit.ac.in/" ]
    }, {
       "all_frames": true,
@@ -92,13 +92,13 @@
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
    }, {
       "all_frames": true,
-      "css": [ "css/errorMsg/error_msg.css" ],
+      "css": [ "scripts/google-analytics/ansyncTracking.js", "css/errorMsg/error_msg.css" ],
       "js": [ "scripts/pronto/logout.js" ],
       "matches": [ "*://phc.prontonetworks.com/cgi-bin/authlogout" ]
    } ],
    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
    "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
-   "homepage_url": "http://rahulkapoor.me/vitacademics-enhancement-suite/",
+   "homepage_url": "https://rahulkapoor90.github.io/vitacademics-enhancement-suite/",
    "icons": {
       "128": "images/icon128.png",
       "130": "images/icon130.png",
@@ -115,6 +115,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications", "contextMenus", "https://vitacademics-rel.herokuapp.com/*", "identity", "gcm", "https://raw.githubusercontent.com/VaTz88/VES-API/master/*" ],
    "short_name": "VES",
-   "version": "1.5.8",
+   "version": "1.5.9",
    "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js", "http://code.tidio.co" ]
 }
