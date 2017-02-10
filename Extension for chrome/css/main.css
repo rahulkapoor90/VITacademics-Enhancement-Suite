@@ -79,10 +79,6 @@
 	float:left;
 	margin-left:5px;
 }
-table td tr:nth-child(5), tr:nth-child(4)
-{
-    display:none;
-}
 input[type="text"], input[type="password"] {
 	height:20px;
   width:160px;
