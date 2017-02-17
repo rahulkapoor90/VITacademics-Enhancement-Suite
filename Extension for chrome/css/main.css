@@ -81,11 +81,12 @@
 }
 input[type="text"], input[type="password"] {
 	height:20px;
-  width:160px;
+  width:130px; /*Previous value:- 160px */;
 	border: 1px solid #d9d9d9;
   border-top: 1px solid #c0c0c0;
   padding: 0 8px;
 }
+
 
 .textbox {
 	margin-top:10px;
