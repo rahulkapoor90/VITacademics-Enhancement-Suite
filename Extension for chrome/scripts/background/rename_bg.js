@@ -18,6 +18,52 @@ chrome.runtime.onMessage.addListener(function(request, sender, response){
             logout(request);
     }
 });
+
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    if (request.msg == "date") {
+        //Notification if the deadline is within 2 days
+        var data = request.data;
+        for (i = 0; i < data.length; i++) {
+            var message = "SUBJECT  :   " + data[i].crsnm + "  -   " + data[i].crstp + "\nTITLE  :  " + data[i].title + "\nDATE  :  " + data[i].duedate;
+            var options = {
+                type: "basic",
+                title: "Assignment Alert",
+                message: message,
+                iconUrl:  chrome.extension.getURL('images/github-logo.png')
+            }
+            chrome.notifications.create(options);
+        }
+    }
+    if (request.msg == "new") {
+        var data = request.data;
+        // Notification if new assignment(s) is posted
+        for (i = 0; i < data.length; i++) {
+            var message = "SUBJECT  :   " + data[i].crsnm + "  -   " + data[i].crstp + "\nTITLE  :  " + data[i].title + "\nDATE  :  " + data[i].duedate;
+            var options = {
+                type: "basic",
+                title: "New Assignment",
+                message: message,
+                iconUrl:  chrome.extension.getURL('images/github-logo.png')
+            }
+            chrome.notifications.create(options);
+        }
+    }
+    if (request.msg == "score") {
+        var data = request.data;
+        //Notification if marks of any assignment is updated
+        for (i = 0; i < data.length; i++) {
+            var message = "SUBJECT  :   " + data[i].crsnm + "  -   " + data[i].crstp + "\nTITLE  :  " + data[i].title + "\nDATE  :  " + data[i].duedate + "\nSCORE  : " + data[i].score;
+            var options = {
+                type: "basic",
+                title: "Marks Updated",
+                message: message,
+                iconUrl:  chrome.extension.getURL('images/github-logo.png')
+            }
+            chrome.notifications.create(options);
+        }
+    }
+});
+
 chrome.notifications.onButtonClicked.addListener(function(nID, i){
     if(nID.length==2 && nID[0]=="M"){
         switch (i) {

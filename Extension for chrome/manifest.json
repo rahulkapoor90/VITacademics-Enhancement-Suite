@@ -84,7 +84,7 @@
       "matches": [ "*://vtop.vit.ac.in/student/changepswd.asp" ]
    }, {
       "css": [ "css/home/design.css" ],
-      "js": [ "scripts/jquery.min.js", "scripts/home/diff.js", "scripts/home/design.js" ],
+      "js": [ "scripts/jquery.min.js", "scripts/home/diff.js", "scripts/home/design.js" ,"scripts/home/assignMsg.js" ],
       "matches": [ "*://vtop.vit.ac.in/student/home.asp" ]
    }, {
       "all_frames": true,
