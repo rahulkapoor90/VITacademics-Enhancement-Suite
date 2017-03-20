@@ -73,8 +73,10 @@ function newAssignment(data) {
 
                         }
                         if (count == storArr.length) {
-                            arr.push(data[i]);
-                            break;
+                            if (data[i]['isUploaded'] == 'Upload') {
+                                arr.push(data[i]);
+                                break;
+                             }
                         }
                     }
                     if (i == data.length - 1) {
@@ -157,7 +159,7 @@ function eachAssignment(data, callback) {
         if (j == l - 1) {
             //Testing Section
             // arr.push({ 'title': "Networking  Standards", 'duedate': "16-FEB-2017", "isUploaded": "Upload", "status": "", "score": "10", "crstp": "ETH", "crscd": "CSE1004", "crsnm": "Network and Communication" });
-            // arr.push({ 'title': "Somw new titleeeeeee", 'duedate': "16-MAR-2017", "isUploaded": "View", "status": "", "score": "", "crstp": "ETH", "crscd": "CSE1004", "crsnm": "Network and Communication" });
+            // arr.push({ 'title': "Something new to show", 'duedate': "25-MAR-2017", "isUploaded": "Upload", "status": "", "score": "", "crstp": "ETH", "crscd": "CSE1004", "crsnm": "Network and Communication" });
             // arr.push({ 'title': "Networking  Standards", 'duedate': "30-MAR-2017", "isUploaded": "Upload", "status": "", "score": "", "crstp": "ETH", "crscd": "CSE1004", "crsnm": "Network and Communication" });
             callback(arr);
             break;
