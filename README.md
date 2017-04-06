@@ -1,6 +1,7 @@
 # <img src="https://raw.githubusercontent.com/rahulkapoor90/VITacademics-Enhancement-Suite/master/Media/logo.gif" width="500">
 
 [![Code Climate](https://codeclimate.com/github/rahulkapoor90/VITacademics-Enhancement-Suite/badges/gpa.svg)](https://codeclimate.com/github/rahulkapoor90/VITacademics-Enhancement-Suite) [![ghit.me](https://ghit.me/badge.svg?repo=rahulkapoor90/VITacademics-Enhancement-Suite)](https://ghit.me/repo/rahulkapoor90/VITacademics-Enhancement-Suite)
+[![College Code](https://img.shields.io/badge/CollegeCode-Repo-red.svg)](https://github.com/CollegeCODE/VITacademics-Enhancement-Suite)
 
 
 > *This Repository is highly inspired from [Reddit Enhancement Suite.](https://github.com/honestbleeps/Reddit-Enhancement-Suite "RES")*
