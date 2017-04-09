@@ -55,6 +55,20 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             var message = "SUBJECT  :   " + data[i].crsnm + "  -   " + data[i].crstp + "\nTITLE  :  " + data[i].title + "\nDATE  :  " + data[i].duedate + "\nSCORE  : " + data[i].score;
             var options = {
                 type: "basic",
+                title: "Assignment Marks Updated",
+                message: message,
+                iconUrl:  chrome.extension.getURL('images/github-logo.png')
+            }
+            chrome.notifications.create(options);
+        }
+    }
+    if (request.msg == "marks") {
+        var data = request.data;
+        //Notification if marks of any assignment is updated
+        for (i = 0; i < data.length; i++) {
+            var message = "SUBJECT  :   " + data[i].name + "\nTITLE  :  " + data[i].title + "\nSCORE  : " + data[i].scored + ' / '+data[i].max+".00";
+            var options = {
+                type: "basic",
                 title: "Marks Updated",
                 message: message,
                 iconUrl:  chrome.extension.getURL('images/github-logo.png')
