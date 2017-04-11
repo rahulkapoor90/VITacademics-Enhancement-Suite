@@ -115,6 +115,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications", "contextMenus", "https://vitacademics-rel.herokuapp.com/*", "identity", "gcm", "https://raw.githubusercontent.com/VaTz88/VES-API/master/*" ],
    "short_name": "VES",
-   "version": "1.7.1",
+   "version": "1.7.2",
    "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js", "http://code.tidio.co" ]
 }
