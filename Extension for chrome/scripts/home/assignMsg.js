@@ -4,7 +4,7 @@ $(document).ready(function () {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            scrapeData(this.responseText, function (data) {
+            scrapeData1(this.responseText, function (data) {
                 //Fetches details of subjects
                 eachAssignment(data, function (docs) {
                     //Fetches all assignments
@@ -107,7 +107,7 @@ function dateAlert(data) {
         if (assignDate != "Invalid Date") {
             var diff = assignSec - curSec;
             var diff = diff / (1000000 * 60 * 60 * 24 );
-            if (diff < 2 && diff > 0) {
+            if (diff < 2 && diff > -1) {
                 if (data[i]['isUploaded'] == 'Upload') {
                     arr.push(data[i]);
                 }
@@ -168,7 +168,7 @@ function eachAssignment(data, callback) {
 
 }
 
-function scrapeData(data, callback) {
+function scrapeData1(data, callback) {
     var arr = new Array();
     var body = $(data);
     var table = body.find('table');
