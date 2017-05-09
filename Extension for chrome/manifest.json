@@ -88,8 +88,7 @@
       "matches": [ "*://vtop.vit.ac.in/student/home.asp" ]
    }, {
       "all_frames": true,
-      "css": ["css/materialize.min.css","css/home/spotlight_modified.css"],
-      "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js", "scripts/home/modify_spotlight.js","scripts/materialize.min.js" ],
+      "js": [ "scripts/jquery.min.js", "scripts/home/msgNew.js", "scripts/home/modify_spotlight.js"],
       "matches": [ "*://vtop.vit.ac.in/student/stud_home.asp" ]
    }, {
       "all_frames": true,
@@ -116,6 +115,6 @@
    },
    "permissions": [ "activeTab", "https://ajax.googleapis.com/", "http://*/*", "storage", "webRequestBlocking", "webRequest", "downloads", "*://vtop.vit.ac.in/*", "notifications", "contextMenus", "https://vitacademics-rel.herokuapp.com/*", "identity", "gcm", "https://raw.githubusercontent.com/VaTz88/VES-API/master/*" ],
    "short_name": "VES",
-   "version": "1.8.1",
-   "web_accessible_resources": [ "scripts/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js", "http://code.tidio.co" ]
+   "version": "1.8.2",
+   "web_accessible_resources": [ "scripts/*", "css/*", "https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css", "https://fonts.googleapis.com/icon?family=Material+Icons", "calc.js", "http://code.tidio.co" ]
 }

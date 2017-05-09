@@ -1,3 +1,31 @@
+chrome.storage.sync.get({
+    material : ""
+  }, function(items) {
+     var material = items.material;
+     console.log(material);
+     if(material == "Yes"){
+        
+    var a = chrome.extension.getURL("css/home/spotlight_modified.css");
+    var b = chrome.extension.getURL("css/materialize.min.css");
+    var c = chrome.extension.getURL("scripts/materialize.min.js");
+
+    var css = document.createElement('link');
+    css.type = 'text/css';
+    css.rel = 'stylesheet';
+    css.href = a;
+    document.getElementsByTagName('head')[0].appendChild(css);
+
+    var css1 = document.createElement('link');
+    css1.type = 'text/css';
+    css1.rel = 'stylesheet';
+    css1.href = b;
+    document.getElementsByTagName('head')[0].appendChild(css1);
+
+    var scr = document.createElement('script');
+    scr.type = 'text/javascript';
+    scr.src = c;
+    document.getElementsByTagName('head')[0].appendChild(scr);
+
 $(function () {
     //Attendence
     $("<div class='card-panel'><div class='row' id='attendenceCard'></div></div>").insertBefore(".main_content");
@@ -17,4 +45,8 @@ $(function () {
     }
 
     $(".main_content").remove();
+});
+
+}
+
 });
