@@ -1,4 +1,4 @@
-function p(data){
+/*function p(data){
 
 var elems = [];
 var baseURL = "https://vtop.vit.ac.in/student/";
@@ -36,7 +36,7 @@ request.onreadystatechange = function() {
     }
 };
 request.open("GET", "https://vitacademics-rel.herokuapp.com/api/v2/vellore/spotlight" , true);
-request.send(null);
+request.send(null);*/
 
 // Copyright (c) 2014 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
