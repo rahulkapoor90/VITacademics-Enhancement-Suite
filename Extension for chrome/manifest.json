@@ -92,9 +92,12 @@
         "matches": ["*://vtop.vit.ac.in/student/stud_home.asp"]
     }, {
         "all_frames": true,
-        "css": ["scripts/google-analytics/ansyncTracking.js", "css/errorMsg/error_msg.css"],
-        "js": ["scripts/pronto/logout.js"],
-        "matches": ["*://phc.prontonetworks.com/cgi-bin/authlogout"]
+        "js": ["scripts/jquery.min.js", "scripts/home/msgNew.js", "scripts/home/modify_spotlight.js"],
+        "matches": ["*://vtop.vit.ac.in/student/stud_home.asp"]
+    }, {
+        "all_frames": true,
+        "js": ["scripts/jquery.min.js", "scripts/VES-API/photo_search.js"],
+        "matches": ["*://ves.vatz88.in/photo_search.html"]
     }],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
