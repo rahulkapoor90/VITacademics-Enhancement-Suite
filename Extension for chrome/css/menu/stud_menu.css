@@ -62,9 +62,13 @@ ol::-webkit-scrollbar-corner {
 	background: #ededed!important
 }
 
+#tree23ec0_trdv {
+	padding: 0px!important;
+}
+
 
 /* hide horizontal scroll */
 
 body {
-	overflow-x: hidden;
+	overflow-x: auto;
 }
