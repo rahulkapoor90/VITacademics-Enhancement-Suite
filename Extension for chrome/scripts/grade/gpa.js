@@ -20,16 +20,14 @@ $(function () {
     $gradeRow.each(function () {
         var credit = Number($(this).children('td').eq(4).text().split(' ').pop());
         var grade = gradePoint[$(this).children('td').eq(9).text()];
-        if (grade) {
+        if (grade >= 0 && credit) {
             totalCredits += credit;
             creditsProduct += (grade * credit);
         }
-        console.log($(this));
-        console.log("credit: " + credit + " grade: " + grade);
     });
 
     var gpa = creditsProduct / totalCredits;
-    console.log(gpa);
+    console.log("GPA: " + gpa);
 
     var gpaRow = '<tr align="center" bgcolor="#EDEADE"><td colspan="11" align="center"><strong>GPA: ' + gpa.toFixed(2) + '</strong></td></tr>';
 
