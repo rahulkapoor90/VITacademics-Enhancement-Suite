@@ -75,6 +75,10 @@
         "matches": ["*://vtop.vit.ac.in/student/grade1.asp?sem=*", "*://vtop.vit.ac.in/student/grade.asp?sem=*"]
     }, {
         "all_frames": true,
+        "js": ["scripts/jquery.min.js", "scripts/grade/archive_gpa.js"],
+        "matches": ["*://vtop.vit.ac.in/student/grade_arch.asp?sem=*"]
+    }, {
+        "all_frames": true,
         "css": ["css/faculty/fac_profile.css"],
         "js": ["scripts/jquery.min.js", "scripts/faculty/fac_profile.js", "scripts/faculty/fsearch.js"],
         "matches": ["*://vtop.vit.ac.in/student/fac_profile.asp", "*://vtop.vit.ac.in/student/fac_profile.asp?*"]
