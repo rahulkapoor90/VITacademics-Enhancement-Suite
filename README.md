@@ -4,15 +4,17 @@
 [![College Code](https://img.shields.io/badge/CollegeCode-Repo-red.svg)](https://github.com/CollegeCODE/VITacademics-Enhancement-Suite)
 
 
-> *This Repository is highly inspired from [Reddit Enhancement Suite.](https://github.com/honestbleeps/Reddit-Enhancement-Suite "RES")*
-> *Special thanks to [Harshal Varday](https://github.com/hvarday).*
-
 > Chrome and Firefox extension that helps you to enhance your browsing experience at [VIT Student Login] (https://vtop.vit.ac.in/student/stud_login.asp)
 
 For general documentation, visit the [VITacademics Enhancement Suite Wiki](https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/wiki).
 
 <img src="https://i.imgur.com/OHswLAn.png">
-## Contributor guidelines
+
+## Contribute
+
+See the list of [contributors](https://github.com/rahulkapoor90/VITacademics-Enhancement-Suite/contributors) who participated in this project.
+
+### Contributor guidelines
 
 Contributions are welcome. if you see any issue then open an issue and if you think you can fix it then start working on it by forking this project. We just ask that you follow a few simple guidelines:
 
@@ -55,6 +57,6 @@ As Extension for Mozilla Firefox is based on chrome, you should follow this tuto
   
 ##### Building in Microsoft Edge
 
-  1. Go to `about:flags` and tick the `Enable extension developer features` checkbox.
-  2. Choose `Load extension` on the extensions menu and select your extensions folder.
-  3. Any time you make changes to the extension, you must go back to the `Menu->Extensions` page, go to the extensions settings and `Reload` the extension.
+1. Go to `about:flags` and tick the `Enable extension developer features` checkbox.
+2. Choose `Load extension` on the extensions menu and select your extensions folder.
+3. Any time you make changes to the extension, you must go back to the `Menu->Extensions` page, go to the extensions settings and `Reload` the extension.
