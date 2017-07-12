@@ -106,6 +106,10 @@
         "all_frames": true,
         "js": ["scripts/jquery.min.js", "scripts/VES-API/photo_search.js"],
         "matches": ["*://ves.vatz88.in/photo_search.html"]
+    }, {
+        "all_frames": true,
+        "js": ["scripts/jquery.min.js", "scripts/vtopbeta/script.js"],
+        "matches": ["*://vtopbeta.vit.ac.in/vtop/"]
     }],
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "description": "Extension to enhance your browsing experience on VIT Academics Student Login.",
