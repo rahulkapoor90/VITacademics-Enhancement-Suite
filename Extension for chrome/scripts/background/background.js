@@ -1,33 +1,35 @@
-OneSignal.init({appId: "ecaa66cf-5858-48fe-8e44-4ddc702f6fdf",
-                googleProjectNumber: "394621869407"});
-
-function getword() {
-  chrome.tabs.create({
-    url: "https://vtop.vit.ac.in/student/stud_login.asp",
-  });
-}
-chrome.contextMenus.create({
-  title: "Open Student Login",
-  contexts:["all"],
-  onclick: getword,
+OneSignal.init({
+    appId: "ecaa66cf-5858-48fe-8e44-4ddc702f6fdf",
+    googleProjectNumber: "394621869407"
 });
 
-function audioNotification(){
+function getword() {
+    chrome.tabs.create({
+        url: "https://vtop.vit.ac.in/student/stud_login.asp",
+    });
+}
+chrome.contextMenus.create({
+    title: "Open Student Login",
+    contexts: ["all"],
+    onclick: getword,
+});
+
+function audioNotification() {
     var yourSound = new Audio('audio/notification.mp3');
     yourSound.play();
 }
 chrome.runtime.setUninstallURL('https://rahulkapoor90.github.io/vitacademics-enhancement-suite/uninstall/');
-chrome.runtime.onInstalled.addListener(function(details){
-      if(details.reason == "update"){
+chrome.runtime.onInstalled.addListener(function (details) {
+    if (details.reason == "update") {
         var thisVersion = chrome.runtime.getManifest().version;
         audioNotification();
         var opt = {
-          type: "basic",
-          title: "Hello Friend!",
-          message: "VITacademics Enhancement Suite has been updated with new features and bug fixes.",
-          iconUrl: chrome.extension.getURL('images/github-logo.png')
-        }
-            chrome.notifications.create(opt);
+            type: "basic",
+            title: "Hello Friend!",
+            message: "VITacademics Enhancement Suite has been updated with new features and bug fixes.",
+            iconUrl: chrome.extension.getURL('images/github-logo.png')
+        };
+        chrome.notifications.create(opt);
     }
 });
 
@@ -37,34 +39,42 @@ function install_notice() {
 
     var now = new Date().getTime();
     localStorage.setItem('install_time', now);
-    chrome.tabs.create({url: "http://rahulkapoor90.github.io/vitacademics-enhancement-suite/thanks"});
-var opt = {
-  type: "basic",
-  title: "Hello Friend!",
-  message: "Thank You for installing VITacademics Enhancement Suite.",
-  iconUrl: chrome.extension.getURL('images/github-logo.png')
-}
+    chrome.tabs.create({
+        url: "http://rahulkapoor90.github.io/vitacademics-enhancement-suite/thanks"
+    });
+    var opt = {
+        type: "basic",
+        title: "Hello Friend!",
+        message: "Thank You for installing VITacademics Enhancement Suite.",
+        iconUrl: chrome.extension.getURL('images/github-logo.png')
+    };
     audioNotification();
     chrome.notifications.create(opt);
 }
-var notify1 = function(data){
+
+var notify1 = function (data) {
     var options = {
-        "title" :   "Marks Change Notification",
-        "type"  :   "basic",
-        "iconUrl"   :   chrome.extension.getURL('images/github-logo.png'),
-        "message"   :   "Following marks have been changed."
+        "title": "Marks Change Notification",
+        "type": "basic",
+        "iconUrl": chrome.extension.getURL('images/github-logo.png'),
+        "message": "Following marks have been changed."
     };
     chrome.notifications.create(options);
-}
+};
+
 install_notice();
-chrome.webRequest.onBeforeRequest.addListener(
-    function(details) {
-        switch (details.url) {
-            case "https://vtop.vit.ac.in/student/images/round_orange.gif":
-                return {redirectUrl: "https://res.cloudinary.com/dadfowug4/image/upload/v1479314802/nAnJHcz_kt2did.png" };
-            case "https://vtop.vit.ac.in/student/images/round_blue.gif":
-                return {redirectUrl: "https://res.cloudinary.com/dadfowug4/image/upload/v1479314802/YFcV4bO_oppp1h.png" };
-        }
-    },
-    {urls: ["*://*.vit.ac.in/*.gif"]},
-    ["blocking"]);
+
+chrome.webRequest.onBeforeRequest.addListener(function (details) {
+    switch (details.url) {
+        case "https://vtop.vit.ac.in/student/images/round_orange.gif":
+            return {
+                redirectUrl: "https://res.cloudinary.com/dadfowug4/image/upload/v1479314802/nAnJHcz_kt2did.png"
+            };
+        case "https://vtop.vit.ac.in/student/images/round_blue.gif":
+            return {
+                redirectUrl: "https://res.cloudinary.com/dadfowug4/image/upload/v1479314802/YFcV4bO_oppp1h.png"
+            };
+    }
+}, {
+    urls: ["*://*.vit.ac.in/*.gif"]
+}, ["blocking"]);
